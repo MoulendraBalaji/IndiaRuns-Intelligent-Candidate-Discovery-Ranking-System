@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException, Query, Response
 from pydantic import BaseModel
 from typing import Dict, Any, Optional
 from .dependencies import matching_service
@@ -45,5 +45,26 @@ def re_rank_candidates(job_id: str, payload: ReRankRequest):
         return results
     except ValueError as val_err:
         raise HTTPException(status_code=400, detail=str(val_err))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/jobs/{job_id}/export")
+def export_ranked_submission(
+    job_id: str,
+    format: str = Query(default="csv", pattern="^(csv)$"),
+    top_n: int = Query(default=100, ge=1, le=100),
+):
+    try:
+        export = matching_service.export_submission_csv(job_id=job_id, top_n=top_n)
+        return Response(
+            content=export["csv_content"],
+            media_type="text/csv",
+            headers={
+                "Content-Disposition": f'attachment; filename="{export["filename"]}"'
+            },
+        )
+    except ValueError as val_err:
+        raise HTTPException(status_code=404, detail=str(val_err))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

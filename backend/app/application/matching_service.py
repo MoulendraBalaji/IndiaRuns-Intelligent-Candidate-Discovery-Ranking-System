@@ -2,6 +2,7 @@ import asyncio
 import logging
 import uuid
 import time
+from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 from app.schemas.job import JobProfile
@@ -16,6 +17,7 @@ from app.agents.explainability.agent import ExplainabilityAgent
 from app.domain.ranking.engine import RankingEngine
 from app.domain.ranking.scorer import DeterministicScorer
 from app.ml.registry.evaluation_dimensions import ROLE_PROFILES, RoleProfile
+from app.pipelines.ranking_pipeline import CompetitionSubmissionPipeline
 
 from app.infrastructure.repositories.candidate_repo import CandidateRepository
 from app.infrastructure.repositories.job_repo import JobRepository
@@ -42,6 +44,7 @@ class MatchingService:
         
         self.embedding_provider = BGEProvider()
         self.index_service = SemanticIndexService(self.embedding_provider)
+        self.submission_pipeline = CompetitionSubmissionPipeline()
         
         import os
         qdrant_url = os.environ.get("QDRANT_URL", "http://localhost:6333")
@@ -297,4 +300,29 @@ class MatchingService:
         return {
             "ranking_result": result.model_dump(mode="json"),
             "explainability_reports": [er.model_dump(mode="json") for er in explain_reports]
+        }
+
+    def export_submission_csv(
+        self,
+        job_id: str,
+        top_n: int = 100,
+        destination: Optional[str] = None,
+    ) -> dict:
+        ranking_result = self.matching_repo.get_match_result(job_id)
+        if not ranking_result:
+            raise ValueError(f"No ranking result cached for job {job_id}. Run match first.")
+
+        output_path = self.submission_pipeline.write_csv(
+            ranking_result=ranking_result,
+            top_n=top_n,
+            destination=destination,
+        )
+        csv_content = output_path.read_text(encoding="utf-8")
+
+        return {
+            "job_id": job_id,
+            "top_n": min(top_n, len(ranking_result.rankings)),
+            "export_path": str(Path(output_path).resolve()),
+            "filename": output_path.name,
+            "csv_content": csv_content,
         }
