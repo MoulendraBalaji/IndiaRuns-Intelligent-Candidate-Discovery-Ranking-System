@@ -1,5 +1,27 @@
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, Field
+
+class Requirement(BaseModel):
+    text: str = Field(..., description="Normalized text of the requirement")
+    category: str = Field(..., description="e.g., technical_skill, soft_skill, domain_knowledge")
+    priority: str = Field(..., description="mandatory, preferred, optional")
+    importance: float = Field(..., ge=0.0, le=1.0, description="Relative importance to the role")
+    confidence: float = Field(..., ge=0.0, le=1.0, description="Confidence in this classification")
+
+class JobQuality(BaseModel):
+    clarity: float = Field(..., ge=0.0, le=1.0)
+    missing_sections: List[str] = Field(default_factory=list)
+    ambiguity: float = Field(..., ge=0.0, le=1.0)
+
+class RoleTaxonomy(BaseModel):
+    family: str = Field(..., description="e.g., AI Engineering")
+    level: str = Field(..., description="e.g., Senior")
+    domain: str = Field(..., description="e.g., Machine Learning")
+    function: str = Field(..., description="e.g., Engineering")
+
+class Capability(BaseModel):
+    name: str = Field(..., description="Extracted capability, e.g., 'Deploy ML Models'")
+    importance: float = Field(..., ge=0.0, le=1.0)
 
 class JobProfile(BaseModel):
     """
@@ -9,17 +31,24 @@ class JobProfile(BaseModel):
     id: Optional[str] = Field(None, description="Unique job ID (UUID)")
     tenant_id: str = Field(..., description="Tenant ID for RLS")
     
+    # Core taxonomy
     title: str = Field(..., description="Job title")
     department: Optional[str] = Field(None, description="Department or team")
+    taxonomy: Optional[RoleTaxonomy] = None
     
-    summary: str = Field(..., description="A synthesized summary of the job requirements")
+    # Requirements
+    requirements: List[Requirement] = Field(default_factory=list)
+    capabilities: List[Capability] = Field(default_factory=list)
+    constraints: List[str] = Field(default_factory=list, description="Explicit and implicit constraints")
     
-    mandatory_skills: List[str] = Field(default_factory=list, description="Strictly required skills")
-    nice_to_have_skills: List[str] = Field(default_factory=list, description="Bonus skills")
+    # Experience
+    min_years_experience: float = Field(0.0)
+    max_years_experience: Optional[float] = None
+    education_requirement: Optional[str] = None
     
-    min_years_experience: float = Field(0.0, description="Minimum years of experience required")
-    max_years_experience: Optional[float] = Field(None, description="Maximum years of experience (if specified)")
+    # Scoring & Vectors
+    complexity_score: float = Field(0.0, ge=0.0, le=1.0)
+    quality: Optional[JobQuality] = None
+    embedding_text: str = Field("", description="Text used to generate semantic embeddings for this job")
     
-    education_requirement: Optional[str] = Field(None, description="Degree requirements (e.g., Bachelor's, Master's)")
-    
-    implicit_constraints: List[str] = Field(default_factory=list, description="Extracted constraints like 'startup experience'")
+    metadata: Dict[str, Any] = Field(default_factory=dict, description="Pipeline versions, LLM models used, etc.")

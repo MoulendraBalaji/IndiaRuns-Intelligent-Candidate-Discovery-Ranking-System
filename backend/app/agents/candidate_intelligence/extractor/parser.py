@@ -1,7 +1,7 @@
 import logging
 from app.schemas.extraction import ExtractedEntities
 from app.schemas.document import ResumeDocument
-from .client import GeminiClient
+from app.infrastructure.llm.gemini_client import GeminiClient
 from .prompt_loader import PromptLoader
 from .response_mapper import ResponseMapper
 
