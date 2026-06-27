@@ -125,6 +125,7 @@ async def test_evaluation_agent_execution(mock_context, mock_llm_response):
     response = await agent.execute(request, role_profile_key="BACKEND_ENGINEER")
     
     assert response.success is True
+    assert response.data is not None
     assert "report" in response.data
     assert "summary" in response.data
     

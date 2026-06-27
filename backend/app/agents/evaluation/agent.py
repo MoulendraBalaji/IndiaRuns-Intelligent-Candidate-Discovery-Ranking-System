@@ -2,7 +2,7 @@ import time
 import os
 import json
 import logging
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 from pathlib import Path
 
 from app.schemas.agent import AgentRequest, AgentResponse
@@ -26,7 +26,7 @@ class EvaluationAgent:
     Evaluates a candidate's profile/features against a job profile
     using dynamic role-specific dimension weights from the registry.
     """
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: Optional[str] = None):
         self.client = GeminiClient(api_key=api_key)
         self.prompt_loader = EvaluationPromptLoader()
 
