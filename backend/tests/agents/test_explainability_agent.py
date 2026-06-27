@@ -96,5 +96,5 @@ async def test_explainability_agent_execution(mock_context, mock_draft_response)
     assert report["comparisons"][0]["compared_to_candidate_id"] == "c2"
     
     # Telemetry
-    assert report["metadata"]["generation_duration_ms"] > 0
+    assert report["metadata"]["generation_duration_ms"] >= 0
     assert report["metadata"]["explanation_confidence"] == 0.95

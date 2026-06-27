@@ -3,7 +3,7 @@ from pydantic import ValidationError
 from app.schemas.candidate import CandidateProfile
 from app.schemas.job import JobProfile
 from app.schemas.feature_store import CandidateFeatures, FeatureValue
-from app.schemas.evaluation import EvaluationResult
+from app.schemas.evaluation import EvaluationSummary
 from app.schemas.ranking import CandidateRank
 from app.schemas.agent import AgentRequest, AgentResponse
 
@@ -46,15 +46,23 @@ def test_feature_store_bounds():
     features = CandidateFeatures(candidate_id="c1", tenant_id="t1", skill_depth=FeatureValue(value=0.8), career_progression=FeatureValue(value=0.5), project_complexity=FeatureValue(value=0.5), authenticity=FeatureValue(value=0.5), growth=FeatureValue(value=0.5), timeline_consistency=FeatureValue(value=0.5))
     assert features.skill_depth.value == 0.8
 
-def test_evaluation_result_bounds():
+def test_evaluation_summary_bounds():
+    from app.schemas.evaluation import RecommendationOpinion
     with pytest.raises(ValidationError):
-        EvaluationResult(candidate_id="c1", job_id="j1", skill_match_score=-0.1, evaluation_summary="Bad")
+        EvaluationSummary(overall_score=-0.1, recommendation=RecommendationOpinion.STRONG_HIRE, confidence=0.9)
         
-    eval_res = EvaluationResult(candidate_id="c1", job_id="j1", skill_match_score=0.9, evaluation_summary="Good")
-    assert eval_res.skill_match_score == 0.9
+    eval_res = EvaluationSummary(overall_score=0.9, recommendation=RecommendationOpinion.STRONG_HIRE, confidence=0.95)
+    assert eval_res.overall_score == 0.9
 
 def test_ranking_valid():
-    rank = CandidateRank(candidate_id="c1", job_id="j1", final_score=0.85, semantic_score=0.9, evaluation_score=0.8, feature_score=0.85)
+    rank = CandidateRank(
+        candidate_id="c1",
+        job_id="j1",
+        final_score=0.85,
+        rank_position=1,
+        passed_gates=True,
+        failed_dimensions=[]
+    )
     assert rank.final_score == 0.85
 
 def test_agent_contracts():
