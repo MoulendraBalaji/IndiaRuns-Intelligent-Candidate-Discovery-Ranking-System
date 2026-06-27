@@ -1,5 +1,5 @@
 from app.schemas.pipeline import PipelineResult
-from app.schemas.feature_store import CandidateFeatures
+from app.schemas.feature_store import CandidateFeatures, FeatureValue
 from .normalizer import Normalizer
 from .scaler import Scaler
 
@@ -12,43 +12,39 @@ class CandidateFeatureEngineer:
         career_result: PipelineResult,
         project_result: PipelineResult,
         growth_result: PipelineResult,
-        authenticity_result: PipelineResult
+        authenticity_result: PipelineResult,
+        timeline_result: PipelineResult
     ) -> CandidateFeatures:
         """
         Transforms raw pipeline results into scaled, normalized features for the Feature Store.
         """
         
-        # Skill: Max expected raw is 100
-        raw_skill = float(skill_result.value)
-        norm_skill = Normalizer.normalize_score(raw_skill, 0.0, 100.0)
-        final_skill = Scaler.scale_confidence(norm_skill, skill_result.confidence)
-        
-        # Career: Max expected raw is 50
-        raw_career = float(career_result.value)
-        norm_career = Normalizer.normalize_score(raw_career, 0.0, 50.0)
-        final_career = Scaler.scale_confidence(norm_career, career_result.confidence)
-        
-        # Project: Max expected raw is 40
-        raw_project = float(project_result.value)
-        norm_project = Normalizer.normalize_score(raw_project, 0.0, 40.0)
-        final_project = Scaler.scale_confidence(norm_project, project_result.confidence)
-        
-        # Growth: Max expected raw is 100
-        raw_growth = float(growth_result.value)
-        norm_growth = Normalizer.normalize_score(raw_growth, 0.0, 100.0)
-        final_growth = Scaler.scale_confidence(norm_growth, growth_result.confidence)
-        
-        # Authenticity: Max expected raw is 100
-        raw_auth = float(authenticity_result.value)
-        norm_auth = Normalizer.normalize_score(raw_auth, 0.0, 100.0)
-        final_auth = Scaler.scale_confidence(norm_auth, authenticity_result.confidence)
+        def process(res: PipelineResult, max_val: float, min_val: float = 0.0, lineage: list = None) -> FeatureValue:
+            # If value is a dict (like in timeline), we might need custom logic.
+            # For this simple example, we assume we just pass a numeric value.
+            raw = float(res.value) if not isinstance(res.value, dict) else float(res.value.get("consistency", 0.0))
+            norm = Normalizer.normalize_score(raw, min_val, max_val)
+            final = Scaler.scale_confidence(norm, res.confidence)
+            return FeatureValue(value=final, derived_from=lineage or [])
+
+        # Construct versions dict
+        versions = {
+            "skill_depth": skill_result.version,
+            "career_progression": career_result.version,
+            "project_complexity": project_result.version,
+            "growth": growth_result.version,
+            "authenticity": authenticity_result.version,
+            "timeline_consistency": timeline_result.version
+        }
         
         return CandidateFeatures(
             candidate_id=candidate_id,
             tenant_id=tenant_id,
-            skill_depth=final_skill,
-            career_progression=final_career,
-            project_complexity=final_project,
-            growth=final_growth,
-            authenticity=final_auth
+            skill_depth=process(skill_result, 100.0, lineage=["extracted_skills"]),
+            career_progression=process(career_result, 50.0, lineage=["extracted_roles"]),
+            project_complexity=process(project_result, 40.0, lineage=["extracted_projects"]),
+            growth=process(growth_result, 100.0, lineage=["extracted_skills", "extracted_roles"]),
+            authenticity=process(authenticity_result, 100.0, lineage=["extracted_roles", "extracted_education"]),
+            timeline_consistency=process(timeline_result, 1.0, lineage=["extracted_roles"]),
+            versions=versions
         )

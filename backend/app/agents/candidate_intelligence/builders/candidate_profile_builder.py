@@ -1,7 +1,8 @@
 from app.schemas.candidate import CandidateProfile, Role, Education
 from app.schemas.extraction import ExtractedEntities
+from .base import Builder
 
-class CandidateProfileBuilder:
+class CandidateProfileBuilder(Builder):
     @staticmethod
     def build(tenant_id: str, candidate_id: str, entities: ExtractedEntities, quality_score: float) -> CandidateProfile:
         experience = [

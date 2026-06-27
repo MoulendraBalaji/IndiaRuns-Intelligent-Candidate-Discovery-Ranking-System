@@ -7,6 +7,7 @@ class FeaturePipeline(ABC):
     """
     Base contract for all deterministic feature pipelines.
     """
+    PIPELINE_VERSION: str = "1.0.0"
     
     @abstractmethod
     async def process(self, entities: ExtractedEntities) -> PipelineResult:
@@ -21,5 +22,6 @@ class FeaturePipeline(ABC):
             value=value,
             confidence=confidence,
             warnings=warnings,
-            latency_ms=latency
+            latency_ms=latency,
+            version=self.PIPELINE_VERSION
         )

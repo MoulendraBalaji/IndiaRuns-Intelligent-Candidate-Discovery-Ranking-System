@@ -2,7 +2,7 @@ import pytest
 from pydantic import ValidationError
 from app.schemas.candidate import CandidateProfile
 from app.schemas.job import JobProfile
-from app.schemas.feature_store import CandidateFeatures
+from app.schemas.feature_store import CandidateFeatures, FeatureValue
 from app.schemas.evaluation import EvaluationResult
 from app.schemas.ranking import CandidateRank
 from app.schemas.agent import AgentRequest, AgentResponse
@@ -41,11 +41,10 @@ def test_job_profile_valid():
 def test_feature_store_bounds():
     with pytest.raises(ValidationError):
         # skill_depth > 1.0 should fail
-        CandidateFeatures(candidate_id="c1", tenant_id="t1", skill_depth=1.5)
+        CandidateFeatures(candidate_id="c1", tenant_id="t1", skill_depth=FeatureValue(value=1.5, derived_from=["a"]), career_progression=FeatureValue(value=0.5), project_complexity=FeatureValue(value=0.5), authenticity=FeatureValue(value=0.5), growth=FeatureValue(value=0.5), timeline_consistency=FeatureValue(value=0.5))
     
-    # Valid
-    features = CandidateFeatures(candidate_id="c1", tenant_id="t1", skill_depth=0.8)
-    assert features.skill_depth == 0.8
+    features = CandidateFeatures(candidate_id="c1", tenant_id="t1", skill_depth=FeatureValue(value=0.8), career_progression=FeatureValue(value=0.5), project_complexity=FeatureValue(value=0.5), authenticity=FeatureValue(value=0.5), growth=FeatureValue(value=0.5), timeline_consistency=FeatureValue(value=0.5))
+    assert features.skill_depth.value == 0.8
 
 def test_evaluation_result_bounds():
     with pytest.raises(ValidationError):

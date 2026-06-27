@@ -1,8 +1,9 @@
 from app.schemas.feature_store import CandidateFeatures
 from app.ml.feature_engineering.candidate import CandidateFeatureEngineer
 from app.schemas.pipeline import PipelineResult
+from .base import Builder
 
-class CandidateFeatureBuilder:
+class CandidateFeatureBuilder(Builder):
     @staticmethod
     def build(
         tenant_id: str,
@@ -11,7 +12,8 @@ class CandidateFeatureBuilder:
         career_res: PipelineResult,
         project_res: PipelineResult,
         growth_res: PipelineResult,
-        auth_res: PipelineResult
+        auth_res: PipelineResult,
+        timeline_res: PipelineResult
     ) -> CandidateFeatures:
         """
         Delegates the heavy lifting to the ML feature engineering layer
@@ -24,5 +26,6 @@ class CandidateFeatureBuilder:
             career_result=career_res,
             project_result=project_res,
             growth_result=growth_res,
-            authenticity_result=auth_res
+            authenticity_result=auth_res,
+            timeline_result=timeline_res
         )

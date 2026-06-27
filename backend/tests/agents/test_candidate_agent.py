@@ -47,7 +47,7 @@ async def test_candidate_intelligence_agent_success(mock_entities):
     assert len(profile["experience"]) == 1
     
     features = res.data["features"]
-    assert features["skill_depth"] > 0.0  # Normalized & scaled
+    assert features["skill_depth"]["value"] > 0.0  # Normalized & scaled
 
 @pytest.mark.asyncio
 async def test_candidate_intelligence_agent_malformed_input():
