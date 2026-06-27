@@ -14,10 +14,13 @@ class GeminiClient:
     _cache: Dict[str, str] = {}
 
     def __init__(self, api_key: str = None):
-        key = api_key or os.environ.get("GEMINI_API_KEY")
-        if not key:
-            raise ValueError("GEMINI_API_KEY is not set.")
-        self.client = genai.Client(api_key=key)
+        self.key = api_key or os.environ.get("GEMINI_API_KEY")
+        self.client = None
+        if not self.key or self.key in ("mock", "your_gemini_api_key_here"):
+            import logging
+            logging.getLogger(__name__).warning("GEMINI_API_KEY is not set to a valid key. LLM actions will fail if called.")
+        else:
+            self.client = genai.Client(api_key=self.key)
 
     def _generate_cache_key(self, prompt: str, text: str, schema_name: str) -> str:
         content = f"{prompt}|{text}|{schema_name}"
@@ -33,6 +36,8 @@ class GeminiClient:
         """
         Calls Gemini to extract structured JSON based on the provided Pydantic schema.
         """
+        if not self.client:
+            raise ValueError("Gemini client is not initialized due to missing/invalid API key.")
         if use_cache:
             cache_key = self._generate_cache_key(prompt, text_input, response_schema.__name__)
             if cache_key in self._cache:
