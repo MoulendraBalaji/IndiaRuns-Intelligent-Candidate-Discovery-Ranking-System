@@ -33,3 +33,6 @@ dev = [
     "mypy>=1.10.0",
     "watchfiles>=0.22.0"
 ]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
