@@ -25,7 +25,7 @@ def test_candidate_profile_valid():
 
 def test_candidate_profile_missing_required():
     with pytest.raises(ValidationError):
-        CandidateProfile(first_name="John") # missing tenant_id, summary, etc.
+        CandidateProfile(first_name="John") # missing tenant_id, last_name, summary, etc.
 
 def test_job_profile_valid():
     data = {

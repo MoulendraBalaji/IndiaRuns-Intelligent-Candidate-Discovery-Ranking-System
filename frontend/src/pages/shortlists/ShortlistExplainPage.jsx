@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import { candidateService } from '../../services/candidateService';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { ArrowLeft, Copy, Check, FileCheck, ShieldAlert, Sparkles, Database } from 'lucide-react';
 
@@ -18,8 +20,8 @@ export default function ShortlistExplainPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJob = await api.getJob(jobId);
-      const fetchedCand = await api.getCandidate(candidateId);
+      const fetchedJob = await jobService.getJob(jobId);
+      const fetchedCand = await candidateService.getCandidate(candidateId);
       if (fetchedJob && fetchedCand) {
         setJob(fetchedJob);
         setCandidate(fetchedCand);

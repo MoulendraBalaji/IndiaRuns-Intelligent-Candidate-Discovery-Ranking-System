@@ -14,6 +14,6 @@ class ProjectPipeline(FeaturePipeline):
             warnings.append("No projects extracted.")
             confidence = 0.8
             
-        raw_score = float(num_projects * 5.0)
+        raw_score = num_projects * 5.0
         
         return self._create_result(value=raw_score, confidence=confidence, warnings=warnings, start_time=start_time)

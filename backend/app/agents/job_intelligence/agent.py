@@ -24,7 +24,7 @@ class JobIntelligenceAgent:
     """
     _job_cache: Dict[str, dict] = {}
     
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: str | None = None):
         self.parser = JobParser(api_key=api_key)
 
     async def execute(self, request: AgentRequest) -> AgentResponse:

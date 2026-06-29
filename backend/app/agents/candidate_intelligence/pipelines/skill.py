@@ -16,6 +16,6 @@ class SkillPipeline(FeaturePipeline):
             
         # Very naive deterministic scoring for now
         # Will be properly scaled in Feature Engineering layer
-        raw_score = float(min(num_skills * 1.5, 100.0))
+        raw_score = min(num_skills * 1.5, 100.0)
         
         return self._create_result(value=raw_score, confidence=confidence, warnings=warnings, start_time=start_time)

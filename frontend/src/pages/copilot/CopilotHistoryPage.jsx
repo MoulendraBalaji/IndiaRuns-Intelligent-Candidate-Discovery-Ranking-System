@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { api } from '../../services/api';
+import { copilotService } from '../../services/copilotService';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { Search, Plus, MessageSquare, Trash2, ArrowLeft } from 'lucide-react';
 
@@ -15,8 +17,8 @@ export default function CopilotHistoryPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedHistory = await api.getCopilotHistory();
-      const fetchedJobs = await api.getJobs();
+      const fetchedHistory = await copilotService.getCopilotHistory();
+      const fetchedJobs = await jobService.getJobs();
       setHistory(fetchedHistory);
       setJobs(fetchedJobs);
       setLoading(false);

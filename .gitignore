@@ -58,6 +58,11 @@ frontend/node_modules/
 frontend/dist/
 .DS_Store
 
-#Dataset
+# Dataset & Submission artifacts
 dataset/candidates.jsonl
+data/submissions/*_test.csv
+
+# Local runtime & test caches
+backend/data/matching_tasks.json
+backend/temp_pytest/
 

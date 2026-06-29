@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { api } from '../../services/api';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { ArrowLeft, Sparkles, AlertTriangle } from 'lucide-react';
 
@@ -18,7 +19,7 @@ export default function AdaptiveConfigPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJob = await api.getJob(jobId);
+      const fetchedJob = await jobService.getJob(jobId);
       if (fetchedJob) {
         setJob(fetchedJob);
       }

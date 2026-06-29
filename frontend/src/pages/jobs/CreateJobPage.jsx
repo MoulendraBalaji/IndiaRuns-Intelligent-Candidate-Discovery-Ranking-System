@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { api } from '../../services/api';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { ArrowLeft, Loader2, Sparkles } from 'lucide-react';
 
@@ -43,7 +44,7 @@ export default function CreateJobPage() {
     }
 
     // Save job using API
-    const newJob = await api.createJob({
+    const newJob = await jobService.createJob({
       title,
       department,
       seniority,
@@ -67,7 +68,7 @@ export default function CreateJobPage() {
       alert('Please fill in at least the Job Title to save a draft.');
       return;
     }
-    const newJob = await api.createJob({
+    const newJob = await jobService.createJob({
       title,
       department,
       seniority,

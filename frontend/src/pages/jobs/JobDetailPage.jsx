@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import { candidateService } from '../../services/candidateService';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { ArrowLeft, Edit3, HelpCircle, Copy, Check, Users, ShieldAlert, ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -21,10 +23,10 @@ export default function JobDetailPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJob = await api.getJob(id);
+      const fetchedJob = await jobService.getJob(id);
       if (fetchedJob) {
         setJob(fetchedJob);
-        const candidates = await api.getCandidatesForJob(id);
+        const candidates = await candidateService.getCandidatesForJob(id);
         setCandidateCount(candidates.length);
       }
       setLoading(false);

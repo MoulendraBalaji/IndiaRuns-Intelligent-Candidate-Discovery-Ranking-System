@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { api } from '../../services/api';
+import { candidateService } from '../../services/candidateService';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { Search, Plus, Filter, Calendar, ChevronLeft, ChevronRight, AlertCircle, Trash } from 'lucide-react';
 
@@ -21,8 +23,8 @@ export default function JobsListPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJobs = await api.getJobs();
-      const fetchedCandidates = await api.getCandidates();
+      const fetchedJobs = await jobService.getJobs();
+      const fetchedCandidates = await candidateService.getCandidates();
       setJobs(fetchedJobs);
       setCandidates(fetchedCandidates);
       setLoading(false);

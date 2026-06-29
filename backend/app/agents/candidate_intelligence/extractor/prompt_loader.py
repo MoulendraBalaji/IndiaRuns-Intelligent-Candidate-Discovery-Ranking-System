@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 class PromptLoader:
-    def __init__(self, prompts_dir: str = None):
+    def __init__(self, prompts_dir: str | None = None):
         if not prompts_dir:
             # Assume running from backend root, prompts are in app/prompts
             base_dir = Path(__file__).resolve().parent.parent.parent.parent

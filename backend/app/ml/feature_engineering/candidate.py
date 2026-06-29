@@ -19,7 +19,7 @@ class CandidateFeatureEngineer:
         Transforms raw pipeline results into scaled, normalized features for the Feature Store.
         """
         
-        def process(res: PipelineResult, max_val: float, min_val: float = 0.0, lineage: list = None) -> FeatureValue:
+        def process(res: PipelineResult, max_val: float, min_val: float = 0.0, lineage: list | None = None) -> FeatureValue:
             # If value is a dict (like in timeline), we might need custom logic.
             # For this simple example, we assume we just pass a numeric value.
             raw = float(res.value) if not isinstance(res.value, dict) else float(res.value.get("consistency", 0.0))

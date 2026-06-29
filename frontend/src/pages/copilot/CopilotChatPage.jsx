@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import { candidateService } from '../../services/candidateService';
+import { copilotService } from '../../services/copilotService';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { Bot, Send, User, ChevronRight, RefreshCw } from 'lucide-react';
 
@@ -23,11 +26,11 @@ export default function CopilotChatPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJobs = await api.getJobs();
+      const fetchedJobs = await jobService.getJobs();
       setJobs(fetchedJobs);
       if (fetchedJobs.length > 0) {
         setSelectedJobId(fetchedJobs[0].id);
-        const cands = await api.getCandidatesForJob(fetchedJobs[0].id);
+        const cands = await candidateService.getCandidatesForJob(fetchedJobs[0].id);
         setCandidates(cands);
       }
       setLoading(false);
@@ -43,7 +46,7 @@ export default function CopilotChatPage() {
   const handleJobContextChange = async (e) => {
     const id = e.target.value;
     setSelectedJobId(id);
-    const cands = await api.getCandidatesForJob(id);
+    const cands = await candidateService.getCandidatesForJob(id);
     setCandidates(cands);
     
     // Clear and reset chat
@@ -62,7 +65,7 @@ export default function CopilotChatPage() {
     setStreaming(true);
 
     // Call API (simulates latency)
-    const reply = await api.askCopilot(selectedJobId, text);
+    const reply = await copilotService.askCopilot(selectedJobId, text);
     
     setStreaming(false);
     setMessages(prev => [...prev, reply]);

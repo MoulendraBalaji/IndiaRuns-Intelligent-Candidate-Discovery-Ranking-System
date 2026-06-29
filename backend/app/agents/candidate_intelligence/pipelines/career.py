@@ -14,6 +14,6 @@ class CareerPipeline(FeaturePipeline):
             warnings.append("No career history extracted.")
             confidence = 0.6
             
-        raw_score = float(num_roles * 10.0)
+        raw_score = num_roles * 10.0
         
         return self._create_result(value=raw_score, confidence=confidence, warnings=warnings, start_time=start_time)

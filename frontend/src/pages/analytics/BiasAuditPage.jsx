@@ -34,7 +34,7 @@ export default function BiasAuditPage() {
 
       {/* Summary Row */}
       <div className="card" style={{ padding: '20px 24px', marginBottom: '24px' }}>
-        <div 
+        <div
           style={{
             display: 'flex',
             justifyContent: 'space-between',
@@ -48,7 +48,7 @@ export default function BiasAuditPage() {
             <div style={{ fontWeight: 700, fontSize: '18px', marginTop: '4px' }}>42 Verified Runs</div>
           </div>
           <div style={{ width: '1px', height: '30px', backgroundColor: 'var(--color-border)' }}></div>
-          
+
           <div>
             <span className="text-muted text-small">PII Fields Stripped</span>
             <div style={{ fontWeight: 700, fontSize: '18px', marginTop: '4px' }}>5 Fields Stripped</div>
@@ -76,10 +76,10 @@ export default function BiasAuditPage() {
         <p className="text-muted text-small" style={{ marginBottom: '16px' }}>
           To prevent demographic bias, the following parameters are fully masked in candidate records during evaluation runs.
         </p>
-        
+
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           {['Candidate Name', 'Gender Identity', 'Photo Header', 'College Name / Alma Mater', 'Residential Address'].map((field, idx) => (
-            <div 
+            <div
               key={idx}
               className="chip chip-success"
               style={{

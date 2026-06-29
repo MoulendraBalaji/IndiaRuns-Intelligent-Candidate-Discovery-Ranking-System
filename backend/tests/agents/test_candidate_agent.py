@@ -39,6 +39,7 @@ async def test_candidate_intelligence_agent_success(mock_entities):
     res = await agent.execute(req)
     
     assert res.success is True
+    assert res.data is not None
     assert "profile" in res.data
     assert "features" in res.data
     

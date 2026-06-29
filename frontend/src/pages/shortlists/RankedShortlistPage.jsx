@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import { candidateService } from '../../services/candidateService';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { ArrowLeft, Download, ShieldCheck, HelpCircle, Eye, Sliders, ChevronDown } from 'lucide-react';
 
@@ -19,10 +21,10 @@ export default function RankedShortlistPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJob = await api.getJob(jobId);
+      const fetchedJob = await jobService.getJob(jobId);
       if (fetchedJob) {
         setJob(fetchedJob);
-        const fetchedCands = await api.getCandidatesForJob(jobId);
+        const fetchedCands = await candidateService.getCandidatesForJob(jobId);
         setCandidates(fetchedCands);
       }
       setLoading(false);

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import { candidateService } from '../../services/candidateService';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { Upload, ArrowLeft, Check, AlertCircle, RefreshCw, Loader } from 'lucide-react';
 
@@ -20,7 +22,7 @@ export default function CandidateUploadPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJobs = await api.getJobs();
+      const fetchedJobs = await jobService.getJobs();
       setJobs(fetchedJobs);
       
       // Auto select from state/location parameter if navigated from Job Detail
@@ -82,7 +84,7 @@ export default function CandidateUploadPage() {
 
       // Complete parsing and inject candidate into database
       const cleanName = item.name.replace(/\.[^/.]+$/, "").split('_').join(' ');
-      const newCand = await api.addCandidate({
+      const newCand = await candidateService.addCandidate({
         name: cleanName,
         role: jobs.find(j => j.id === selectedJobId)?.title || 'Candidate Profile',
         email: `${cleanName.toLowerCase().replace(/\s/g, '')}@gmail.com`,

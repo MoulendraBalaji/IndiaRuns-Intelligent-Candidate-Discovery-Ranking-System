@@ -16,7 +16,7 @@ class CandidateIntelligenceAgent:
     """
     Orchestrates the LLM extraction and deterministic feature pipelines.
     """
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: str | None = None):
         self.parser = CandidateParser(api_key=api_key)
         self.pipelines = PipelineRegistry.get_all_instances()
 

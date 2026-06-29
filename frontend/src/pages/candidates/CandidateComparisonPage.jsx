@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
+import { candidateService } from '../../services/candidateService';
 import Layout from '../../components/Layout';
 import { ArrowLeft, X, Layers, Plus, ExternalLink } from 'lucide-react';
 
@@ -16,7 +17,7 @@ export default function CandidateComparisonPage() {
 
   useEffect(() => {
     async function loadData() {
-      const allCands = await api.getCandidates();
+      const allCands = await candidateService.getCandidates();
       const matched = allCands.filter(c => passedIds.includes(c.id));
       setCandidates(matched);
       setLoading(false);

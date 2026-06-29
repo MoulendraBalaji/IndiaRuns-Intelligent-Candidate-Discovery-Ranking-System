@@ -18,6 +18,7 @@ def mock_context():
 @pytest.mark.asyncio
 async def test_copilot_agent_execution(mock_context):
     agent = CopilotAgent(api_key="mock")
+    agent.client.client = MagicMock()
     
     # Mock the Gemini Client response content object
     mock_res = MagicMock()

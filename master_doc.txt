@@ -1,0 +1,912 @@
+ 
+◈  CLASSIFIED: AI TALENT INTELLIGENCE PLATFORM  ◈
+NEXUS
+AI HIRING INTELLIGENCE PLATFORM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Complete Engineering Documentation Suite
+ 
+● PRD  ● TRS  ● SRS  ● Architecture  ● Database
+● API Spec  ● Agent Design  ● Data Flow  ● Folder Structure
+● Roadmap  ● Evaluation Metrics  ● PPT Guide  ● GitHub README
+● UI/UX Specification  ● Deployment Architecture
+ 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Hackathon Submission — AI Talent Intelligence Engine
+Version 1.0  |  2026  |  Multi-Agent · Explainable AI · Production Grade
+ 
+
+ABOUT THIS DOCUMENT
+What is NEXUS?
+NEXUS is a production-grade AI Hiring Intelligence Platform that fundamentally reimagines how companies hire. Instead of matching keywords, NEXUS deploys a panel of specialized AI agents — each reasoning like an experienced recruiter, hiring manager, or behavioral psychologist — to holistically evaluate candidates and produce ranked, fully explainable shortlists that hiring teams can trust and act on immediately.
+The platform answers not "who matches the keywords" but "who is the best person to hire, why, with what evidence, and with what confidence."
+What's in this document?
+This document is a complete engineering documentation suite compiled into a single unified reference. It covers every layer of the NEXUS platform — from product requirements and agent design to database schemas, API specs, deployment architecture, and UI/UX guidelines. It is designed as both a hackathon submission artifact and a production engineering blueprint.
+ 
+◆ NOTE: All documents in this suite are interconnected. Cross-references are provided where relevant. When in doubt, refer to the Architecture Document (§04) as the single source of truth for system design.
+
+TABLE OF CONTENTS
+ 
+01  Product Requirements Document (PRD)
+02  Technical Requirements Specification (TRS)
+03  Software Requirements Specification (SRS)
+04  System Architecture Document
+05  Database Design
+06  API Specification (OpenAPI-Style)
+07  Agent Design Document
+08  Data Flow & Sequence Diagrams
+09  Folder Structure
+10  Development Roadmap
+11  Evaluation Metrics
+12  PPT Architecture Guide
+13  GitHub README
+14  UI/UX Specification
+15  Deployment Architecture
+
+01 — PRODUCT REQUIREMENTS DOCUMENT (PRD)
+1.1 Executive Summary
+NEXUS is a production-grade AI Hiring Intelligence Platform that replaces keyword-based Applicant Tracking Systems with a multi-agent AI panel that thinks and reasons like experienced recruiters. The platform evaluates candidates holistically — skill depth, project quality, career trajectory, behavioral signals, and resume authenticity — and produces ranked, explainable shortlists that hiring teams can trust and act on.
+NEXUS answers not "who matches the keywords" but "who is the best person to hire, why, with what evidence, and with what confidence."
+1.2 Problem Statement
+Traditional ATS tools rely on exact keyword matching, rejecting qualified candidates who use synonyms (e.g. "Apache Kafka" vs "Message Queues")
+Recruiters spend 60–80% of their time on manual screening that should be automated intelligently
+Ranking scores are opaque — recruiters cannot understand why a candidate was ranked higher
+Resume inflation is rampant; systems cannot distinguish genuine expertise from keyword stuffing
+No existing free tool predicts growth potential or proactively flags hiring risks
+Current solutions are not designed for multi-agent, explainable AI reasoning
+Bias baked into ranking (name, college prestige, photo) produces discriminatory shortlists
+1.3 Goals & Non-Goals
+Primary Goal: Build an AI hiring panel that reasons over candidates the way experienced recruiters do
+Secondary Goal: Generate ranked, explainable shortlists with skill gaps, hiring risks, and tailored interview questions
+Tertiary Goal: Demonstrate production readiness: Docker, FastAPI, PostgreSQL, Qdrant, Redis, LangGraph
+Non-Goal (v1): Full ATS workflow (scheduling, offers, onboarding) — deferred to v2
+Non-Goal (v1): Real-time crawling of LinkedIn or external platforms — requires OAuth agreements
+Non-Goal (v1): Mobile application — desktop web dashboard only
+
+
+
+
+
+
+1.4 Target Users
+ 
+1.5 Core Feature Requirements
+F-01: Ingest JDs (text/JSON) and parse into structured Job Intelligence Profile with hidden expectation extraction
+F-02: Parse resumes (PDF/DOCX) into structured Candidate Knowledge Profiles with entity extraction
+F-03: Semantic retrieval — top-K candidates via vector similarity (BGE-M3 + Qdrant) with metadata filtering
+F-04: Multi-agent scoring: Recruiter Agent, Hiring Manager Agent, Behavioral Agent (parallel execution)
+F-05: Skill Intelligence with ontology-based semantic skill graph (Kafka → Message Queues → Streaming)
+F-06: Project Intelligence — extract problem/architecture/scale/impact from project descriptions
+F-07: Career Intelligence — trajectory, velocity, tenure stability, and domain progression analysis
+F-08: Authenticity Verification — evidence-based skill confidence scoring to detect resume inflation
+F-09: Growth Potential Agent — predict future trajectory from historical signals and learning velocity
+F-10: Adaptive Ranking — dynamic weight tuning per role type (research / leadership / junior / devops)
+F-11: Explainability Engine — per-candidate narrative: why selected, gaps, risks, tailored interview questions
+F-12: Recruiter Copilot — RAG-based streaming chat interface over all ranking outputs
+F-13: Bias Mitigation — strip PII (name, gender, photo, college name) before ranking pipeline
+F-14: Dashboard — ranked list with radar charts, career timeline, and skill gap heatmap
+F-15: Ranked output export (CSV/JSON/PDF) for reporting and submission
+
+
+
+1.6 Success Metrics
+
+02 — TECHNICAL REQUIREMENTS SPECIFICATION (TRS)
+Every technology choice in NEXUS is deliberate, evaluated against alternatives, and justified by production requirements.
+2.1 AI & Embedding Layer
+ 
+2.2 Data & Storage Layer
+ 
+
+2.3 Backend & API Layer
+ 
+2.4 Frontend Layer
+ 
+2.5 Performance Requirements
+Resume parsing: < 2 seconds per document (PDF/DOCX under 5MB)
+Embedding generation: batch 50 candidates in < 5 seconds via ONNX-optimized BGE-M3
+Qdrant semantic retrieval (top-100 from 10k candidates): < 200ms P99
+Full multi-agent pipeline per candidate: < 3 seconds (parallelized LangGraph nodes)
+Full JD → ranked shortlist (10 candidates): < 15 seconds end-to-end
+Dashboard page load: < 1.5 seconds (Next.js SSR + Redis cache + CDN assets)
+Recruiter Copilot response: < 3 seconds to first token (streaming via SSE)
+2.6 Security Requirements
+All candidate PII encrypted at rest (AES-256) in PostgreSQL via pgcrypto extension
+Tenant isolation: each company's data namespaced in Qdrant collections and PostgreSQL schemas
+API key rotation every 30 days; secrets managed via environment variables or Vault — never in code
+GDPR compliance: candidate data deletion endpoint with cascading cleanup across all stores
+All agent inputs/outputs logged with timestamp, model version, and recruiter ID for full auditability
+Bias audit trail: pre-ranking PII strip log, post-ranking identity restore log with verification hash
+Rate limiting: 100 requests/minute per recruiter account via Redis token bucket
+
+03 — SOFTWARE REQUIREMENTS SPECIFICATION (SRS)
+3.1 Functional Requirements
+FR-01: Job Ingestion & Intelligence
+The system SHALL accept JD input via REST API as raw text or structured JSON
+The system SHALL invoke the Job Intelligence Agent to extract: required_skills, preferred_skills, experience_level, industry, soft_skills, career_patterns, red_flags, role_objectives, hidden_expectations, seniority_tier
+The system SHALL generate a structured JobProfile object and persist it in PostgreSQL
+The system SHALL generate a combined embedding of the JD + JobProfile for Qdrant indexing
+Job profiles SHALL be versioned; re-analysis SHALL create a new version without overwriting history
+FR-02: Resume Ingestion & Candidate Profiling
+The system SHALL accept resume uploads as PDF or DOCX via multipart/form-data
+The system SHALL parse resumes using Docling with pdfplumber fallback for scanned documents
+The system SHALL extract: contact_info, skills, work_history, education, projects, certifications, activity_signals
+The system SHALL build a CandidateProfile JSON and persist it in PostgreSQL
+The system SHALL generate a candidate representation embedding and upsert into Qdrant
+The system SHALL strip PII (name, photo, college name, address) before passing to ranking agents
+FR-03: Semantic Retrieval
+Given a job_id, the system SHALL query Qdrant for top-K candidates by cosine similarity (default K=100)
+K SHALL be configurable per request (range 10–500) via query parameter
+The system SHALL apply metadata pre-filters if specified (e.g., min_experience_years, required_location)
+Retrieval results SHALL include candidate_id, similarity_score, and basic profile metadata
+FR-04: Multi-Agent Scoring
+The system SHALL run 3 primary evaluation agents in parallel: Recruiter Agent, Hiring Manager Agent, Behavioral Agent
+Each agent SHALL return: score (0–100), justification (list[str]), signals_detected (list[str]), risks_or_gaps (list[str])
+The system SHALL also run: Skill Intelligence Agent, Project Intelligence Agent, Career Intelligence Agent, Authenticity Agent, Growth Potential Agent
+All agent outputs SHALL be structured via Pydantic models and validated before aggregation
+Agent failures SHALL NOT fail the entire pipeline; defaults SHALL be used with a warning flag
+
+FR-05: Adaptive Ranking & Final Score
+The system SHALL compute a Hiring Relevance Score (HRS) using weighted aggregation of all agent outputs
+Weights SHALL be dynamically selected based on role_type (research / leadership / junior / devops / default)
+Default: HRS = 0.30×Semantic + 0.25×Recruiter + 0.20×HiringManager + 0.15×Behavioral + 0.10×Growth
+The system SHALL sort candidates descending by HRS and return the top-N shortlist (configurable)
+Weight configurations SHALL be logged per ranking job for auditability and reproducibility
+FR-06: Explainability
+Each ranked candidate SHALL have an Explanation object: overall_match, confidence_score, why_selected, missing_skills, hiring_risks, interview_questions (3–5), upskilling_recommendation
+Explanations SHALL be generated by the Explanation Agent using structured output mode
+No recommendation SHALL be surfaced to the UI without an attached explanation
+Explanations SHALL reference specific evidence from the candidate's profile (not generic statements)
+FR-07: Recruiter Copilot
+The system SHALL expose a /copilot/chat endpoint accepting natural language queries in context of a job_id
+The Copilot SHALL use RAG over: ranking outputs, agent explanations, candidate profiles, job profiles
+The Copilot SHALL support: comparison queries, filter queries, follow-up questions, ranking rationale queries
+Responses SHALL stream via Server-Sent Events (SSE) with delta tokens
+
+
+
+
+
+
+
+3.2 Non-Functional Requirements
+
+04 — SYSTEM ARCHITECTURE DOCUMENT
+4.1 Architecture Philosophy
+NEXUS is designed as a layered, agent-orchestrated intelligence platform. The key architectural insight is that ATS ranking is fundamentally a reasoning problem, not a retrieval problem. Semantic search handles retrieval (finding relevant candidates from a corpus); multi-agent LLM reasoning handles evaluation (deciding who to hire and why). These two concerns are deliberately separated in the architecture, allowing each layer to scale and evolve independently.
+4.2 High-Level Architecture Layers
+ 
+
+
+
+4.3 Full Pipeline Architecture (ASCII)
+JD INPUT FLOW:
+  [Recruiter UI] ──POST /api/v1/jobs──▶ [FastAPI Gateway]
+                                               │
+                                [Job Intelligence Agent]
+                                ┌───────────────────────┐
+                                │ Required Skills        │
+                                │ Hidden Expectations    │
+                                │ Seniority / Domain     │
+                                │ Red Flags / Culture    │
+                                └───────────────────────┘
+                                               │
+                                     [JobProfile JSON]
+                                               │
+                           ┌───────────────────┴──────────────────┐
+                    [PostgreSQL jobs]                 [Qdrant: job_embeddings]
+ 
+RANKING PIPELINE:
+  [job_id + K] ──▶ Qdrant Top-K Retrieval ──▶ Candidate Pool (K=100 default)
+                                                          │
+              ┌───────────────────────────────────────────┤
+              │           PARALLEL AGENT NODES            │
+              │                                           │
+     [Recruiter Agent]      [HM Agent]      [Behavioral Agent]
+     [Skill Agent]          [Project Agent] [Career Agent]
+     [Authenticity Agent]                   [Growth Agent]
+              │                                           │
+              └─────────[Adaptive Ranking Engine]─────────┘
+                                     │
+                           [Explainability Agent]
+                                     │
+                          [Ranked Shortlist JSON]
+                                     │
+               ┌────────────────────┴────────────────────┐
+    [Recruiter Copilot RAG]                    [CSV/JSON Export]
+              │
+    [Next.js Dashboard + Chat UI]
+ 4.4 LangGraph Agent State Machine
+  StateGraph nodes:
+  ├── START
+  ├── job_intelligence_node       (sequential, runs once per JD at ingestion)
+  ├── resume_intelligence_node    (parallel: Fan-out per candidate batch)
+  ├── skill_intelligence_node     (parallel: runs after resume_intelligence)
+  ├── project_intelligence_node   (parallel: runs after resume_intelligence)
+  ├── career_intelligence_node    (parallel: runs after resume_intelligence)
+  ├── behavioral_intelligence_node (parallel: runs after resume_intelligence)
+  ├── authenticity_node           (parallel: runs after skill_intelligence)
+  ├── growth_potential_node       (parallel: depends on career + skill + behavioral)
+  ├── adaptive_ranking_node       (sequential: Fan-in, waits for all agents)
+  └── explainability_node         (sequential: post-ranking, per top-N candidates)
+  └── END
+
+  State object: NexusRankingState {
+    job_profile: JobProfile
+    candidates: List[CandidateProfile]
+    agent_outputs: Dict[str, AgentEvaluation]
+    ranked_list: List[RankedCandidate]
+    explanations: Dict[str, Explanation]
+    error_flags: List[str]
+  }
+ 
+4.5 Design Decisions & Tradeoffs
+
+05 — DATABASE DESIGN
+PostgreSQL 16 is the primary relational store. Qdrant holds all vector embeddings. Redis provides caching and session storage. MinIO persists binary resume files. All stores are Docker-native and production-ready.
+5.1 PostgreSQL Schema
+Table: tenants
+  tenants
+  ├── id              UUID PRIMARY KEY DEFAULT gen_random_uuid()
+  ├── name            TEXT NOT NULL UNIQUE
+  ├── plan            TEXT DEFAULT 'trial'   -- trial/pro/enterprise
+  ├── api_key_hash    TEXT                    -- hashed API key
+  ├── created_at      TIMESTAMPTZ DEFAULT NOW()
+  └── updated_at      TIMESTAMPTZ DEFAULT NOW()
+Table: jobs
+  jobs
+  ├── id              UUID PRIMARY KEY DEFAULT gen_random_uuid()
+  ├── tenant_id       UUID NOT NULL REFERENCES tenants(id) ON DELETE CASCADE
+  ├── title           TEXT NOT NULL
+  ├── raw_jd          TEXT NOT NULL
+  ├── job_profile     JSONB NOT NULL     -- structured JobProfile
+  ├── role_type       TEXT DEFAULT 'default'  -- research/leadership/junior/devops/default
+  ├── embedding_id    TEXT               -- Qdrant point ID
+  ├── version         INT DEFAULT 1      -- increments on re-analysis
+  ├── status          TEXT DEFAULT 'active'  -- draft/active/archived
+  ├── created_at      TIMESTAMPTZ DEFAULT NOW()
+  └── updated_at      TIMESTAMPTZ DEFAULT NOW()
+Table: candidates
+  candidates
+  ├── id                  UUID PRIMARY KEY DEFAULT gen_random_uuid()
+  ├── tenant_id           UUID NOT NULL REFERENCES tenants(id) ON DELETE CASCADE
+  ├── raw_profile         JSONB NOT NULL       -- full parsed profile (includes PII)
+  ├── anonymized_profile  JSONB NOT NULL       -- PII-stripped version for agents
+  ├── embedding_id        TEXT                  -- Qdrant point ID
+  ├── skills              TEXT[]               -- flat skill array for quick filtering
+  ├── experience_years    FLOAT
+  ├── file_path           TEXT                  -- MinIO object path
+  ├── file_hash           TEXT                  -- SHA256 of original file (dedup)
+  ├── created_at          TIMESTAMPTZ DEFAULT NOW()
+  └── updated_at          TIMESTAMPTZ DEFAULT NOW()
+Table: rankings
+  rankings
+  ├── id                  UUID PRIMARY KEY DEFAULT gen_random_uuid()
+  ├── job_id              UUID NOT NULL REFERENCES jobs(id)
+  ├── candidate_id        UUID NOT NULL REFERENCES candidates(id)
+  ├── final_score         FLOAT NOT NULL       -- Hiring Relevance Score (0-100)
+  ├── rank_position       INT NOT NULL         -- 1-indexed within this job
+  ├── semantic_score      FLOAT
+  ├── recruiter_score     FLOAT
+  ├── hm_score            FLOAT
+  ├── behavioral_score    FLOAT
+  ├── growth_score        FLOAT
+  ├── authenticity_score  FLOAT
+  ├── skill_score         FLOAT
+  ├── project_score       FLOAT
+  ├── career_score        FLOAT
+  ├── explanation         JSONB               -- full Explanation object
+  ├── agent_outputs       JSONB               -- raw per-agent eval outputs
+  ├── role_weights        JSONB               -- weight config used for audit
+  ├── created_at          TIMESTAMPTZ DEFAULT NOW()
+  └── UNIQUE(job_id, candidate_id)
+Table: agent_logs
+  agent_logs
+  ├── id                UUID PRIMARY KEY DEFAULT gen_random_uuid()
+  ├── ranking_id        UUID REFERENCES rankings(id)
+  ├── agent_name        TEXT NOT NULL         -- e.g. 'skill_intelligence_agent'
+  ├── model_name        TEXT NOT NULL         -- e.g. 'gemini-2.5-flash'
+  ├── model_version     TEXT
+  ├── prompt_tokens     INT
+  ├── completion_tokens INT
+  ├── latency_ms        INT
+  ├── input_hash        TEXT                  -- SHA256(input) for audit
+  ├── output_hash       TEXT                  -- SHA256(output) for audit
+  ├── error             TEXT                  -- NULL if success
+  └── created_at        TIMESTAMPTZ DEFAULT NOW()
+Table: copilot_sessions
+  copilot_sessions
+  ├── id              UUID PRIMARY KEY DEFAULT gen_random_uuid()
+  ├── job_id          UUID NOT NULL REFERENCES jobs(id)
+  ├── recruiter_id    UUID NOT NULL            -- user identity
+  ├── messages        JSONB DEFAULT '[]'       -- list of {role, content, ts}
+  ├── created_at      TIMESTAMPTZ DEFAULT NOW()
+  └── last_active_at  TIMESTAMPTZ DEFAULT NOW()
+5.2 Qdrant Vector Collections
+ 
+
+5.3 Redis Key Patterns
+
+06 — API SPECIFICATION (OpenAPI-Style)
+6.1 Base URL & Auth
+  Base URL:     https://api.nexus.ai/api/v1
+  Auth Header:  Authorization: Bearer <JWT>
+  Content-Type: application/json  (POST/PUT)
+                multipart/form-data  (file uploads)
+  Rate Limit:   100 req/min per authenticated recruiter
+  Versioning:   URL-based versioning (/api/v1/, /api/v2/)
+ 
+6.2 Job Endpoints
+POST /jobs: Create and analyze a new job description
+  Request body:
+  { "title": "Senior ML Engineer",
+    "raw_jd": "We are looking for...",
+    "role_type": "research"  // optional: research|leadership|junior|devops|default }
+
+  Response 201:
+  { "job_id": "uuid", "job_profile": { JobProfile }, "embedding_id": "qdrant-id",
+    "created_at": "2026-01-01T00:00:00Z" }
+
+  Error 422: Validation error (JD too short < 50 chars)
+  Error 429: Rate limit exceeded
+GET /jobs/{job_id}: Retrieve job profile and metadata by ID
+GET /jobs: List all jobs for tenant (paginated: ?page=1&limit=20)
+DELETE /jobs/{job_id}: Archive a job (soft delete — retained in audit log)
+ 
+6.3 Candidate Endpoints
+POST /candidates/upload: Upload and parse a resume file (PDF/DOCX)
+  Request: multipart/form-data
+  - file:      binary (PDF or DOCX, max 10MB)
+  - tenant_id: string (UUID)
+
+  Response 201:
+  { "candidate_id": "uuid", "parsed_profile": { CandidateProfile },
+    "anonymized_profile": { PII-stripped }, "embedding_id": "qdrant-id" }
+
+  Error 415: Unsupported file type
+  Error 413: File too large (> 10MB)
+POST /candidates/batch-upload: Upload up to 50 resumes as a zip file
+GET /candidates/{id}: Retrieve candidate profile by ID
+DELETE /candidates/{id}: GDPR-compliant full deletion across all stores
+ 
+6.4 Ranking Endpoints
+POST /rank/{job_id}: Trigger full multi-agent ranking pipeline
+  Query params:
+  - limit: int  (candidates to return, default 10, max 50)
+  - K:     int  (semantic pool size, default 100, max 500)
+
+  Response 200:
+  { "job_id": "uuid", "role_type": "research",
+    "weights_used": { "w_semantic": 0.45, "w_recruiter": 0.20, ... },
+    "total_evaluated": 100,
+    "candidates": [
+      { "rank": 1, "candidate_id": "uuid", "final_score": 91.4,
+        "breakdown": { "semantic": 88.0, "recruiter": 92.0, "hm": 94.0,
+                         "behavioral": 85.0, "growth": 90.0, "authenticity": 95.0 },
+        "explanation": { "why_selected": ["5yr NLP prod exp", "RAG at scale"],
+          "missing_skills": ["Kubernetes", "Go"],
+          "hiring_risks": ["limited leadership signals"],
+          "interview_questions": ["Describe your RAG architecture..."],
+          "upskilling_recommendation": "4 weeks: Docker + K8s fundamentals" }
+      }
+    ] }
+GET /rank/{job_id}: Retrieve cached ranking result for a job
+GET /rank/{job_id}/export?format=csv: Export ranking as CSV or JSON
+ 
+6.5 Copilot & Utility Endpoints
+POST /copilot/chat: Natural language recruiter copilot (streaming SSE)
+  Request:
+  { "job_id": "uuid", "message": "Why is C102 ranked above C089?",
+    "session_id": "optional-for-context" }
+
+  Response: text/event-stream
+  data: {"delta": "Candidate C102 ranks higher because..."}
+  data: {"delta": "...their RAG implementation at 10M req/day scale..."}
+  data: [DONE]
+GET /health: System health check — all service statuses
+GET /metrics: Prometheus-format metrics endpoint
+
+07 — AGENT DESIGN DOCUMENT
+Each agent in NEXUS corresponds to one human hiring question. Every agent is stateless, receives a (candidate_profile, job_profile) pair, and returns a typed AgentEvaluation object. Agents are implemented as LangGraph nodes and executed in parallel where possible.
+Agent 01: Job Intelligence Agent
+ 
+Agent 02: Resume Intelligence Agent
+ 
+
+Agent 03: Skill Intelligence Agent
+ 
+Agent 04: Project Intelligence Agent
+ 
+
+
+Agent 05: Career Intelligence Agent
+ 
+Agent 06: Behavioral Intelligence Agent
+ 
+
+
+Agent 07: Authenticity Verification Agent  ⭐ UNIQUE
+ 
+Agent 08: Growth Potential Agent  ⭐ UNIQUE
+ 
+
+Agent 09: Adaptive Ranking Engine
+ 
+Agent 10: Explainability Agent
+
+08 — DATA FLOW & SEQUENCE DIAGRAMS
+8.1 Resume Upload Flow
+  Recruiter ──[POST /candidates/upload]──▶ FastAPI
+                                              │
+                                    [File size/type check]
+                                              │
+                                    [Save to MinIO: resumes/{tenant}/{id}.pdf]
+                                              │
+                                    [Docling.parse(file)]
+                                              │ (fallback: pdfplumber if Docling fails)
+                                    [Resume Intelligence Agent]
+                                              │
+                              ┌───────────────┴──────────────────┐
+                    [PII Strip (anonymize)]           [BGE-M3 Embed (batch)]
+                              │                                   │
+                    [PostgreSQL: candidates]          [Redis: emb:candidate:{id}]
+                              │                                   │
+                              └────────────────┬─────────────────┘
+                                               │
+                                 [Qdrant upsert: candidate_embeddings]
+                                               │
+                                 [Response 201: candidate_id + profile]
+ 
+8.2 Ranking Pipeline Sequence
+  Recruiter ──[POST /rank/{job_id}?K=100&limit=10]──▶ FastAPI
+                                                           │
+                                               [Check Redis: rank:job:{id}:top10]
+                                               │ (cache hit → return immediately)
+                                               │ (cache miss → continue)
+                                               ▼
+                                    [Qdrant: top-K cosine search]
+                                               │
+                                    [Candidate Pool: K=100 candidates]
+                                               │
+              ┌────────────────────────────────┼────────────────────────────────┐
+              │           LANGGRAPH PARALLEL EXECUTION (per candidate)           │
+     [Skill Agent]  [Project Agent]  [Career Agent]  [Behavioral]  [Growth]     │
+     [Recruiter Agent]               [HM Agent]      [Authenticity Agent]       │
+              │                                                                  │
+              └────────────────────────────────┬────────────────────────────────┘
+                                               │ (fan-in after all agents complete)
+                                    [Adaptive Ranking Engine]
+                                               │
+                                    [Sort by HRS descending]
+                                               │
+                                    [Explainability Agent: top-N]
+                                               │
+                           ┌───────────────────┴──────────────────┐
+                  [PostgreSQL: persist rankings]       [Redis: cache ranked list]
+                                               │
+                                    [Response 200: ranked shortlist]
+ 
+
+8.3 Recruiter Copilot Flow
+  Recruiter ──[POST /copilot/chat]──▶ FastAPI
+                     {job_id, message, session_id}
+                                          │
+                            [Load session context from Redis]
+                                          │
+                            [RAG Retrieval over Qdrant:]
+                            │  - Rank explanation vectors
+                            │  - Candidate profile vectors
+                            │  - Job profile vectors
+                                          │
+                            [Build context window: session + retrieved chunks]
+                                          │
+                            [Gemini 2.5 Flash: stream response]
+                                          │
+                            [SSE stream ──▶ Recruiter browser]
+                                          │
+                            [Append to session history in Redis]
+ 
+8.4 Data Ownership Map
+
+09 — FOLDER STRUCTURE
+Complete project directory layout for the NEXUS monorepo, organized by concern.
+  nexus/
+  ├── backend/                         # FastAPI Python backend
+  │   ├── app/
+  │   │   ├── main.py                  # FastAPI app entrypoint
+  │   │   ├── config.py                # Env config (pydantic-settings)
+  │   │   ├── api/
+  │   │   │   ├── v1/
+  │   │   │   │   ├── jobs.py          # Job endpoints
+  │   │   │   │   ├── candidates.py    # Candidate upload endpoints
+  │   │   │   │   ├── ranking.py       # Ranking trigger endpoints
+  │   │   │   │   ├── copilot.py       # Recruiter copilot SSE endpoint
+  │   │   │   │   └── health.py        # Health + metrics endpoints
+  │   │   ├── agents/
+  │   │   │   ├── base.py              # Base agent class + AgentEvaluation model
+  │   │   │   ├── job_intelligence.py  # Agent 01: Job Intelligence
+  │   │   │   ├── resume_intelligence.py  # Agent 02: Resume Intelligence
+  │   │   │   ├── skill_intelligence.py   # Agent 03: Skill Intelligence
+  │   │   │   ├── project_intelligence.py # Agent 04: Project Intelligence
+  │   │   │   ├── career_intelligence.py  # Agent 05: Career Intelligence
+  │   │   │   ├── behavioral_intelligence.py  # Agent 06: Behavioral
+  │   │   │   ├── authenticity.py      # Agent 07: Authenticity Verification
+  │   │   │   ├── growth_potential.py  # Agent 08: Growth Potential
+  │   │   │   ├── ranking_engine.py    # Agent 09: Adaptive Ranking
+  │   │   │   └── explainability.py    # Agent 10: Explainability
+  │   │   ├── core/
+  │   │   │   ├── embedding.py         # BGE-M3 embedding generation (ONNX)
+  │   │   │   ├── qdrant_client.py     # Qdrant vector DB client
+  │   │   │   ├── redis_client.py      # Redis cache client
+  │   │   │   ├── postgres.py          # PostgreSQL async client (asyncpg)
+  │   │   │   ├── minio_client.py      # MinIO object storage client
+  │   │   │   └── llm_router.py        # Gemini/GPT-4 router with fallback
+  │   │   ├── parsers/
+  │   │   │   ├── docling_parser.py    # Docling PDF/DOCX parser
+  │   │   │   ├── pdfplumber_parser.py # Fallback OCR parser
+  │   │   │   └── pii_stripper.py      # PII removal + anonymization
+  │   │   ├── models/
+  │   │   │   ├── job.py               # JobProfile Pydantic models
+  │   │   │   ├── candidate.py         # CandidateProfile Pydantic models
+  │   │   │   ├── ranking.py           # RankedCandidate, HRS, Explanation
+  │   │   │   └── agent.py             # AgentEvaluation, SkillAnalysis, etc.
+  │   │   ├── pipelines/
+  │   │   │   ├── ranking_pipeline.py  # LangGraph StateGraph orchestrator
+  │   │   │   └── copilot_pipeline.py  # RAG pipeline for copilot
+  │   │   ├── ontology/
+  │   │   │   └── skill_taxonomy.yaml  # Curated tech skill ontology graph
+  │   │   └── middleware/
+  │   │       ├── auth.py              # JWT validation middleware
+  │   │       ├── rate_limit.py        # Redis-based rate limiting
+  │   │       └── logging.py           # structlog request/response logging
+  │   ├── tests/
+  │   │   ├── unit/                    # Unit tests per agent
+  │   │   ├── integration/             # End-to-end pipeline tests
+  │   │   └── fixtures/                # Sample JDs and resumes for testing
+  │   ├── Dockerfile
+  │   ├── requirements.txt
+  │   └── pyproject.toml
+  │
+  ├── frontend/                        # Next.js 14 App Router
+  │   ├── app/
+  │   │   ├── layout.tsx               # Root layout (cosmic dark theme)
+  │   │   ├── page.tsx                 # Landing page / dashboard
+  │   │   ├── jobs/
+  │   │   │   ├── page.tsx             # Job listing page
+  │   │   │   └── [id]/page.tsx        # Job detail + candidate ranking
+  │   │   ├── candidates/page.tsx      # Candidate management
+  │   │   └── copilot/page.tsx         # Recruiter Copilot chat interface
+  │   ├── components/
+  │   │   ├── RankingTable.tsx         # Main ranked candidate table
+  │   │   ├── SkillRadarChart.tsx      # Recharts radar chart
+  │   │   ├── CareerTimeline.tsx       # D3 career progression timeline
+  │   │   ├── ExplanationCard.tsx      # Per-candidate explanation panel
+  │   │   ├── CopilotChat.tsx          # SSE streaming chat component
+  │   │   └── ScoreBreakdown.tsx       # Multi-axis score bar chart
+  │   ├── Dockerfile
+  │   └── package.json
+  │
+  ├── infra/
+  │   ├── docker-compose.yml           # Full local stack
+  │   ├── docker-compose.prod.yml      # Production overrides
+  │   ├── k8s/
+  │   │   ├── backend-deployment.yaml
+  │   │   ├── frontend-deployment.yaml
+  │   │   ├── postgres-statefulset.yaml
+  │   │   ├── qdrant-statefulset.yaml
+  │   │   ├── redis-deployment.yaml
+  │   │   └── ingress.yaml
+  │   └── terraform/                   # Optional: cloud provisioning
+  │
+  ├── scripts/
+  │   ├── seed_demo_data.py            # Seed 50 demo candidates + 5 JDs
+  │   ├── eval_ranking.py              # Precision@K evaluation script
+  │   └── generate_docs.py             # Auto-regenerate this document
+  │
+  ├── docs/                            # Static documentation assets
+  ├── .github/workflows/ci.yml         # GitHub Actions CI/CD pipeline
+  ├── .env.example                     # Environment variable template
+  ├── docker-compose.yml               # Root-level convenience compose
+  ├── Makefile                         # make dev / make test / make deploy
+  └── README.md                        # GitHub README (see §13)
+
+10 — DEVELOPMENT ROADMAP
+Phase 0: Foundation (Days 1–2)
+Set up Docker Compose: PostgreSQL, Qdrant, Redis, MinIO — all services up in one command
+FastAPI skeleton with health endpoint, JWT auth middleware, rate limiting
+Resume upload endpoint: Docling parse → PII strip → PostgreSQL persist → Qdrant upsert
+BGE-M3 embedding pipeline with Redis caching — confirm < 2s per resume
+JD ingestion endpoint with basic Job Intelligence Agent (Gemini 2.5 Flash structured output)
+Seed database with 50 mock candidates and 5 job descriptions for development
+Phase 1: Core Intelligence (Days 3–5)
+Implement all 8 specialized agents with Pydantic output validation
+Build skill ontology YAML with 500+ tech skills and semantic relationships
+LangGraph StateGraph: wire all agents with parallel Fan-out and Fan-in aggregation
+Adaptive Ranking Engine with all 5 role-type weight configurations
+Explainability Agent generating evidence-based narratives and tailored interview questions
+POST /rank/{job_id} returning full ranked shortlist with breakdowns and explanations
+Write unit tests for each agent with 5 mock candidate fixtures
+Phase 2: Recruiter Experience (Days 6–8)
+Next.js 14 frontend: cosmic dark theme, Tailwind tokens, layout components
+Job management page: create JD, view parsed job profile, trigger ranking
+Ranking dashboard: sortable table, score breakdown bars, explanation modal
+Skill radar chart (Recharts), career timeline (D3), skill gap heatmap
+Recruiter Copilot: RAG pipeline + SSE streaming chat UI
+CSV/JSON export functionality for ranking results
+Batch resume upload (zip file → process 50 resumes in background via Celery)
+Phase 3: Polish & Production (Days 9–10)
+End-to-end integration tests: upload 20 resumes → rank → verify explanations
+Prometheus metrics + Grafana dashboard for latency, throughput, agent costs
+structlog audit logging for all ranking decisions with correlation IDs
+Performance optimization: confirm P95 ranking latency < 8s for 10 candidates
+GDPR deletion endpoint testing: verify cascading cleanup across all stores
+Documentation finalization: README, API docs, deployment guide
+Docker multi-stage build optimization for production image size
+
+V2 Roadmap (Post-Hackathon)
+
+11 — EVALUATION METRICS
+NEXUS is measured across four dimensions: Retrieval Quality, Ranking Quality, Explainability Quality, and System Performance. All metrics are automated where possible and validated with human evaluators.
+11.1 Retrieval Quality (Qdrant / BGE-M3)
+ 
+11.2 Ranking Quality
+ 
+
+11.3 Explainability Quality
+ 
+11.4 System Performance Metrics
+
+12 — PPT ARCHITECTURE GUIDE
+Slide-by-slide guide for presenting NEXUS architecture in a 10–15 minute hackathon demo. Each slide description includes recommended visuals and talking points.
+Slide 1: Title Slide
+Content: NEXUS logo, tagline: 'AI Hiring Intelligence — Beyond Keywords'
+Visual: Cosmic dark background, constellation-style neural network animation
+Talking point: 'In 10 minutes, we will show you that hiring can be as intelligent as the humans doing it — or better.'
+Slide 2: The Problem (Pain Quantification)
+Content: 3 stats — 60% recruiter time on screening / 75% qualified candidates rejected by ATS / 0 explainability in current tools
+Visual: Split-screen: broken ATS keyword matcher vs NEXUS reasoning agent
+Talking point: 'Every ATS ranks based on who wrote the best keyword list, not who is the best hire.'
+Slide 3: Solution Overview
+Content: NEXUS = Semantic Retrieval + Multi-Agent Reasoning + Explainability
+Visual: 3-layer diagram — Retrieval Layer → Agent Panel → Explanation Layer
+Talking point: 'We separated retrieval from reasoning. Qdrant finds candidates. 8 AI agents evaluate them. The explanation agent tells you why.'
+Slide 4: System Architecture
+Content: Full L1–L8 architecture diagram (from §4.2) with color-coded layers
+Visual: Layered architecture diagram with tech logos (FastAPI, Qdrant, LangGraph, Gemini, Next.js)
+Talking point: Walk each layer in 30 seconds. Emphasize: 'Every component is production-ready and runs locally with one command.'
+Slide 5: The 8 AI Agents
+Content: Agent panel with icons — Skill, Project, Career, Behavioral, Authenticity ⭐, Growth ⭐, Ranking, Explainability
+Visual: LangGraph state machine diagram with parallel branches and fan-in
+Talking point: 'Authenticity and Growth Potential are our key innovations — no other platform predicts who will become great.'
+Slide 6: Live Demo — JD Input
+Content: Screen recording — paste a real JD, show JobProfile JSON output
+Talking point: 'Notice how the agent extracted hidden expectations — production ownership, scale mindset — that were never explicitly written in the JD.'
+Slide 7: Live Demo — Ranking Output
+Content: Screen recording — 20 resumes uploaded, /rank called, results in 6 seconds
+Visual: Dashboard with ranked table, score breakdown bars, explanation panel open
+Talking point: 'Candidate 3 is ranked first. Not because they have the most keywords — but because their RAG project shows production-scale AI experience and their career shows a 40% year-on-year complexity growth.'
+Slide 8: Recruiter Copilot Demo
+Content: Screen recording — type 'Why is candidate 3 ranked above candidate 7?' and show SSE streaming response
+Talking point: 'Recruiters can interrogate the ranking in natural language. This is not a chatbot — it is a reasoning interface over structured evidence.'
+Slide 9: Key Differentiators
+ 
+Slide 10: Closing & Metrics
+Content: Key numbers — < 8s ranking / > 80% precision@10 / > 4/5 explainability score / 100% explainable
+Visual: Cosmos dark background with metric cards glowing in cyan and gold
+Talking point: 'NEXUS is not a demo. It is a production architecture. One docker-compose up. Full pipeline running in under 5 minutes.'
+
+13 — GITHUB README
+◆ NOTE: This section contains the full content of the README.md file for the NEXUS GitHub repository.
+ 
+  # 🌌 NEXUS — AI Hiring Intelligence Platform
+
+  > Beyond keywords. Beyond resumes. Into reasoning.
+
+  NEXUS replaces broken keyword-matching ATS with a panel of 8 specialized AI agents
+  that evaluate candidates like experienced recruiters — and explain every decision.
+
+  [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-00C9E0)](https://fastapi.tiangolo.com)
+  [![LangGraph](https://img.shields.io/badge/LangGraph-0.1-7C4DFF)](https://langchain.com)
+  [![Qdrant](https://img.shields.io/badge/Qdrant-1.9-F39C12)](https://qdrant.tech)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+  ## 🚀 Quick Start
+
+  ```bash
+  git clone https://github.com/your-org/nexus
+  cd nexus
+  cp .env.example .env  # Add your Gemini API key
+  docker-compose up -d  # Starts all services
+  # Backend: http://localhost:8000/docs
+  # Frontend: http://localhost:3000
+  # Grafana:  http://localhost:3001
+  ```
+
+  ## 🧠 The Problem
+
+  Traditional ATS: Kafka expert rejected because they wrote 'Message Queues'.
+  NEXUS: Kafka → Message Queues → Distributed Systems → Streaming. MATCH.
+
+  ## 🤖 The 8-Agent Panel
+
+  | Agent | Question | Innovation |
+  |-------|----------|------------|
+  | Skill Intelligence | Do skills truly match? | Ontology-based semantic graph |
+  | Project Intelligence | Are projects real and relevant? | Complexity + impact scoring |
+  | Career Intelligence | Is the trajectory growing? | Velocity & stability analysis |
+  | Behavioral Intelligence | Are they actively seeking? | Signal-based engagement |
+  | Authenticity ⭐ | Are skill claims evidenced? | Cross-validation, no false rejections |
+  | Growth Potential ⭐ | Who will become great? | Forward trajectory prediction |
+  | Adaptive Ranking | Final HRS score | Role-aware dynamic weights |
+  | Explainability | Why this candidate? | Evidence-grounded narrative |
+
+  ## 📊 Architecture
+
+  Ingest → Embed (BGE-M3) → Retrieve (Qdrant) → Evaluate (LangGraph × 8 agents)
+  → Rank (HRS) → Explain → Copilot (RAG + SSE)
+
+  ## ⚡ Performance
+
+  - Resume parse: < 2s | Embedding: < 200ms | Retrieval: < 200ms
+  - Full ranking (10 candidates): < 8s P95
+  - All services: docker-compose up in < 5 minutes
+
+  ## 🛠️ Tech Stack
+
+  Backend: Python · FastAPI · LangGraph · BGE-M3 · Gemini 2.5 Flash
+  Storage: PostgreSQL · Qdrant · Redis · MinIO
+  Frontend: Next.js 14 · Recharts · D3 · Tailwind CSS
+  Infra: Docker · Kubernetes · Prometheus · Grafana
+
+  ## 📄 License
+
+  MIT — Built for the AI Hiring Intelligence Hackathon 2026
+
+14 — UI/UX SPECIFICATION
+NEXUS uses a Cosmos Dark design language: deep space backgrounds, neon accents, glassmorphism panels, and aurora-inspired gradients. The design should feel like mission control for talent intelligence.
+14.1 Design System
+ 
+14.2 Page Specifications
+Page: Job List (/jobs)
+Header: NEXUS wordmark + nav (Jobs | Candidates | Copilot | Settings)
+Hero: 'Active Positions' count card with glow border + 'New Job' CTA button (cyan)
+Job cards: Title, role_type badge (color-coded), candidate count, status, 'Rank Candidates' CTA
+Sort/filter: by role_type, status, created_date — no page reload (React Query)
+Page: Ranking Dashboard (/jobs/[id])
+Job profile summary card: role title, key skills, seniority, hidden expectations panel
+'Run Ranking' button → loading state with streaming progress (agent-by-agent status)
+Results table: Rank | Candidate ID | HRS Score | Semantic | Recruiter | HM | Behavioral | Growth | Authenticity | Action
+Row click: expand explanation panel — why_selected list, missing skills chips, hiring risks, interview questions
+Right panel: Skill Radar Chart (Recharts, 6 dimensions) + Career Timeline (D3)
+Top bar: Export CSV/JSON | Filter by score > X | Toggle PII reveal (for shortlisted candidates)
+Page: Recruiter Copilot (/copilot)
+Split layout: Left panel (60%) = chat interface; Right panel (40%) = live candidate cards
+Chat input: full-width, glassmorphism background, send on Enter, typing indicator
+Messages: user bubbles (right, gold border) vs copilot bubbles (left, cyan border)
+Copilot responses stream character-by-character with cursor blink animation
+Right panel updates dynamically: 'Candidates mentioned in last response' cards
+Suggested queries: 'Why is #1 better than #5?', 'Show me candidates with Kubernetes', 'Who is closest to requirements?'
+14.3 Component Library
+
+15 — DEPLOYMENT ARCHITECTURE
+15.1 Local Development (Docker Compose)
+  # docker-compose.yml — Full local stack
+  services:
+    postgres:
+      image: postgres:16-alpine
+      environment: { POSTGRES_DB: nexus, POSTGRES_USER: nexus, POSTGRES_PASSWORD: nexus }
+      ports: ['5432:5432']
+      volumes: ['pgdata:/var/lib/postgresql/data']
+      healthcheck: { test: ['CMD', 'pg_isready'], interval: 10s }
+
+    qdrant:
+      image: qdrant/qdrant:v1.9.0
+      ports: ['6333:6333', '6334:6334']
+      volumes: ['qdrantdata:/qdrant/storage']
+
+    redis:
+      image: redis:7-alpine
+      ports: ['6379:6379']
+      command: redis-server --maxmemory 2gb --maxmemory-policy allkeys-lru
+
+    minio:
+      image: minio/minio:latest
+      ports: ['9000:9000', '9001:9001']
+      environment: { MINIO_ROOT_USER: nexus, MINIO_ROOT_PASSWORD: nexuspassword }
+      command: server /data --console-address ':9001'
+
+    backend:
+      build: ./backend
+      ports: ['8000:8000']
+      depends_on: [postgres, qdrant, redis, minio]
+      environment:
+        DATABASE_URL: postgresql://nexus:nexus@postgres:5432/nexus
+        QDRANT_URL: http://qdrant:6333
+        REDIS_URL: redis://redis:6379
+        GEMINI_API_KEY: ${GEMINI_API_KEY}
+
+    frontend:
+      build: ./frontend
+      ports: ['3000:3000']
+      environment: { NEXT_PUBLIC_API_URL: http://backend:8000/api/v1 }
+
+    prometheus:
+      image: prom/prometheus:latest
+      ports: ['9090:9090']
+      volumes: ['./infra/prometheus.yml:/etc/prometheus/prometheus.yml']
+
+    grafana:
+      image: grafana/grafana:latest
+      ports: ['3001:3000']
+      volumes: ['./infra/grafana/dashboards:/var/lib/grafana/dashboards']
+ 
+
+15.2 Production Architecture (Kubernetes)
+  nexus-production/
+  ├── backend-deployment.yaml      # 3 replicas, HPA at 70% CPU
+  ├── frontend-deployment.yaml     # 2 replicas, CDN-backed static assets
+  ├── celery-worker-deployment.yaml  # 2 replicas, async task processing
+  ├── postgres-statefulset.yaml    # Single primary + read replica
+  ├── qdrant-statefulset.yaml      # 3-node cluster with replication
+  ├── redis-deployment.yaml        # Redis Sentinel for HA
+  ├── minio-statefulset.yaml       # 4-node distributed mode
+  └── ingress.yaml                 # NGINX ingress with TLS (Let's Encrypt)
+
+  # HPA Configuration (backend)
+  apiVersion: autoscaling/v2
+  kind: HorizontalPodAutoscaler
+  spec:
+    scaleTargetRef: nexus-backend
+    minReplicas: 2
+    maxReplicas: 10
+    metrics:
+      - type: Resource
+        resource: { name: cpu, target: { averageUtilization: 70 } }
+ 
+15.3 CI/CD Pipeline (GitHub Actions)
+  # .github/workflows/ci.yml
+  on: [push, pull_request]
+  jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: Run backend tests
+          run: docker-compose -f docker-compose.test.yml up --abort-on-container-exit
+        - name: Upload coverage
+          uses: codecov/codecov-action@v4
+
+    build:
+      needs: test
+      steps:
+        - name: Build backend image
+          run: docker build -t nexus-backend:${{ github.sha }} ./backend
+        - name: Push to registry
+          run: docker push ghcr.io/org/nexus-backend:${{ github.sha }}
+
+    deploy:
+      needs: build
+      if: github.ref == 'refs/heads/main'
+      steps:
+        - name: Deploy to Kubernetes
+          run: kubectl set image deployment/nexus-backend backend=nexus-backend:${{ github.sha }}
+        - name: Wait for rollout
+          run: kubectl rollout status deployment/nexus-backend --timeout=300s
+ 
+
+15.4 Environment Variables Reference
+ 
+15.5 Deployment Checklist
+[ ] All environment variables set in .env or Kubernetes Secrets
+[ ] PostgreSQL migrations run: alembic upgrade head
+[ ] Qdrant collections created: job_embeddings, candidate_embeddings, project_embeddings
+[ ] MinIO bucket created: nexus-resumes (with private ACL)
+[ ] BGE-M3 model downloaded: huggingface-cli download BAAI/bge-m3
+[ ] Health endpoint returning 200: GET /health
+[ ] Seed data loaded: python scripts/seed_demo_data.py
+[ ] Prometheus scraping backend /metrics endpoint
+[ ] Grafana dashboard imported from infra/grafana/dashboards/nexus.json
+[ ] End-to-end test: upload resume → rank job → verify explanation present
+ 
+
+━━ END OF NEXUS COMPLETE DOCUMENTATION SUITE ━━
+NEXUS · AI Hiring Intelligence Platform · v1.0 · 2026

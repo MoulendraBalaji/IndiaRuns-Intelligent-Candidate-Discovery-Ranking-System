@@ -22,7 +22,8 @@ dependencies = [
     "networkx>=3.3",
     "docling>=1.0.0",
     "sentence-transformers>=3.0.1",
-    "spacy>=3.7.5"
+    "spacy>=3.7.5",
+    "python-multipart>=0.0.32",
 ]
 
 [project.optional-dependencies]

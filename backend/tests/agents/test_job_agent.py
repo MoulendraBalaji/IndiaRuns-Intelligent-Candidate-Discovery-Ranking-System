@@ -38,6 +38,7 @@ async def test_job_intelligence_agent_success(mock_job_entities):
     res = await agent.execute(req)
     
     assert res.success is True
+    assert res.data is not None
     assert "profile" in res.data
     
     profile = res.data["profile"]

@@ -8,7 +8,7 @@ from .response_mapper import ResponseMapper
 logger = logging.getLogger(__name__)
 
 class CandidateParser:
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: str | None = None):
         self.client = GeminiClient(api_key=api_key)
         self.prompt_loader = PromptLoader()
 

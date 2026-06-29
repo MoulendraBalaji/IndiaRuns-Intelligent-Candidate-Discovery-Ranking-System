@@ -8,7 +8,7 @@ from .prompt_loader import PromptLoader
 logger = logging.getLogger(__name__)
 
 class JobParser:
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: str | None = None):
         self.client = GeminiClient(api_key=api_key)
         self.prompt_loader = PromptLoader()
 

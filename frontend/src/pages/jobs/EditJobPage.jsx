@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { api } from '../../services/api';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { ArrowLeft, RefreshCw } from 'lucide-react';
 
@@ -27,7 +28,7 @@ export default function EditJobPage() {
 
   useEffect(() => {
     async function loadData() {
-      const fetchedJob = await api.getJob(id);
+      const fetchedJob = await jobService.getJob(id);
       if (fetchedJob) {
         setJob(fetchedJob);
         setTitle(fetchedJob.title);
@@ -55,7 +56,7 @@ export default function EditJobPage() {
     // Simulate AI pipeline
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    await api.updateJob(id, {
+    await jobService.updateJob(id, {
       title,
       department,
       seniority,

@@ -13,7 +13,7 @@ class GeminiClient:
     # Simple in-memory cache to prevent redundant LLM calls for identical prompts/text
     _cache: Dict[str, str] = {}
 
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: str | None = None):
         self.key = api_key or os.environ.get("GEMINI_API_KEY")
         self.client = None
         if not self.key or self.key in ("mock", "your_gemini_api_key_here"):

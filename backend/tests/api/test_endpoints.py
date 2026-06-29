@@ -23,7 +23,7 @@ def test_system_stats_endpoint():
     assert "qdrant_status" in data
     assert "latencies" in data
 
-@patch("app.api.v1.endpoints.dependencies.candidate_service")
+@patch("app.api.v1.endpoints.candidates.candidate_service")
 def test_upload_resume_endpoint(mock_candidate_service):
     # Setup mock profile
     from app.schemas.candidate import CandidateProfile
@@ -54,7 +54,7 @@ def test_upload_resume_endpoint(mock_candidate_service):
     assert response.json()["id"] == "c1"
     mock_candidate_service.upload_resume.assert_called_once()
 
-@patch("app.api.v1.endpoints.dependencies.job_service")
+@patch("app.api.v1.endpoints.jobs.job_service")
 def test_create_job_endpoint(mock_job_service):
     from app.schemas.job import JobProfile
     mock_job = JobProfile(
@@ -77,7 +77,7 @@ def test_create_job_endpoint(mock_job_service):
     assert response.json()["id"] == "j1"
     mock_job_service.create_job.assert_called_once()
 
-@patch("app.api.v1.endpoints.dependencies.matching_service")
+@patch("app.api.v1.endpoints.matching.matching_service")
 def test_trigger_match_endpoint(mock_matching_service):
     mock_matching_service.start_matching = AsyncMock(return_value="task-123")
     
@@ -91,7 +91,7 @@ def test_trigger_match_endpoint(mock_matching_service):
     assert response.json()["status"] == "PENDING"
     mock_matching_service.start_matching.assert_called_once_with(job_id="j1", limit=5, k=20)
 
-@patch("app.api.v1.endpoints.dependencies.matching_service")
+@patch("app.api.v1.endpoints.matching.matching_service")
 def test_rerank_endpoint(mock_matching_service):
     mock_result = {
         "ranking_result": {
@@ -112,7 +112,7 @@ def test_rerank_endpoint(mock_matching_service):
     assert "ranking_result" in response.json()
     mock_matching_service.re_rank.assert_called_once_with("j1", {"technical_fit": 0.5})
 
-@patch("app.api.v1.endpoints.dependencies.copilot_service")
+@patch("app.api.v1.endpoints.copilot.copilot_service")
 def test_copilot_chat_endpoint(mock_copilot_service):
     mock_response = {
         "answer": "Candidate C1 is ranked higher because of FastAPI expertise.",

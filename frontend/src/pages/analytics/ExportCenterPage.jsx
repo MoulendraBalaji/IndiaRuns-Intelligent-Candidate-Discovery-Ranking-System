@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../../services/api';
+import { jobService } from '../../services/jobService';
 import Layout from '../../components/Layout';
 import { Download, Calendar, Mail, FileSpreadsheet, Loader2 } from 'lucide-react';
 
@@ -30,7 +31,7 @@ export default function ExportCenterPage() {
 
   useEffect(() => {
     async function loadJobs() {
-      const fetched = await api.getJobs();
+      const fetched = await jobService.getJobs();
       setJobs(fetched);
       if (fetched.length > 0) {
         setSelectedJobId(fetched[0].id);

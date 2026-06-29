@@ -31,3 +31,18 @@ This project uses `uv` for dependency management and `ruff`/`mypy` for linting a
 make lint
 make test
 ```
+
+## Hackathon Submission
+
+To generate the final competition submission (Deliverable #3), run the generation script from the project root. This orchestrates the dataset through the complete NEXUS pipeline, using Deterministic Ranking and creating reproducible outputs.
+
+```bash
+python scripts/generate_submission.py --team_id <your_team_id>
+```
+
+This will output the final ranked `.csv` file and a `submission_metadata.json` log into the `data/submissions/` directory.
+
+To validate the generated CSV against the competition rules, run:
+```bash
+python dataset/validate_submission.py data/submissions/<your_team_id>.csv
+```
