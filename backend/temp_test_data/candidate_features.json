@@ -1,0 +1,512 @@
+{
+  "2a8fd9b7-f729-48aa-9baf-e1b2dc7a51b6": {
+    "candidate_id": "2a8fd9b7-f729-48aa-9baf-e1b2dc7a51b6",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "53a8cf44-46b2-4076-8cfd-e456cb453f75": {
+    "candidate_id": "53a8cf44-46b2-4076-8cfd-e456cb453f75",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "7937bc06-0f97-43da-84e9-1dc788a4083b": {
+    "candidate_id": "7937bc06-0f97-43da-84e9-1dc788a4083b",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "95004548-baa2-4b53-9f2b-4d41f46f1ef2": {
+    "candidate_id": "95004548-baa2-4b53-9f2b-4d41f46f1ef2",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "d810fd4c-a185-4bb4-ac37-99c5edc07898": {
+    "candidate_id": "d810fd4c-a185-4bb4-ac37-99c5edc07898",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "58ade3bf-cf5a-4674-8545-90d2962ca48a": {
+    "candidate_id": "58ade3bf-cf5a-4674-8545-90d2962ca48a",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "21cbaaec-1685-4d62-b7e1-ef7ad3bf56bb": {
+    "candidate_id": "21cbaaec-1685-4d62-b7e1-ef7ad3bf56bb",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "2734f594-9aca-4c7a-8a02-9f9e1f719139": {
+    "candidate_id": "2734f594-9aca-4c7a-8a02-9f9e1f719139",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "fd671cc5-e91a-448e-856d-69b1d7f45502": {
+    "candidate_id": "fd671cc5-e91a-448e-856d-69b1d7f45502",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  },
+  "5c725a1c-a695-4b6e-a2a4-7f794ad2b75f": {
+    "candidate_id": "5c725a1c-a695-4b6e-a2a4-7f794ad2b75f",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  }
+}

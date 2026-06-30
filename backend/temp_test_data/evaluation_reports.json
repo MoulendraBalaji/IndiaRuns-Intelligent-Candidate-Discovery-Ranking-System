@@ -1,0 +1,3852 @@
+{
+  "42abcf81-b2e8-45ba-af94-afb06e60314b": [
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 3
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    }
+  ],
+  "f91cd4ee-f549-4374-8bdb-1d4a5b947969": [
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 3
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 3
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    }
+  ],
+  "091844fe-09fa-428d-822d-f84974857bb1": [
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    }
+  ],
+  "e181e3fa-b249-4158-8bff-d2779691b634": [
+    {
+      "candidate_id": "2a8fd9b7-f729-48aa-9baf-e1b2dc7a51b6",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "53a8cf44-46b2-4076-8cfd-e456cb453f75",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 2
+    },
+    {
+      "candidate_id": "7937bc06-0f97-43da-84e9-1dc788a4083b",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "95004548-baa2-4b53-9f2b-4d41f46f1ef2",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "d810fd4c-a185-4bb4-ac37-99c5edc07898",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "58ade3bf-cf5a-4674-8545-90d2962ca48a",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "21cbaaec-1685-4d62-b7e1-ef7ad3bf56bb",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "2734f594-9aca-4c7a-8a02-9f9e1f719139",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "fd671cc5-e91a-448e-856d-69b1d7f45502",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    }
+  ],
+  "30a5113c-ce35-48b3-b488-fc4023fade67": [
+    {
+      "candidate_id": "2a8fd9b7-f729-48aa-9baf-e1b2dc7a51b6",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "53a8cf44-46b2-4076-8cfd-e456cb453f75",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "7937bc06-0f97-43da-84e9-1dc788a4083b",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "95004548-baa2-4b53-9f2b-4d41f46f1ef2",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "d810fd4c-a185-4bb4-ac37-99c5edc07898",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "58ade3bf-cf5a-4674-8545-90d2962ca48a",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "21cbaaec-1685-4d62-b7e1-ef7ad3bf56bb",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    },
+    {
+      "candidate_id": "2734f594-9aca-4c7a-8a02-9f9e1f719139",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "fd671cc5-e91a-448e-856d-69b1d7f45502",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 0
+    },
+    {
+      "candidate_id": "5c725a1c-a695-4b6e-a2a4-7f794ad2b75f",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "metadata": {
+        "evaluator_model": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "pipeline_version": "1.0.0",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "schema_version": "1.0.0"
+      },
+      "trace": [
+        {
+          "step": "Mock step",
+          "input_features": [
+            "Mock input_features Item"
+          ],
+          "reason": "Mock reason",
+          "confidence": 0.85,
+          "duration_ms": 3
+        }
+      ],
+      "dimensions": {
+        "technical_fit": {
+          "id": "technical_fit",
+          "score": 0.85,
+          "weight": 0.3,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "experience_fit": {
+          "id": "experience_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        },
+        "behavior_fit": {
+          "id": "behavior_fit",
+          "score": 0.85,
+          "weight": 0.1,
+          "reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+          "evidence": [
+            {
+              "fact": "Mock fact",
+              "source": "Mock source",
+              "lineage": [
+                "Mock lineage Item"
+              ],
+              "confidence": 0.85,
+              "strength": 0.85
+            }
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "Mock field",
+          "severity": "Mock severity",
+          "reason": "Mock reason",
+          "evidence": [
+            "Mock evidence Item"
+          ]
+        }
+      ],
+      "risks": {
+        "technical": 0.85,
+        "experience": 0.85,
+        "timeline": 0.85,
+        "resume_quality": 0.85,
+        "confidence": 0.85
+      },
+      "recommendation": "Strong Hire",
+      "overall_reasoning": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "confidence": 0.85,
+      "total_duration_ms": 1
+    }
+  ]
+}

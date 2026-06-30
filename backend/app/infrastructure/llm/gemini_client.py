@@ -6,6 +6,7 @@ import typing
 from typing import Dict, Any, Optional
 from google import genai
 from google.genai import types
+from enum import Enum
 from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)
@@ -69,7 +70,15 @@ def generate_mock_data(schema: type[BaseModel]) -> dict:
             else:
                 mock_dict[name] = []
         elif origin is dict:
-            mock_dict[name] = {"key": "value"}
+            val_type = args[1] if (args and len(args) > 1) else str
+            if isinstance(val_type, type) and issubclass(val_type, BaseModel):
+                mock_dict[name] = {
+                    "technical_fit": generate_mock_data(val_type),
+                    "experience_fit": generate_mock_data(val_type),
+                    "behavior_fit": generate_mock_data(val_type)
+                }
+            else:
+                mock_dict[name] = {"key": "value"}
         elif annotation == str:
             if name == "first_name":
                 mock_dict[name] = "Ira"
@@ -93,6 +102,8 @@ def generate_mock_data(schema: type[BaseModel]) -> dict:
                 mock_dict[name] = "mandatory"
             else:
                 mock_dict[name] = f"Mock {name}"
+        elif isinstance(annotation, type) and issubclass(annotation, Enum):
+            mock_dict[name] = list(annotation)[0].value
         elif annotation == int:
             mock_dict[name] = 3
         elif annotation == float:

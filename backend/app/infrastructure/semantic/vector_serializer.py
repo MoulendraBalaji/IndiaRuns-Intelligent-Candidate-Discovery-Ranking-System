@@ -8,15 +8,16 @@ class VectorSerializer:
     """
     @staticmethod
     def to_candidate_payload(profile: CandidateProfile, embedding_version: str) -> CandidatePayload:
+        role = profile.experience[0].title if profile.experience else "Unknown"
         return CandidatePayload(
             candidate_id=profile.id,
-            role=profile.current_role,
-            location=profile.location,
-            experience_years=profile.experience_years,
+            role=role,
+            location="Unknown",
+            experience_years=profile.total_years_experience,
             embedding_version=embedding_version,
             metadata={
                 "has_degree": bool(profile.education),
                 "is_active": True,
-                "skills": [s.name for s in profile.skills]
+                "skills": profile.hard_skills
             }
         )

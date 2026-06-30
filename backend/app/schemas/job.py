@@ -35,6 +35,7 @@ class JobProfile(BaseModel):
     title: str = Field(..., description="Job title")
     department: Optional[str] = Field(None, description="Department or team")
     taxonomy: Optional[RoleTaxonomy] = None
+    role_type: Optional[str] = Field("BACKEND_ENGINEER", description="Preset role type")
     
     # Requirements
     requirements: List[Requirement] = Field(default_factory=list)

@@ -38,3 +38,4 @@ class CandidateProfile(BaseModel):
     soft_skills: List[str] = Field(default_factory=list, description="Interpersonal skills (e.g., Leadership)")
     
     total_years_experience: float = Field(0.0, description="Calculated total years of experience")
+    embedding_text: str = Field("", description="Text representation used for generating embeddings")

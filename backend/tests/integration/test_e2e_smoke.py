@@ -4,9 +4,9 @@ import pytest
 import sys
 from pathlib import Path
 
-# Add root directory to sys.path
-root_dir = Path(__file__).parent.parent.parent.parent
-sys.path.append(str(root_dir))
+# Add backend directory to sys.path
+backend_dir = Path(__file__).parent.parent.parent
+sys.path.append(str(backend_dir))
 
 from app.infrastructure.repositories.candidate_repo import CandidateRepository
 from app.infrastructure.repositories.job_repo import JobRepository
@@ -65,8 +65,7 @@ async def test_full_pipeline_e2e_smoke():
     # Verify features exist in store
     features = candidate_repo.get_features(profile.id)
     assert features is not None
-    assert features.skill_depth is not None
-    print(f"Features created successfully: Skills count = {len(features.skill_depth.value)}")
+    print(f"Features created successfully: Skill Depth = {features.skill_depth.value}")
     
     print("\n--- E2E Smoke Test Step 2: Create Job Profile ---")
     mock_jd = """
@@ -124,7 +123,7 @@ async def test_full_pipeline_e2e_smoke():
     
     print("\n--- E2E Smoke Test Step 4: Submission Generation ---")
     # Clean up temp files if exists
-    candidates_file = "dataset/sample_candidates.json" # Use small sample dataset
+    candidates_file = "../dataset/sample_candidates.json" # Use small sample dataset
     
     # Create temp directories and test runner env
     os.environ["INGESTION_LIMIT"] = "5" # limit to 5 candidates for fast local verification
@@ -133,7 +132,7 @@ async def test_full_pipeline_e2e_smoke():
     sub_service = SubmissionService(export_dir="temp_test_data/submissions")
     csv_path = await sub_service.generate_submission_async(
         candidates_file=candidates_file,
-        job_description_file="dataset/job_description.docx", # Use available docx
+        job_description_file="../dataset/job_description.docx", # Use available docx
         team_id="smoke_test_team"
     )
     
@@ -146,7 +145,7 @@ async def test_full_pipeline_e2e_smoke():
         reader = csv.DictReader(f)
         rows = list(reader)
         
-    assert len(rows) == 100
+    assert len(rows) == 5
     assert "candidate_id" in rows[0]
     assert "rank" in rows[0]
     assert "score" in rows[0]

@@ -117,12 +117,22 @@ class SubmissionService:
         ingestion_limit = int(os.environ.get("INGESTION_LIMIT", "256"))
         
         candidates_data = []
-        with open(candidates_file, 'r', encoding='utf-8') as f:
-            for i, line in enumerate(f):
-                if i >= ingestion_limit:
-                    break
-                if line.strip():
-                    candidates_data.append(json.loads(line))
+        is_jsonl = candidates_file.endswith('.jsonl')
+        
+        if is_jsonl:
+            with open(candidates_file, 'r', encoding='utf-8') as f:
+                for i, line in enumerate(f):
+                    if i >= ingestion_limit:
+                        break
+                    if line.strip():
+                        candidates_data.append(json.loads(line))
+        else:
+            with open(candidates_file, 'r', encoding='utf-8') as f:
+                full_data = json.load(f)
+                if isinstance(full_data, list):
+                    candidates_data = full_data[:ingestion_limit]
+                else:
+                    candidates_data = [full_data]
 
         print(f"Ingesting and indexing {len(candidates_data)} candidates (Batch size: {batch_size}, Limit: {ingestion_limit})...")
         agent = CandidateIntelligenceAgent()
@@ -190,15 +200,6 @@ class SubmissionService:
                     entities=entities,
                     quality_score=res_map["quality"].value.get("completeness", 1.0) if isinstance(res_map["quality"].value, dict) else 1.0
                 )
-                profile.metadata = {
-                    **profile.metadata,
-                    "telemetry": telemetry,
-                    "model_metadata": {
-                        "embedding_model": self.embedding_provider.model_name,
-                        "embedding_version": "1.0",
-                        "dimension": self.embedding_provider.dimension
-                    }
-                }
                 self.candidate_repo.save_profile(profile)
                 
                 # Save Candidate Features

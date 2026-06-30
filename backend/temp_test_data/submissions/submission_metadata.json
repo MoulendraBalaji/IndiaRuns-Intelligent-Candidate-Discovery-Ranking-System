@@ -1,0 +1,17 @@
+{
+  "pipeline_version": "NEXUS v1.0",
+  "model_metadata": {
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "embedding_version": "1.0",
+    "dimension": 1024
+  },
+  "generated_at": "2026-06-30T15:55:03.874769Z",
+  "dataset_hash": "edd71d58c9673a5dee978c9206f32fd9c64fbd5ea2a04a8e7da49318c22a3fff",
+  "csv_hash": "06089ab776fc9bdd7f609e1cca1f5766574b103d5fb4f424b1b0f95ce6326299",
+  "git_commit_hash": "nexus-hackathon-prod-release",
+  "telemetry": {
+    "total_duration_ms": 12936,
+    "candidates_ingested": 5,
+    "matching_task_id": "3717e3a9-a5c0-4e61-91bf-155ae1996d0f"
+  }
+}

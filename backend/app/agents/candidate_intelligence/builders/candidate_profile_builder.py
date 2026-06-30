@@ -24,6 +24,10 @@ class CandidateProfileBuilder(Builder):
             ) for edu in entities.education
         ]
         
+        skills_str = ", ".join(entities.skills)
+        experience_titles = ", ".join([r.title for r in entities.roles])
+        embedding_text = f"Candidate: {entities.first_name} {entities.last_name}. Skills: {skills_str}. Experience: {experience_titles}."
+        
         return CandidateProfile(
             tenant_id=tenant_id,
             id=candidate_id,
@@ -35,5 +39,6 @@ class CandidateProfileBuilder(Builder):
             experience=experience,
             education=education,
             hard_skills=entities.skills,
-            total_years_experience=0.0 # Will compute if needed
+            total_years_experience=0.0,
+            embedding_text=embedding_text
         )

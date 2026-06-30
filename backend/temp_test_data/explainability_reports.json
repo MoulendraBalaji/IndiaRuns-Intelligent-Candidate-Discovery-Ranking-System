@@ -1,0 +1,787 @@
+{
+  "42abcf81-b2e8-45ba-af94-afb06e60314b": [
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:17:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    }
+  ],
+  "f91cd4ee-f549-4374-8bdb-1d4a5b947969": [
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 3,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 2,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:20:39Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 2,
+        "schema_version": "1.0.0"
+      }
+    }
+  ],
+  "091844fe-09fa-428d-822d-f84974857bb1": [
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "Mock candidate_id",
+      "job_id": "Mock job_id",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:50:29Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    }
+  ],
+  "e181e3fa-b249-4158-8bff-d2779691b634": [
+    {
+      "candidate_id": "2a8fd9b7-f729-48aa-9baf-e1b2dc7a51b6",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "53a8cf44-46b2-4076-8cfd-e456cb453f75",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "7937bc06-0f97-43da-84e9-1dc788a4083b",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "95004548-baa2-4b53-9f2b-4d41f46f1ef2",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "d810fd4c-a185-4bb4-ac37-99c5edc07898",
+      "job_id": "e181e3fa-b249-4158-8bff-d2779691b634",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:52:28Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    }
+  ],
+  "30a5113c-ce35-48b3-b488-fc4023fade67": [
+    {
+      "candidate_id": "2a8fd9b7-f729-48aa-9baf-e1b2dc7a51b6",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "53a8cf44-46b2-4076-8cfd-e456cb453f75",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "7937bc06-0f97-43da-84e9-1dc788a4083b",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 1,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "95004548-baa2-4b53-9f2b-4d41f46f1ef2",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "candidate_id": "d810fd4c-a185-4bb4-ac37-99c5edc07898",
+      "job_id": "30a5113c-ce35-48b3-b488-fc4023fade67",
+      "explanation_type": "recruiter",
+      "summary": "The candidate shows exceptional alignment with technical engineering requirements.",
+      "dimension_explanations": {
+        "key": "value"
+      },
+      "strengths": [
+        "Strong technical core",
+        "Solid hands-on projects"
+      ],
+      "weaknesses": [
+        "Could improve direct domain expertise"
+      ],
+      "interview_focus": [
+        "Mock interview_focus Item"
+      ],
+      "development_opportunities": [
+        "Mock development_opportunities Item"
+      ],
+      "comparisons": [],
+      "metadata": {
+        "model_version": "gemini-2.5-flash",
+        "prompt_version": "v1",
+        "timestamp": "2026-06-30T15:54:40Z",
+        "explanation_confidence": 0.95,
+        "generation_duration_ms": 0,
+        "schema_version": "1.0.0"
+      }
+    }
+  ]
+}

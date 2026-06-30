@@ -164,6 +164,8 @@ class MatchingService:
                     response = await self.eval_agent.execute(req, role_profile_key=role_profile_key)
                     if response.success:
                         report_data = response.data["report"]
+                        report_data["candidate_id"] = c.id
+                        report_data["job_id"] = job_id
                         eval_reports.append(EvaluationReport(**report_data))
                 except Exception as eval_err:
                     logger.error(f"Failed evaluation for candidate {c.id}: {eval_err}")
@@ -216,6 +218,8 @@ class MatchingService:
                     exp_response = await self.explain_agent.execute(req)
                     if exp_response.success:
                         exp_rep_data = exp_response.data["report"]
+                        exp_rep_data["candidate_id"] = r_cand.candidate_id
+                        exp_rep_data["job_id"] = job_id
                         explain_reports.append(ExplainabilityReport(**exp_rep_data))
                 except Exception as exp_err:
                     logger.error(f"Failed explainability for candidate {r_cand.candidate_id}: {exp_err}")
