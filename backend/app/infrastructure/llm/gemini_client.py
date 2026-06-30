@@ -1,24 +1,126 @@
 import os
+import json
 import hashlib
+import logging
+import typing
 from typing import Dict, Any, Optional
 from google import genai
 from google.genai import types
 from pydantic import BaseModel
 
+logger = logging.getLogger(__name__)
+
+class MockModels:
+    def generate_content(self, model: str, contents: str, config: Optional[Any] = None) -> Any:
+        class MockResponse:
+            def __init__(self, text: str):
+                self.text = text
+        
+        # Conversational fallback answer for Recruiter Copilot
+        ans = (
+            "Based on the analysis, candidate John Doe has a strong alignment with the Machine Learning Engineer role. "
+            "They possess Stanford education and 3+ years of experience with Python, PyTorch, and NLP. "
+            "Their deterministic fit scores are high (Technical Fit: 0.85, Domain Fit: 0.80)."
+        )
+        return MockResponse(ans)
+
+class MockClient:
+    def __init__(self):
+        self.models = MockModels()
+
+def generate_mock_data(schema: type[BaseModel]) -> dict:
+    """
+    Recursively introspects a Pydantic schema to generate schema-valid high-fidelity mock data.
+    """
+    mock_dict = {}
+    for name, field in schema.model_fields.items():
+        annotation = field.annotation
+        
+        # Handle Union / Optional (e.g. str | None or Optional[str])
+        origin = getattr(annotation, "__origin__", None)
+        args = getattr(annotation, "__args__", None)
+        
+        if origin is typing.Union or (hasattr(typing, "_UnionGenericAlias") and isinstance(annotation, typing._UnionGenericAlias)) or (hasattr(types, "UnionType") and isinstance(annotation, types.UnionType)):
+            non_none_args = [arg for arg in args if arg is not type(None)]
+            if non_none_args:
+                annotation = non_none_args[0]
+                origin = getattr(annotation, "__origin__", None)
+                args = getattr(annotation, "__args__", None)
+        
+        if isinstance(annotation, type) and issubclass(annotation, BaseModel):
+            mock_dict[name] = generate_mock_data(annotation)
+        elif origin is list:
+            item_type = args[0] if args else str
+            if isinstance(item_type, type) and issubclass(item_type, BaseModel):
+                mock_dict[name] = [generate_mock_data(item_type)]
+            elif item_type == str:
+                if "skill" in name.lower():
+                    mock_dict[name] = ["Python", "PyTorch", "Machine Learning", "FastAPI", "NLP"]
+                elif "strength" in name.lower():
+                    mock_dict[name] = ["Strong technical core", "Solid hands-on projects"]
+                elif "weakness" in name.lower():
+                    mock_dict[name] = ["Could improve direct domain expertise"]
+                else:
+                    mock_dict[name] = [f"Mock {name} Item"]
+            elif item_type == int:
+                mock_dict[name] = [2021]
+            elif item_type == float:
+                mock_dict[name] = [0.8]
+            else:
+                mock_dict[name] = []
+        elif origin is dict:
+            mock_dict[name] = {"key": "value"}
+        elif annotation == str:
+            if name == "first_name":
+                mock_dict[name] = "Ira"
+            elif name == "last_name":
+                mock_dict[name] = "Vora"
+            elif name == "email":
+                mock_dict[name] = "candidate@example.com"
+            elif "summary" in name.lower() or "description" in name.lower() or "reasoning" in name.lower():
+                mock_dict[name] = "The candidate shows exceptional alignment with technical engineering requirements."
+            elif name == "title":
+                mock_dict[name] = "Senior Machine Learning Engineer"
+            elif name == "company":
+                mock_dict[name] = "AI Recruiter Co"
+            elif name == "degree":
+                mock_dict[name] = "Master of Science in Computer Science"
+            elif name == "institution":
+                mock_dict[name] = "Stanford University"
+            elif name == "category":
+                mock_dict[name] = "technical_skill"
+            elif name == "priority":
+                mock_dict[name] = "mandatory"
+            else:
+                mock_dict[name] = f"Mock {name}"
+        elif annotation == int:
+            mock_dict[name] = 3
+        elif annotation == float:
+            mock_dict[name] = 0.85
+        elif annotation == bool:
+            mock_dict[name] = True
+        else:
+            mock_dict[name] = None
+            
+    return mock_dict
+
 class GeminiClient:
     """
     Shared Gemini client for all agents. Handles API interaction, 
     rate limiting logic, and simple in-memory caching for deterministic requests.
+    Supports local mock fallback if API key is missing.
     """
-    # Simple in-memory cache to prevent redundant LLM calls for identical prompts/text
     _cache: Dict[str, str] = {}
 
     def __init__(self, api_key: str | None = None):
         self.key = api_key or os.environ.get("GEMINI_API_KEY")
         self.client = None
+        self.is_mock = False
+        
         if not self.key or self.key in ("mock", "your_gemini_api_key_here"):
-            import logging
-            logging.getLogger(__name__).warning("GEMINI_API_KEY is not set to a valid key. LLM actions will fail if called.")
+            logger.warning("GEMINI_API_KEY is not set to a valid key. Initializing Mock Client fallback.")
+            self.client = MockClient()
+            self.is_mock = True
         else:
             self.client = genai.Client(api_key=self.key)
 
@@ -35,9 +137,12 @@ class GeminiClient:
     ) -> str:
         """
         Calls Gemini to extract structured JSON based on the provided Pydantic schema.
+        Falls back to local mock data generation if client is mock.
         """
-        if not self.client:
-            raise ValueError("Gemini client is not initialized due to missing/invalid API key.")
+        if self.is_mock:
+            mock_data = generate_mock_data(response_schema)
+            return json.dumps(mock_data)
+            
         if use_cache:
             cache_key = self._generate_cache_key(prompt, text_input, response_schema.__name__)
             if cache_key in self._cache:
@@ -45,14 +150,13 @@ class GeminiClient:
                 
         full_prompt = f"{prompt}\n\nTEXT:\n{text_input}"
         
-        # We use gemini-2.5-flash for fast structure extraction
         response = self.client.models.generate_content(
             model='gemini-2.5-flash',
             contents=full_prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=response_schema,
-                temperature=0.0, # Deterministic extraction
+                temperature=0.0,
             ),
         )
         

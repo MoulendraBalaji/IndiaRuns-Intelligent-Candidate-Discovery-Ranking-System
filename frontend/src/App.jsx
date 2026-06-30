@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
 
 // Pages Imports
@@ -40,6 +40,7 @@ import AuditLogsPage from './pages/settings/AuditLogsPage';
 // Main Sidebar Layout (for the shortlists index)
 import Layout from './components/Layout';
 import { api } from './services/api';
+import { jobService } from './services/jobService';
 import { ListChecks } from 'lucide-react';
 
 // General Shortlists Index Page (shows all jobs where shortlist is ready)
@@ -49,12 +50,13 @@ function ShortlistsIndexPage() {
 
   useEffect(() => {
     async function loadData() {
-      const all = await api.getJobs();
+      const all = await jobService.getJobs();
       setJobs(all.filter(j => j.status === 'Shortlist Ready'));
       setLoading(false);
     }
     loadData();
   }, []);
+
 
   return (
     <Layout pageTitle="Shortlists">
