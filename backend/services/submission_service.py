@@ -262,15 +262,20 @@ class SubmissionService:
         rankings = list(ranking_result.rankings)
         current_rank = len(rankings) + 1
         
+        min_score = 0.5
+        if rankings:
+            min_score = min(cr.final_score for cr in rankings)
+        
         for cand in indexed_candidates:
             if current_rank > 100:
                 break
             if cand.id not in seen_cids:
                 seen_cids.add(cand.id)
+                padded_score = max(0.001, min_score - ((current_rank - len(ranking_result.rankings)) * 0.002))
                 rankings.append(CandidateRank(
                     candidate_id=cand.id,
                     job_id=job.id,
-                    final_score=max(0.01, 0.5 - (current_rank * 0.002)),
+                    final_score=padded_score,
                     rank_position=current_rank,
                     passed_gates=True,
                     failed_dimensions=[]

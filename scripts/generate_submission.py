@@ -34,6 +34,7 @@ def main():
     print("\nSubmission generation complete!")
     print(f"Final output: {csv_path}")
     print("Please review the generated file and validate using dataset/validate_submission.py")
+    sys.exit(0)
 
 if __name__ == "__main__":
     main()

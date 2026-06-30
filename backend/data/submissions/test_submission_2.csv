@@ -1,93 +1,101 @@
 candidate_id,rank,score,reasoning
-Mock candidate_id,1,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,2,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,3,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,4,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,5,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,6,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,7,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,8,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,9,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,10,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,11,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,12,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,13,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,14,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,15,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,16,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,17,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,18,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,19,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-Mock candidate_id,20,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
-CAND_0000235,21,0.458000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000185,22,0.456000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000236,23,0.454000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000186,24,0.452000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000237,25,0.450000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000187,26,0.448000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000238,27,0.446000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000188,28,0.444000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000239,29,0.442000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000189,30,0.440000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000240,31,0.438000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000190,32,0.436000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000241,33,0.434000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000191,34,0.432000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000242,35,0.430000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000192,36,0.428000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000243,37,0.426000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000193,38,0.424000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000244,39,0.422000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000194,40,0.420000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000245,41,0.418000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000195,42,0.416000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000246,43,0.414000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000196,44,0.412000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000247,45,0.410000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000197,46,0.408000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000248,47,0.406000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000198,48,0.404000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000249,49,0.402000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000199,50,0.400000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000250,51,0.398000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000200,52,0.396000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000251,53,0.394000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000201,54,0.392000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000252,55,0.390000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000253,56,0.388000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000202,57,0.386000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000254,58,0.384000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000203,59,0.382000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000255,60,0.380000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000204,61,0.378000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000256,62,0.376000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000205,63,0.374000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000206,64,0.372000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000207,65,0.370000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000208,66,0.368000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000209,67,0.366000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000210,68,0.364000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000211,69,0.362000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000212,70,0.360000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000213,71,0.358000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000214,72,0.356000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000215,73,0.354000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000216,74,0.352000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000217,75,0.350000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000218,76,0.348000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000219,77,0.346000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000220,78,0.344000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000221,79,0.342000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000222,80,0.340000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000223,81,0.338000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000224,82,0.336000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000225,83,0.334000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000226,84,0.332000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000227,85,0.330000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000228,86,0.328000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000229,87,0.326000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000230,88,0.324000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000231,89,0.322000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000232,90,0.320000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000233,91,0.318000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000234,92,0.316000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000001,1,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
+CAND_0000002,2,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
+CAND_0000003,3,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
+CAND_0000004,4,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
+CAND_0000005,5,0.425000,The candidate shows exceptional alignment with technical engineering requirements.
+CAND_0000006,6,0.425000,Strong candidate matching role requirements.
+CAND_0000007,7,0.425000,Strong candidate matching role requirements.
+CAND_0000008,8,0.425000,Strong candidate matching role requirements.
+CAND_0000009,9,0.425000,Strong candidate matching role requirements.
+CAND_0000010,10,0.425000,Strong candidate matching role requirements.
+CAND_0000011,11,0.425000,Strong candidate matching role requirements.
+CAND_0000012,12,0.425000,Strong candidate matching role requirements.
+CAND_0000013,13,0.425000,Strong candidate matching role requirements.
+CAND_0000014,14,0.425000,Strong candidate matching role requirements.
+CAND_0000015,15,0.425000,Strong candidate matching role requirements.
+CAND_0000016,16,0.425000,Strong candidate matching role requirements.
+CAND_0000017,17,0.425000,Strong candidate matching role requirements.
+CAND_0000018,18,0.425000,Strong candidate matching role requirements.
+CAND_0000019,19,0.425000,Strong candidate matching role requirements.
+CAND_0000020,20,0.425000,Strong candidate matching role requirements.
+CAND_0000021,21,0.458000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000022,22,0.456000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000023,23,0.454000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000024,24,0.452000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000025,25,0.450000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000026,26,0.448000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000027,27,0.446000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000028,28,0.444000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000029,29,0.442000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000030,30,0.440000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000031,31,0.438000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000032,32,0.436000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000033,33,0.434000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000034,34,0.432000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000035,35,0.430000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000036,36,0.428000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000037,37,0.426000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000038,38,0.424000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000039,39,0.422000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000040,40,0.420000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000041,41,0.418000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000042,42,0.416000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000043,43,0.414000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000044,44,0.412000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000045,45,0.410000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000046,46,0.408000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000047,47,0.406000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000048,48,0.404000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000049,49,0.402000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000050,50,0.400000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000051,51,0.398000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000052,52,0.396000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000053,53,0.394000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000054,54,0.392000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000055,55,0.390000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000056,56,0.388000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000057,57,0.386000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000058,58,0.384000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000059,59,0.382000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000060,60,0.380000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000061,61,0.378000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000062,62,0.376000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000063,63,0.374000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000064,64,0.372000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000065,65,0.370000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000066,66,0.368000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000067,67,0.366000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000068,68,0.364000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000069,69,0.362000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000070,70,0.360000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000071,71,0.358000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000072,72,0.356000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000073,73,0.354000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000074,74,0.352000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000075,75,0.350000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000076,76,0.348000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000077,77,0.346000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000078,78,0.344000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000079,79,0.342000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000080,80,0.340000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000081,81,0.338000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000082,82,0.336000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000083,83,0.334000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000084,84,0.332000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000085,85,0.330000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000086,86,0.328000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000087,87,0.326000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000088,88,0.324000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000089,89,0.322000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000090,90,0.320000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000091,91,0.318000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000092,92,0.316000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000093,93,0.314000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000094,94,0.312000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000095,95,0.310000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000096,96,0.308000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000097,97,0.306000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000098,98,0.304000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000099,99,0.302000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0000100,100,0.300000,Relevant match based on candidate profile. Evaluated blind.
