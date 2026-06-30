@@ -1,14 +1,11 @@
 import asyncio
 import logging
 import uuid
-import time
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import Dict, Optional
 
-from app.schemas.job import JobProfile
-from app.schemas.candidate import CandidateProfile
 from app.schemas.feature_store import CandidateFeatures
-from app.schemas.evaluation import EvaluationReport, EvaluationContext
+from app.schemas.evaluation import EvaluationReport
 from app.schemas.ranking import RankingResult, CandidateRank
 from app.schemas.explainability import ExplainabilityReport, ExplanationContext, ExplanationType
 

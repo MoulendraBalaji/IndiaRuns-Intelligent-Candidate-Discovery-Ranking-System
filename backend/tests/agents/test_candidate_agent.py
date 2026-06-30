@@ -1,7 +1,5 @@
 import pytest
-import asyncio
-from unittest.mock import AsyncMock, patch
-from app.schemas.document import ResumeDocument
+from unittest.mock import AsyncMock
 from app.schemas.agent import AgentRequest
 from app.agents.candidate_intelligence.agent import CandidateIntelligenceAgent
 from app.schemas.extraction import ExtractedEntities, ExtractedRole

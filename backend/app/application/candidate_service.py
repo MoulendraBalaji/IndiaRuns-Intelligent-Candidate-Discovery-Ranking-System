@@ -4,7 +4,7 @@ from typing import List, Optional
 import io
 
 from app.schemas.candidate import CandidateProfile
-from app.schemas.feature_store import CandidateFeatures, FeatureValue
+from app.schemas.feature_store import CandidateFeatures
 from app.schemas.agent import AgentRequest
 from app.agents.candidate_intelligence.agent import CandidateIntelligenceAgent
 from app.infrastructure.repositories.candidate_repo import CandidateRepository

@@ -4,7 +4,7 @@ import logging
 from typing import Optional
 
 from app.schemas.agent import AgentRequest, AgentResponse
-from app.schemas.explainability import ExplanationContext, ExplanationDraft, ExplainabilityReport
+from app.schemas.explainability import ExplanationContext, ExplanationDraft
 from app.infrastructure.llm.gemini_client import GeminiClient
 from .prompt_builder import ExplanationPromptBuilder
 from .validator import DraftValidator

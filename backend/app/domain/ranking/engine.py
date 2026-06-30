@@ -1,8 +1,8 @@
 import time
-from typing import List, Dict, Any
+from typing import List
 from app.schemas.evaluation import EvaluationReport
 from app.schemas.ranking import CandidateRank, RankingResult
-from app.ml.registry.evaluation_dimensions import ROLE_PROFILES, RoleProfile
+from app.ml.registry.evaluation_dimensions import ROLE_PROFILES
 from .scorer import DeterministicScorer
 
 class RankingEngine:

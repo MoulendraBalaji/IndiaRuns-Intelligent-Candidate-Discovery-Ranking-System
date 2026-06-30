@@ -1,7 +1,6 @@
 import pytest
 from app.schemas.evaluation import (
-    EvaluationReport, EvaluationMetadata, RiskAssessment, 
-    RecommendationOpinion, EvaluationDimensionScore, EvaluationSummary
+    RecommendationOpinion, EvaluationSummary
 )
 from app.ml.registry.evaluation_dimensions import ROLE_PROFILES, DIMENSION_METADATA
 

@@ -1,4 +1,3 @@
-from typing import Optional
 from app.schemas.job import RoleTaxonomy
 
 class RoleTaxonomyMapper:

@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List, Dict, Optional
+from typing import List, Dict
 from pydantic import BaseModel, Field
 from app.schemas.candidate import CandidateProfile
 from app.schemas.feature_store import CandidateFeatures

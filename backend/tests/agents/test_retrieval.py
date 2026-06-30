@@ -1,5 +1,5 @@
 import pytest
-from app.schemas.job import JobProfile, RoleTaxonomy
+from app.schemas.job import JobProfile
 from app.schemas.candidate import CandidateProfile
 from app.infrastructure.semantic.embedding_provider import BGEProvider
 from app.infrastructure.semantic.index_service import SemanticIndexService

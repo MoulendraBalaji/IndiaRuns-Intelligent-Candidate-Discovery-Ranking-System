@@ -1,9 +1,6 @@
 import os
-import asyncio
 import logging
 from arq.connections import RedisSettings
-from app.schemas.agent import AgentRequest
-from app.agents.candidate_intelligence.agent import CandidateIntelligenceAgent
 from app.infrastructure.repositories.candidate_repo import CandidateRepository
 from app.application.candidate_service import CandidateService
 

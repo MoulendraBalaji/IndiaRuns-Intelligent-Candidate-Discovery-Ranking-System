@@ -1,8 +1,7 @@
 import time
 import json
 import logging
-from typing import Dict, List, Optional
-from google import genai
+from typing import Optional
 from google.genai import types
 
 from app.schemas.agent import AgentRequest, AgentResponse

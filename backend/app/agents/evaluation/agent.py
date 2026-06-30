@@ -2,13 +2,13 @@ import time
 import os
 import json
 import logging
-from typing import Dict, List, Any, Optional
+from typing import Optional
 from pathlib import Path
 
 from app.schemas.agent import AgentRequest, AgentResponse
 from app.schemas.evaluation import EvaluationContext, EvaluationReport, EvaluationMetadata, EvaluationSummary
 from app.infrastructure.llm.gemini_client import GeminiClient
-from app.ml.registry.evaluation_dimensions import ROLE_PROFILES, DIMENSION_METADATA
+from app.ml.registry.evaluation_dimensions import ROLE_PROFILES
 
 logger = logging.getLogger(__name__)
 

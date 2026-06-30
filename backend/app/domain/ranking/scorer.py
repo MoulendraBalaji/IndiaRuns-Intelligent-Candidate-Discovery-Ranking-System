@@ -1,5 +1,5 @@
 import logging
-from typing import Dict, Tuple, List
+from typing import Tuple, List
 from app.schemas.evaluation import EvaluationReport
 from app.ml.registry.evaluation_dimensions import DIMENSION_METADATA, RoleProfile
 

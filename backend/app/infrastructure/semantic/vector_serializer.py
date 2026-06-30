@@ -1,4 +1,3 @@
-from typing import Dict, Any
 from app.schemas.candidate import CandidateProfile
 from app.schemas.retrieval import CandidatePayload
 

@@ -6,7 +6,6 @@ from app.schemas.evaluation import EvaluationReport, EvaluationMetadata, RiskAss
 from app.schemas.ranking import RankingResult, CandidateRank
 from app.schemas.explainability import ExplanationContext, ExplanationType
 from app.agents.explainability.agent import ExplainabilityAgent
-from app.agents.explainability.prompt_builder import ExplanationPromptBuilder
 
 @pytest.fixture
 def mock_context():

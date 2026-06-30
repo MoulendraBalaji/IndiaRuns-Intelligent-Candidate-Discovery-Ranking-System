@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import List, Dict, Optional
+from typing import List, Dict
 from app.schemas.copilot import CopilotResponse
 from .dependencies import copilot_service
 

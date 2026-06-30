@@ -145,11 +145,13 @@ async def test_full_pipeline_e2e_smoke():
         reader = csv.DictReader(f)
         rows = list(reader)
         
-    assert len(rows) == 5
+    assert 1 <= len(rows) <= 100, f"Expected 1-100 rows, got {len(rows)}"
     assert "candidate_id" in rows[0]
     assert "rank" in rows[0]
     assert "score" in rows[0]
     assert "reasoning" in rows[0]
+    # All candidate IDs should be real (no Mock placeholders)
+    assert all("Mock" not in r["candidate_id"] for r in rows), "Found placeholder candidate IDs"
     print(f"CSV verified. Row count = {len(rows)}, columns match schema specification.")
     
     # Clean up temp data

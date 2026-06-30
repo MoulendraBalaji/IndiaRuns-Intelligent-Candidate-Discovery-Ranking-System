@@ -6,21 +6,16 @@ import os
 import pdfplumber
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Any
 
 # Import real schemas and domain modules
-from app.schemas.candidate import CandidateProfile, Education, Role
-from app.schemas.feature_store import CandidateFeatures, FeatureValue
 from app.schemas.extraction import ExtractedEntities, ExtractedRole, ExtractedEducation
 from app.schemas.ranking import RankingResult, CandidateRank
 from app.schemas.explainability import ExplainabilityReport, ExplainabilityMetadata, ExplanationType
-from app.schemas.agent import AgentRequest
 
 # Import builders and registry
 from app.agents.candidate_intelligence.agent import CandidateIntelligenceAgent
 from app.agents.candidate_intelligence.builders.candidate_profile_builder import CandidateProfileBuilder
 from app.agents.candidate_intelligence.builders.candidate_feature_builder import CandidateFeatureBuilder
-from app.agents.candidate_intelligence.pipelines.registry import PipelineRegistry
 
 # Import backend services and repos
 from app.infrastructure.repositories.candidate_repo import CandidateRepository
@@ -181,17 +176,8 @@ class SubmissionService:
                 results = await asyncio.gather(*pipeline_tasks)
                 res_map = dict(zip(agent.pipelines.keys(), results))
                 
-                # Telemetry metrics collection
-                telemetry = {
-                    "pipelines": {
-                        k: {
-                            "latency_ms": res_map[k].latency_ms,
-                            "confidence": res_map[k].confidence,
-                            "warnings_count": len(res_map[k].warnings)
-                        } for k in res_map
-                    },
-                    "total_extraction_time_ms": int((time.time() - t_cand_start) * 1000)
-                }
+                # Per-candidate telemetry is aggregated in final metadata
+                _per_candidate_latency_ms = int((time.time() - t_cand_start) * 1000)
                 
                 # Save Candidate Profile
                 profile = CandidateProfileBuilder.build(

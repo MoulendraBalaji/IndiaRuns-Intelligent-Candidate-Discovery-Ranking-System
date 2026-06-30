@@ -62,7 +62,27 @@ frontend/dist/
 dataset/candidates.jsonl
 data/submissions/*_test.csv
 
+# Backend runtime data (JSON repositories — never commit)
+backend/data/*.json
+backend/data/submissions/*.csv
+backend/data/submissions/*.json
+backend/run*.log
+
 # Local runtime & test caches
 backend/data/matching_tasks.json
 backend/temp_pytest/
+backend/temp_test_data/
+.pytest_cache/
+backend/.pytest_cache/
+.ruff_cache/
+backend/.ruff_cache/
+mypy.ini
 
+# Scratch / planning artefacts (not for version control)
+*_doc.txt
+*_doc_full.txt
+docs_content.txt
+agents_06_08.txt
+scaffold.ps1
+NEXUS_UI_Design_Brief_All_27_Pages.md
+backend/run*.log

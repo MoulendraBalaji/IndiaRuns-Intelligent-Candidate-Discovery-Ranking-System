@@ -1,7 +1,6 @@
 import asyncio
 import time
 import uuid
-from typing import Dict, Any
 
 from app.schemas.agent import AgentRequest, AgentResponse
 from app.schemas.document import ResumeDocument

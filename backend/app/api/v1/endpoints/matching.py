@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Query, Response
 from pydantic import BaseModel
-from typing import Dict, Any, Optional
+from typing import Dict
 from .dependencies import matching_service
 
 router = APIRouter()

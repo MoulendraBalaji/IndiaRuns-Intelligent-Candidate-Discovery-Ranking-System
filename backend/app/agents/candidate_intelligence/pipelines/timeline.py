@@ -1,5 +1,4 @@
 import time
-from typing import Dict, Any
 from app.schemas.pipeline import PipelineResult
 from app.schemas.extraction import ExtractedEntities
 from .base import FeaturePipeline

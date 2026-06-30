@@ -1,5 +1,5 @@
 import logging
-from typing import List, Dict, Any, Optional
+from typing import List, Dict
 from app.schemas.agent import AgentRequest
 from app.agents.copilot.agent import CopilotAgent
 from app.infrastructure.repositories.matching_repo import MatchingRepository

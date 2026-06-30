@@ -1,6 +1,5 @@
 import time
 from datetime import datetime
-from typing import Any, Dict, Optional
 
 from app.schemas.agent import AgentRequest, AgentResponse
 
@@ -39,7 +38,8 @@ class BehavioralIntelligenceAgent:
             profile_completeness = signals.get("profile_completeness_score", 50.0) / 100.0
             last_active_date = signals.get("last_active_date", "2025-01-01")
             recruiter_response_rate = signals.get("recruiter_response_rate", 0.5)
-            github_activity = signals.get("github_activity_score", 0)
+            # github_activity kept for future scoring integration
+            _github_activity = signals.get("github_activity_score", 0)
             
             # Recency
             recency_score = self._calculate_recency(last_active_date)
