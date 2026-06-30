@@ -9,6 +9,8 @@ on:
 jobs:
   backend:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     defaults:
       run:
@@ -28,7 +30,18 @@ jobs:
         run: uv sync --all-extras
 
       - name: Run tests
-        run: uv run pytest
+        run: |
+          rc=0
+          uv run pytest > pytest_output.log 2>&1 || rc=$?
+          if [ $rc -ne 0 ]; then
+            echo "Pytest failed with exit code $rc. Committing output log..."
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add pytest_output.log
+            git commit -m "ci: save pytest failure log [skip ci]"
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+            exit $rc
+          fi
 
   frontend:
     runs-on: ubuntu-latest
