@@ -30,15 +30,7 @@ jobs:
         run: uv sync --all-extras
 
       - name: Run tests
-        run: |
-          uv run pytest > pytest_output.log 2>&1 || (cat pytest_output.log && exit 2)
-
-      - name: Upload pytest log
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: pytest-log
-          path: backend/pytest_output.log
+        run: uv run pytest
 
   frontend:
     runs-on: ubuntu-latest
