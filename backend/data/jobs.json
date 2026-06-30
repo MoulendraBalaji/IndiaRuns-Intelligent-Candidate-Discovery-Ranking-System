@@ -1,1 +1,158 @@
-{}
+{
+  "d976b323-af52-4441-a56a-6d11ef8d4b7d": {
+    "id": "d976b323-af52-4441-a56a-6d11ef8d4b7d",
+    "tenant_id": "default_tenant",
+    "title": "Senior Machine Learning Engineer",
+    "department": "Mock department",
+    "taxonomy": {
+      "family": "AI Engineering",
+      "level": "Senior",
+      "domain": "Machine Learning",
+      "function": "Engineering"
+    },
+    "requirements": [
+      {
+        "text": "python",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "python",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "machine_learning",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "fastapi",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "nlp",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "Mock responsibilities Item",
+        "category": "responsibility",
+        "priority": "mandatory",
+        "importance": 0.9,
+        "confidence": 0.9
+      }
+    ],
+    "capabilities": [],
+    "constraints": [
+      "Mock implicit_constraints Item"
+    ],
+    "min_years_experience": 0.85,
+    "max_years_experience": 0.85,
+    "education_requirement": "Mock education",
+    "complexity_score": 0.124,
+    "quality": {
+      "clarity": 0.85,
+      "missing_sections": [
+        "Mock missing_sections Item"
+      ],
+      "ambiguity": 0.15000000000000002
+    },
+    "embedding_text": "Title: Senior Machine Learning Engineer\nRole Family: AI Engineering\nLevel: Senior\nDomain: Machine Learning",
+    "metadata": {
+      "pipeline_version": "1.0",
+      "prompt_version": "v1",
+      "ontology_version": "1.0",
+      "llm_model": "gemini-2.5-flash"
+    }
+  },
+  "c1207d6d-d5eb-4970-b3de-474413febb50": {
+    "id": "c1207d6d-d5eb-4970-b3de-474413febb50",
+    "tenant_id": "default_tenant",
+    "title": "Senior Machine Learning Engineer",
+    "department": "Mock department",
+    "taxonomy": {
+      "family": "AI Engineering",
+      "level": "Senior",
+      "domain": "Machine Learning",
+      "function": "Engineering"
+    },
+    "requirements": [
+      {
+        "text": "python",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "deep_learning",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "machine_learning",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "fastapi",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "nlp",
+        "category": "technical_skill",
+        "priority": "preferred",
+        "importance": 0.5,
+        "confidence": 0.85
+      },
+      {
+        "text": "Mock responsibilities Item",
+        "category": "responsibility",
+        "priority": "mandatory",
+        "importance": 0.9,
+        "confidence": 0.9
+      }
+    ],
+    "capabilities": [],
+    "constraints": [
+      "Mock implicit_constraints Item"
+    ],
+    "min_years_experience": 0.85,
+    "max_years_experience": 0.85,
+    "education_requirement": "Mock education",
+    "complexity_score": 0.124,
+    "quality": {
+      "clarity": 0.85,
+      "missing_sections": [
+        "Mock missing_sections Item"
+      ],
+      "ambiguity": 0.15000000000000002
+    },
+    "embedding_text": "Title: Senior Machine Learning Engineer\nRole Family: AI Engineering\nLevel: Senior\nDomain: Machine Learning",
+    "metadata": {
+      "pipeline_version": "1.0",
+      "prompt_version": "v1",
+      "ontology_version": "1.0",
+      "llm_model": "gemini-2.5-flash"
+    }
+  }
+}

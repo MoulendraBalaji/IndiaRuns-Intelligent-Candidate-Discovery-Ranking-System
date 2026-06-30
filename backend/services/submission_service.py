@@ -175,7 +175,7 @@ class SubmissionService:
                 telemetry = {
                     "pipelines": {
                         k: {
-                            "latency_ms": res_map[k].processing_time_ms,
+                            "latency_ms": res_map[k].latency_ms,
                             "confidence": res_map[k].confidence,
                             "warnings_count": len(res_map[k].warnings)
                         } for k in res_map
