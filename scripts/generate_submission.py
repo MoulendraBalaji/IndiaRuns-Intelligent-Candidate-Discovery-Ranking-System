@@ -9,15 +9,18 @@ sys.path.append(str(root_dir))
 sys.path.append(str(root_dir / 'backend'))
 
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(dotenv_path=root_dir / ".env")
+
+# Change working directory to backend so all agents (and prompt loaders) initialize with the correct path
+os.chdir(str(root_dir / "backend"))
 
 from backend.services.submission_service import SubmissionService
 
 def main():
     parser = argparse.ArgumentParser(description="Generate the top 100 candidate submission CSV.")
     parser.add_argument("--team_id", required=True, help="Your team ID / Participant ID for the submission filename.")
-    parser.add_argument("--candidates", default="dataset/candidates.jsonl", help="Path to candidates.jsonl")
-    parser.add_argument("--job_description", default="dataset/job_description.docx", help="Path to JD")
+    parser.add_argument("--candidates", default=str(root_dir / "dataset/candidates.jsonl"), help="Path to candidates.jsonl")
+    parser.add_argument("--job_description", default=str(root_dir / "dataset/job_description.docx"), help="Path to JD")
     
     args = parser.parse_args()
     
@@ -34,9 +37,6 @@ def main():
     
     # Instantiate service with absolute export directory
     service = SubmissionService(export_dir=abs_export_dir)
-    
-    # Change working directory to backend so prompts/ resources resolve correctly
-    os.chdir(str(root_dir / "backend"))
     
     csv_path = service.generate_submission(
         candidates_file=abs_candidates,
