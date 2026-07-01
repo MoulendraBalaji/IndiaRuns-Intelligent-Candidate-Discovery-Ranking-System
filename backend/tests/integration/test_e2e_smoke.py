@@ -105,6 +105,7 @@ async def test_full_pipeline_e2e_smoke():
         await asyncio.sleep(0.5)
         
     status_dict = matching_service.get_task_status(task_id)
+    assert status_dict is not None
     assert status_dict.get("status") == "COMPLETED"
     
     # Verify results
