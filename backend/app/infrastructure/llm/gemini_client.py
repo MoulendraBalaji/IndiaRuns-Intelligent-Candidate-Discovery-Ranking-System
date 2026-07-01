@@ -34,6 +34,32 @@ def generate_mock_data(schema: type[BaseModel], text_input: Optional[str] = None
     Recursively introspects a Pydantic schema to generate schema-valid high-fidelity mock data.
     """
     mock_dict: dict[str, Any] = {}
+    
+    # Analyze text_input to deduce domain context
+    is_frontend = False
+    is_architect = False
+    inferred_title = ""
+    if text_input:
+        text_lower = text_input.lower()
+        if "frontend" in text_lower or "react" in text_lower or "ui" in text_lower or "ux" in text_lower or "css" in text_lower or "typescript" in text_lower:
+            is_frontend = True
+        if "architect" in text_lower:
+            is_architect = True
+            
+        # Extract title from first line or Title: label
+        import re
+        title_match = re.search(r"(?:job\s+)?title:\s*([^\n\r]+)", text_input, re.IGNORECASE)
+        if title_match:
+            inferred_title = title_match.group(1).strip()
+        else:
+            lines = [l.strip() for l in text_input.split('\n') if l.strip()]
+            for line in lines[:3]:
+                if len(line) < 60 and any(keyword in line.lower() for keyword in ["engineer", "developer", "architect", "lead", "manager", "designer"]):
+                    inferred_title = line
+                    break
+            if not inferred_title and lines and len(lines[0]) < 60:
+                inferred_title = lines[0]
+
     for name, field in schema.model_fields.items():
         annotation = field.annotation
         
@@ -57,18 +83,47 @@ def generate_mock_data(schema: type[BaseModel], text_input: Optional[str] = None
                 mock_dict[name] = [generate_mock_data(item_type, text_input)]
             elif item_type == str:
                 if "skill" in name.lower():
-                    # Introspect candidate skills from text_input if available
+                    # Parse dynamic skills from text input or return presets
                     import re
                     skills_list = []
                     if text_input:
-                        skills_match = re.search(r"Skills:\s*([^.]+)", text_input)
-                        if skills_match:
-                            skills_list = [s.strip() for s in skills_match.group(1).split(",") if s.strip()]
-                    mock_dict[name] = skills_list[:5] if skills_list else ["Python", "PyTorch", "Machine Learning", "FastAPI", "NLP"]
+                        tech_keywords = [
+                            "React", "TypeScript", "JavaScript", "HTML", "CSS", "Vite", "Vue", "Angular",
+                            "Tailwind", "Next.js", "Python", "PyTorch", "FastAPI", "Docker", "Qdrant", "Redis",
+                            "PostgreSQL", "AWS", "Kubernetes", "Node.js", "Git"
+                        ]
+                        for kw in tech_keywords:
+                            if re.search(rf"\b{kw}\b", text_input, re.IGNORECASE):
+                                skills_list.append(kw)
+                    if not skills_list:
+                        skills_list = ["React", "TypeScript", "JavaScript", "HTML", "CSS"] if is_frontend else ["Python", "FastAPI", "Data Structures", "SQL", "Git"]
+                    mock_dict[name] = skills_list[:5]
                 elif "strength" in name.lower():
-                    mock_dict[name] = ["Strong technical core", "Solid hands-on projects"]
+                    mock_dict[name] = ["Exceptional structural layout hygiene", "Solid systems architecture credentials"] if is_architect else ["Strong technical core", "Solid hands-on projects"]
                 elif "weakness" in name.lower():
                     mock_dict[name] = ["Could improve direct domain expertise"]
+                elif name == "responsibilities":
+                    mock_dict[name] = [
+                        "Design and build responsive web application components.",
+                        "Optimize client-side performance and ensure high layout fidelity.",
+                        "Collaborate with backend engineering teams to consume REST APIs."
+                    ] if is_frontend else [
+                        "Design and build scalable REST APIs and data processing workers.",
+                        "Optimize DB lookup queries and index candidate profiles.",
+                        "Maintain system health and write high coverage test suites."
+                    ]
+                elif name == "implicit_constraints":
+                    mock_dict[name] = [
+                        "Deep familiarity with client-side state caching techniques.",
+                        "Strict alignment with Figma design tokens guidelines.",
+                        "Prior experience scaling consumer facing single page apps."
+                    ] if is_frontend else [
+                        "Implicit focus on distributed tracing and structured logging.",
+                        "High familiarity with asynchronous python queues (arq/celery).",
+                        "Strong vector space maths understanding for database operations."
+                    ]
+                elif name == "missing_sections":
+                    mock_dict[name] = ["Compliance guidelines"]
                 else:
                     mock_dict[name] = [f"Mock {name} Item"]
             elif item_type == int:
@@ -115,7 +170,7 @@ def generate_mock_data(schema: type[BaseModel], text_input: Optional[str] = None
                 else:
                     mock_dict[name] = "The candidate shows exceptional alignment with technical engineering requirements."
             elif name == "title":
-                mock_dict[name] = "Senior Machine Learning Engineer"
+                mock_dict[name] = inferred_title if inferred_title else ("Senior Frontend Architect" if is_frontend else "Senior Machine Learning Engineer")
             elif name == "company":
                 mock_dict[name] = "AI Recruiter Co"
             elif name == "degree":
@@ -126,6 +181,8 @@ def generate_mock_data(schema: type[BaseModel], text_input: Optional[str] = None
                 mock_dict[name] = "technical_skill"
             elif name == "priority":
                 mock_dict[name] = "mandatory"
+            elif name == "department":
+                mock_dict[name] = "Engineering"
             else:
                 mock_dict[name] = f"Mock {name}"
         elif isinstance(annotation, type) and issubclass(annotation, Enum):
