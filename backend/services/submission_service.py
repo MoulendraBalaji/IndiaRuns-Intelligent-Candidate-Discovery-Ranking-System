@@ -68,6 +68,14 @@ class SubmissionService:
 
     async def generate_submission_async(self, candidates_file: str, job_description_file: str, team_id: str) -> str:
         t_start = time.time()
+        
+        # Clear/wipe local JSON repository files to prevent old run candidate leakages
+        print("Clearing database repository from previous runs...")
+        for file_path in [self.candidate_repo.profiles_path, self.candidate_repo.features_path]:
+            if os.path.exists(file_path):
+                with open(file_path, "w", encoding="utf-8") as f:
+                    json.dump({}, f)
+                    
         print("1. Parsing and Analyzing Job Description...")
         # Extract text from Job Description PDF/file
         jd_text = ""
@@ -159,7 +167,7 @@ class SubmissionService:
             for skill in skills:
                 if skill in keywords:
                     score += 10.0
-                elif any(kw in skill for kw in keywords):
+                elif any(w in keywords for w in skill.split()):
                     score += 3.0
                     
             # 2. Headline & Summary matches
