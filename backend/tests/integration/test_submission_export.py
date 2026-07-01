@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 # Add backend directory to PYTHONPATH
-root_dir = Path(__file__).resolve().parents[2]
+root_dir = Path(__file__).resolve().parents[3]
 sys.path.append(str(root_dir))
 sys.path.append(str(root_dir / "backend"))
 
@@ -75,6 +75,7 @@ def test_export_and_validation():
     assert len(wb.sheetnames) == 1, f"Expected exactly 1 worksheet, got {len(wb.sheetnames)}"
     
     ws = wb.active
+    assert ws is not None
     assert ws.title == "Ranked Candidates", f"Expected worksheet title 'Ranked Candidates', got '{ws.title}'"
     assert ws.freeze_panes == "A2", f"Expected freeze_panes 'A2', got '{ws.freeze_panes}'"
 
@@ -86,7 +87,9 @@ def test_export_and_validation():
     assert ws.max_row == 101, f"Expected 101 rows (1 header + 100 data rows), got {ws.max_row}"
 
     # Verify ordering of scores & ranks
-    scores = [ws.cell(row=i, column=3).value for i in range(2, ws.max_row + 1)]
+    from typing import Any
+    raw_scores: list[Any] = [ws.cell(row=i, column=3).value for i in range(2, ws.max_row + 1)]
+    scores: list[float] = [float(s or 0.0) for s in raw_scores]
     assert scores == sorted(scores, reverse=True), "Scores are not sorted in descending order!"
 
     ranks = [ws.cell(row=i, column=2).value for i in range(2, ws.max_row + 1)]

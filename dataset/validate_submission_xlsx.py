@@ -83,7 +83,7 @@ def validate_submission(xlsx_path):
 
     seen_ids = set()
     seen_ranks = set()
-    by_rank = []
+    by_rank: list[tuple[int, float | int, str]] = []
 
     for i, cells in enumerate(data_rows):
         row_num = DATA_ROW_START + i
@@ -138,7 +138,10 @@ def validate_submission(xlsx_path):
 
         # Collect for order & tie-break validations
         if cid and rank_val is not None and score_val is not None:
-            by_rank.append((rank_val, score_val, cid))
+            from typing import Any
+            r_val: Any = rank_val
+            s_val: Any = score_val
+            by_rank.append((int(r_val), float(s_val), str(cid)))
 
     # ✅ Each rank 1-100 appears exactly once
     missing = set(range(1, 101)) - seen_ranks

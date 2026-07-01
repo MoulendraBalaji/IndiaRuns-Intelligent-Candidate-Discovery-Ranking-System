@@ -33,10 +33,10 @@ class SubmissionWriter:
                 reasoning = report.summary.strip()
                 
             rows.append({
-                "candidate_id": str(rank.candidate_id),
-                "rank": int(rank.rank_position),
-                "score": float(rank.final_score),
-                "reasoning": str(reasoning)
+                "candidate_id": rank.candidate_id,
+                "rank": rank.rank_position,
+                "score": rank.final_score,
+                "reasoning": reasoning
             })
         return rows
 
@@ -76,6 +76,7 @@ class SubmissionWriter:
         wb = openpyxl.Workbook()
         # Ensure only 1 sheet exists
         ws = wb.active
+        assert ws is not None
         ws.title = "Ranked Candidates"
 
         # Write header
@@ -100,11 +101,14 @@ class SubmissionWriter:
         # Auto-fit columns
         for col in ws.columns:
             max_len = 0
-            col_letter = get_column_letter(col[0].column)
+            col_idx = col[0].column
+            if col_idx is None:
+                continue
+            col_letter = get_column_letter(col_idx)
             for cell in col:
                 val_str = str(cell.value or '')
                 # If score column, format it to check length with 6 decimal places
-                if cell.row > 1 and cell.column == 3 and isinstance(cell.value, (int, float)):
+                if cell.row is not None and cell.row > 1 and cell.column == 3 and isinstance(cell.value, (int, float)):
                     val_str = f"{cell.value:.6f}"
                 if len(val_str) > max_len:
                     max_len = len(val_str)
