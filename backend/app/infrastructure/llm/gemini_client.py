@@ -161,12 +161,51 @@ class GeminiClient:
                 
         full_prompt = f"{prompt}\n\nTEXT:\n{text_input}"
         
+        # Convert Pydantic model to json schema and resolve refs to build a flat schema dict
+        schema_dict = response_schema.model_json_schema()
+        
+        def dereference_schema(schema, defs=None):
+            if defs is None:
+                defs = schema.get("$defs", {})
+            if isinstance(schema, dict):
+                if "$ref" in schema:
+                    ref_path = schema["$ref"]
+                    ref_name = ref_path.split("/")[-1]
+                    ref_schema = dict(defs[ref_name])
+                    resolved = dereference_schema(ref_schema, defs)
+                    schema.pop("$ref")
+                    schema.update(resolved)
+                else:
+                    for key, value in list(schema.items()):
+                        schema[key] = dereference_schema(value, defs)
+            elif isinstance(schema, list):
+                for i, item in enumerate(schema):
+                    schema[i] = dereference_schema(item, defs)
+            if isinstance(schema, dict) and "$defs" in schema:
+                schema.pop("$defs")
+            return schema
+
+        def strip_additional_properties(schema):
+            if isinstance(schema, dict):
+                schema.pop("additionalProperties", None)
+                for key, value in list(schema.items()):
+                    strip_additional_properties(value)
+            elif isinstance(schema, list):
+                for item in schema:
+                    strip_additional_properties(item)
+
+        dereference_schema(schema_dict)
+        strip_additional_properties(schema_dict)
+        
+        # Instantiate standard google-genai types.Schema from stripped dict
+        api_schema = types.Schema.model_validate(schema_dict)
+        
         response = self.client.models.generate_content(
             model='gemini-2.5-flash',
             contents=full_prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
-                response_schema=response_schema,
+                response_schema=api_schema,
                 temperature=0.0,
             ),
         )
