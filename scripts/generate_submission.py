@@ -27,10 +27,20 @@ def main():
         
     print(f"Generating submission for team: {args.team_id}")
     
-    service = SubmissionService()
+    # Resolve absolute paths first
+    abs_candidates = str(Path(args.candidates).resolve())
+    abs_jd = str(Path(args.job_description).resolve())
+    abs_export_dir = str(root_dir / "data/submissions")
+    
+    # Instantiate service with absolute export directory
+    service = SubmissionService(export_dir=abs_export_dir)
+    
+    # Change working directory to backend so prompts/ resources resolve correctly
+    os.chdir(str(root_dir / "backend"))
+    
     csv_path = service.generate_submission(
-        candidates_file=args.candidates,
-        job_description_file=args.job_description,
+        candidates_file=abs_candidates,
+        job_description_file=abs_jd,
         team_id=args.team_id
     )
     
