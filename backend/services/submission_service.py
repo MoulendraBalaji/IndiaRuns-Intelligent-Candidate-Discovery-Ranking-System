@@ -107,6 +107,7 @@ class SubmissionService:
             raw_jd=jd_text,
             role_type="DATA_SCIENTIST" # DATA_SCIENTIST preset mapped for ML engineer
         )
+        assert job.id is not None
         print(f"Job Profile Created. ID: {job.id}, Title: {job.title}")
 
         print("2. Batch Streaming Ingestion & Semantic Indexing...")
@@ -248,6 +249,7 @@ class SubmissionService:
             raise ValueError(f"MatchingService failed or timed out: {status_dict}")
             
         results = self.matching_service.get_match_result(job.id)
+        assert results is not None
         ranking_result = RankingResult(**results["ranking_result"])
         explanations = {
             er["candidate_id"]: ExplainabilityReport(**er)
@@ -270,7 +272,7 @@ class SubmissionService:
         for cand in indexed_candidates:
             if current_rank > 100:
                 break
-            if cand.id not in seen_cids:
+            if cand.id is not None and cand.id not in seen_cids:
                 seen_cids.add(cand.id)
                 padded_score = min(min_score, max(0.0, min_score - ((current_rank - len(ranking_result.rankings)) * 0.002)))
                 rankings.append(CandidateRank(
