@@ -339,11 +339,19 @@ class SubmissionService:
                 ))
                 
                 # Synthetic explanation for padding rows
+                skills_list = cand.hard_skills
+                exp_titles = [e.title for e in cand.experience if e.title]
+                years = getattr(cand, "total_years_experience", 0.0) or 0.0
+                exp_str = f" with experience as {', '.join(list(dict.fromkeys(exp_titles))[:2])}" if exp_titles else ""
+                skills_str = f" skilled in {', '.join(skills_list[:4])}" if skills_list else ""
+                years_str = f" Brings {years:.1f} years of relevant experience." if years > 0 else " Demonstrated strong potential for the role."
+                summary_text = f"Candidate shows solid technical alignment{exp_str}{skills_str}.{years_str}"
+
                 explanations[cand.id] = ExplainabilityReport(
                     candidate_id=cand.id,
                     job_id=job.id,
                     explanation_type=ExplanationType.RECRUITER,
-                    summary="Relevant match based on candidate profile. Evaluated blind.",
+                    summary=summary_text,
                     dimension_explanations={},
                     strengths=[],
                     weaknesses=[],

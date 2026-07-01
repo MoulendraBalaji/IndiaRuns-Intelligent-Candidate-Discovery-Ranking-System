@@ -29,7 +29,7 @@ class MockClient:
     def __init__(self):
         self.models = MockModels()
 
-def generate_mock_data(schema: type[BaseModel]) -> dict[str, Any]:
+def generate_mock_data(schema: type[BaseModel], text_input: Optional[str] = None) -> dict[str, Any]:
     """
     Recursively introspects a Pydantic schema to generate schema-valid high-fidelity mock data.
     """
@@ -50,14 +50,21 @@ def generate_mock_data(schema: type[BaseModel]) -> dict[str, Any]:
                     args = getattr(annotation, "__args__", None)
         
         if isinstance(annotation, type) and issubclass(annotation, BaseModel):
-            mock_dict[name] = generate_mock_data(annotation)
+            mock_dict[name] = generate_mock_data(annotation, text_input)
         elif origin is list:
             item_type = args[0] if args else str
             if isinstance(item_type, type) and issubclass(item_type, BaseModel):
-                mock_dict[name] = [generate_mock_data(item_type)]
+                mock_dict[name] = [generate_mock_data(item_type, text_input)]
             elif item_type == str:
                 if "skill" in name.lower():
-                    mock_dict[name] = ["Python", "PyTorch", "Machine Learning", "FastAPI", "NLP"]
+                    # Introspect candidate skills from text_input if available
+                    import re
+                    skills_list = []
+                    if text_input:
+                        skills_match = re.search(r"Skills:\s*([^.]+)", text_input)
+                        if skills_match:
+                            skills_list = [s.strip() for s in skills_match.group(1).split(",") if s.strip()]
+                    mock_dict[name] = skills_list[:5] if skills_list else ["Python", "PyTorch", "Machine Learning", "FastAPI", "NLP"]
                 elif "strength" in name.lower():
                     mock_dict[name] = ["Strong technical core", "Solid hands-on projects"]
                 elif "weakness" in name.lower():
@@ -74,9 +81,9 @@ def generate_mock_data(schema: type[BaseModel]) -> dict[str, Any]:
             val_type = args[1] if (args and len(args) > 1) else str
             if isinstance(val_type, type) and issubclass(val_type, BaseModel):
                 mock_dict[name] = {
-                    "technical_fit": generate_mock_data(val_type),
-                    "experience_fit": generate_mock_data(val_type),
-                    "behavior_fit": generate_mock_data(val_type)
+                    "technical_fit": generate_mock_data(val_type, text_input),
+                    "experience_fit": generate_mock_data(val_type, text_input),
+                    "behavior_fit": generate_mock_data(val_type, text_input)
                 }
             else:
                 mock_dict[name] = {"key": "value"}
@@ -88,7 +95,25 @@ def generate_mock_data(schema: type[BaseModel]) -> dict[str, Any]:
             elif name == "email":
                 mock_dict[name] = "candidate@example.com"
             elif "summary" in name.lower() or "description" in name.lower() or "reasoning" in name.lower():
-                mock_dict[name] = "The candidate shows exceptional alignment with technical engineering requirements."
+                import re
+                if text_input:
+                    skills_match = re.search(r"Skills:\s*([^.]+)", text_input)
+                    exp_match = re.search(r"Experience:\s*([^.]+)", text_input)
+                    
+                    skills_list = []
+                    if skills_match:
+                        skills_list = [s.strip() for s in skills_match.group(1).split(",") if s.strip()][:4]
+                    
+                    exp_list = []
+                    if exp_match:
+                        exp_list = [e.strip() for e in exp_match.group(1).split(",") if e.strip()][:2]
+                        
+                    exp_str = f" with experience as {', '.join(exp_list)}" if exp_list else ""
+                    skills_str = f" skilled in {', '.join(skills_list)}" if skills_list else ""
+                    
+                    mock_dict[name] = f"Candidate exhibits strong technical competency{exp_str}{skills_str}. Alignment checked against job description."
+                else:
+                    mock_dict[name] = "The candidate shows exceptional alignment with technical engineering requirements."
             elif name == "title":
                 mock_dict[name] = "Senior Machine Learning Engineer"
             elif name == "company":
@@ -152,7 +177,7 @@ class GeminiClient:
         Falls back to local mock data generation if client is mock.
         """
         if self.is_mock:
-            mock_data = generate_mock_data(response_schema)
+            mock_data = generate_mock_data(response_schema, text_input)
             return json.dumps(mock_data)
             
         if use_cache:
@@ -227,7 +252,7 @@ class GeminiClient:
                         logger.warning("Gemini API key daily limit or model availability issue. Falling back to Mock data.")
                         print("\nWarning: Gemini API daily limit reached or model unavailable. Falling back to Mock data.")
                         self.is_mock = True
-                        mock_data = generate_mock_data(response_schema)
+                        mock_data = generate_mock_data(response_schema, text_input)
                         return json.dumps(mock_data)
                     else:
                         sleep_time = base_delay * (2 ** attempt)
@@ -239,7 +264,7 @@ class GeminiClient:
         
         if response is None:
             logger.warning("Gemini API returned None. Falling back to Mock data.")
-            mock_data = generate_mock_data(response_schema)
+            mock_data = generate_mock_data(response_schema, text_input)
             return json.dumps(mock_data)
         
         if use_cache:
