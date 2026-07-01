@@ -201,16 +201,37 @@ class GeminiClient:
         # Instantiate standard google-genai types.Schema from stripped dict
         api_schema = types.Schema.model_validate(schema_dict)
         
-        assert self.client is not None
-        response = self.client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=full_prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                response_schema=api_schema,
-                temperature=0.0,
-            ),
-        )
+        import time
+        max_retries = 5
+        base_delay = 2.0
+        response = None
+        
+        for attempt in range(max_retries):
+            try:
+                assert self.client is not None
+                response = self.client.models.generate_content(
+                    model='gemini-2.5-flash',
+                    contents=full_prompt,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_schema=api_schema,
+                        temperature=0.0,
+                    ),
+                )
+                break
+            except Exception as e:
+                err_msg = str(e)
+                if "429" in err_msg or "ResourceExhausted" in err_msg or "Quota exceeded" in err_msg or "rate limit" in err_msg.lower():
+                    if attempt < max_retries - 1:
+                        sleep_time = base_delay * (2 ** attempt)
+                        logger.warning(f"Gemini API rate limited (429). Retrying in {sleep_time}s... (Attempt {attempt+1}/{max_retries})")
+                        print(f"Gemini API rate limited (429). Retrying in {sleep_time}s... (Attempt {attempt+1}/{max_retries})")
+                        time.sleep(sleep_time)
+                        continue
+                raise e
+        
+        if response is None:
+            raise ValueError("Failed to obtain response from Gemini API after retries.")
         
         if use_cache:
             self._cache[cache_key] = response.text

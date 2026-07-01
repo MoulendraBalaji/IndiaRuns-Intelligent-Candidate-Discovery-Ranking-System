@@ -10,7 +10,6 @@ sys.path.append(str(root_dir / 'backend'))
 
 from dotenv import load_dotenv
 load_dotenv(dotenv_path=root_dir / ".env")
-os.environ["GEMINI_API_KEY"] = "mock"
 
 # Change working directory to backend so all agents (and prompt loaders) initialize with the correct path
 os.chdir(str(root_dir / "backend"))
@@ -22,9 +21,16 @@ def main():
     parser.add_argument("--team_id", required=True, help="Your team ID / Participant ID for the submission filename.")
     parser.add_argument("--candidates", default=str(root_dir / "dataset/candidates.jsonl"), help="Path to candidates.jsonl")
     parser.add_argument("--job_description", default=str(root_dir / "dataset/job_description.docx"), help="Path to JD")
+    parser.add_argument("--api_key", default=None, help="Optional Gemini API key to override the environment key.")
     
     args = parser.parse_args()
     
+    # Configure API key priority: argument, then environment, fallback to "mock"
+    if args.api_key:
+        os.environ["GEMINI_API_KEY"] = args.api_key
+    elif not os.environ.get("GEMINI_API_KEY"):
+        os.environ["GEMINI_API_KEY"] = "mock"
+        
     if not os.path.exists(args.candidates):
         print(f"Error: {args.candidates} not found.")
         sys.exit(1)
