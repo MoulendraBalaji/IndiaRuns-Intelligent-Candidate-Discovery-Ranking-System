@@ -226,6 +226,7 @@ class GeminiClient:
                     if "limit: 20" in err_msg.lower() or "free_tier" in err_msg.lower() or attempt == max_retries - 1:
                         logger.warning("Gemini API key daily limit or model availability issue. Falling back to Mock data.")
                         print("\nWarning: Gemini API daily limit reached or model unavailable. Falling back to Mock data.")
+                        self.is_mock = True
                         mock_data = generate_mock_data(response_schema)
                         return json.dumps(mock_data)
                     else:
