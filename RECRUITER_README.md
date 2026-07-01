@@ -15,9 +15,12 @@ NEXUS runs as a collection of containerized services. Follow these steps to get 
 * **Gemini API Key**: The platform uses Gemini for its multi-agent panel, resume structuring, and candidate copilot. Get a key from [Google AI Studio](https://aistudio.google.com/).
 
 ### Step-by-Step Setup
-1. **Clone the Repository** (or open the project folder).
+1. **Navigate to the project folder**:
+   ```bash
+   cd IndiaRuns-Intelligent-Candidate-Discovery-Ranking-System
+   ```
 2. **Configure Environment Variables**:
-   In the root directory, copy the example environment file:
+   In this directory, copy the example environment file:
    ```bash
    cp .env.example .env
    ```
