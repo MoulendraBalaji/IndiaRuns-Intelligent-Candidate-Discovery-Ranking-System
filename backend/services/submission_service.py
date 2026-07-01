@@ -156,6 +156,17 @@ class SubmissionService:
                 else:
                     scored_candidates = [full_data]
                     
+        # Define high-value machine learning and retrieval domain keywords to filter out generic profiles
+        domain_keywords = {
+            "machine learning", "ml", "nlp", "natural language processing", "computer vision", 
+            "dense retrieval", "sparse retrieval", "vector search", "semantic search", "embeddings",
+            "qdrant", "faiss", "milvus", "pinecone", "weaviate", "elasticsearch", "opensearch",
+            "pytorch", "tensorflow", "keras", "scikit-learn", "transformers", "hugging face", "huggingface",
+            "llm", "llms", "large language models", "fine-tuning", "lora", "qlora", "rag", "retrieval-augmented generation",
+            "ranking", "learning to rank", "recommender", "recommendation", "information retrieval",
+            "deep learning", "neural networks", "search engine", "vector space", "langchain", "llamaindex"
+        }
+        
         # Score each candidate based on skill match and behavioral signals
         candidates_with_scores = []
         for cand in scored_candidates:
@@ -167,18 +178,18 @@ class SubmissionService:
             for skill in skills:
                 if skill in keywords:
                     score += 10.0
-                elif any(w in keywords for w in skill.split()):
-                    score += 3.0
+                if any(dk in skill for dk in domain_keywords):
+                    score += 15.0
                     
             # 2. Headline & Summary matches
             profile = cand.get("profile", {})
             headline = profile.get("headline", "").lower()
             summary = profile.get("summary", "").lower()
-            for kw in keywords:
-                if kw in headline:
+            for dk in domain_keywords:
+                if dk in headline:
+                    score += 5.0
+                if dk in summary:
                     score += 2.0
-                if kw in summary:
-                    score += 0.5
                     
             # 3. Behavioral signals & Honeypot filters (down-weight inactive candidates)
             signals = cand.get("redrob_signals", {})
