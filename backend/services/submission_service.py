@@ -191,7 +191,15 @@ class SubmissionService:
                 if dk in summary:
                     score += 2.0
                     
-            # 3. Behavioral signals & Honeypot filters (down-weight inactive candidates)
+            # 3. Behavioral signals & Honeypot filters (down-weight inactive candidates and traps)
+            # Honeypot / Trap Filter: penalize non-relevant/conflicting job titles
+            non_relevant_titles = {"sales", "hr", "accountant", "accounting", "civil", "mechanical", "marketing", "content writer", "support", "recruiter", "office"}
+            for exp in cand.get("experience", []):
+                title = exp.get("title", "").lower()
+                if any(nt in title for nt in non_relevant_titles):
+                    score *= 0.05  # Heavy penalty for honeypot traps
+                    break
+
             signals = cand.get("redrob_signals", {})
             if not signals.get("open_to_work_flag", True):
                 score *= 0.75
