@@ -1,13 +1,17 @@
 {
   "pipeline_version": "NEXUS v1.0",
-  "candidate_agent": "1.0",
-  "behavior_agent": "1.0",
-  "growth_agent": "1.0",
-  "evaluation_agent": "1.0",
-  "ranking_engine": "1.0",
-  "embedding_model": "BAAI/bge-large-en-v1.5",
-  "generated_at": "2026-06-29T18:31:51.279432Z",
+  "model_metadata": {
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "embedding_version": "1.0",
+    "dimension": 1024
+  },
+  "generated_at": "2026-07-01T10:21:34.850237Z",
   "dataset_hash": "de7b8cae39a9f9378a2cd4f8153bfc1f84960bce0ae520f263423d129df4b335",
-  "csv_hash": "db1383576900dbf83f57de7c519d47972147be408124949f4cafc061a2e1539f",
-  "git_commit_hash": "a1b2c3d4e5f6g7h8i9j0"
+  "csv_hash": "a52a9fd4040b0931b31a1df1b774b0a3866aed9a352369511a0163cf8e0c7702",
+  "git_commit_hash": "nexus-hackathon-prod-release",
+  "telemetry": {
+    "total_duration_ms": 641686,
+    "candidates_ingested": 256,
+    "matching_task_id": "211d5ed6-0b14-4337-8c21-0f94c79d706b"
+  }
 }

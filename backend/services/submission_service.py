@@ -272,7 +272,7 @@ class SubmissionService:
                 break
             if cand.id not in seen_cids:
                 seen_cids.add(cand.id)
-                padded_score = max(0.001, min_score - ((current_rank - len(ranking_result.rankings)) * 0.002))
+                padded_score = min(min_score, max(0.0, min_score - ((current_rank - len(ranking_result.rankings)) * 0.002)))
                 rankings.append(CandidateRank(
                     candidate_id=cand.id,
                     job_id=job.id,
