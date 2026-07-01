@@ -50,10 +50,19 @@ export function SettingsTabs() {
 }
 
 export default function ProfileSettingsPage() {
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const userStr = localStorage.getItem('nexus_current_user');
+      return userStr ? JSON.parse(userStr) : { name: 'Demo User', email: 'demo@gmail.com', title: 'Senior Recruiting Partner', dept: 'Talent Acquisition' };
+    } catch (e) {
+      return { name: 'Demo User', email: 'demo@gmail.com', title: 'Senior Recruiting Partner', dept: 'Talent Acquisition' };
+    }
+  });
+
   // Form State
-  const [fullName, setFullName] = useState('John Doe');
-  const [title, setTitle] = useState('Senior Recruiting Partner');
-  const [dept, setDept] = useState('Talent Acquisition');
+  const [fullName, setFullName] = useState(currentUser.name || 'Demo User');
+  const [title, setTitle] = useState(currentUser.title || 'Senior Recruiting Partner');
+  const [dept, setDept] = useState(currentUser.dept || 'Talent Acquisition');
 
   const [currentPw, setCurrentPw] = useState('');
   const [newPw, setNewPw] = useState('');
@@ -67,7 +76,23 @@ export default function ProfileSettingsPage() {
 
   const handleSaveProfile = (e) => {
     e.preventDefault();
+    const updated = { ...currentUser, name: fullName, title, dept };
+    localStorage.setItem('nexus_current_user', JSON.stringify(updated));
+    setCurrentUser(updated);
+    
+    // Dispatch storage event to alert other components like sidebar
+    window.dispatchEvent(new Event('storage'));
+    
     alert('Personal information updated successfully.');
+  };
+
+  const getInitials = (name) => {
+    if (!name) return 'U';
+    const parts = name.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[1][0]).toUpperCase();
+    }
+    return name[0].toUpperCase();
   };
 
   const handleUpdatePassword = (e) => {
@@ -128,7 +153,7 @@ export default function ProfileSettingsPage() {
                     border: '1px solid var(--color-border)'
                   }}
                 >
-                  JD
+                  {getInitials(fullName)}
                 </div>
                 <button type="button" className="btn btn-secondary btn-small" onClick={() => alert('Avatar picker triggered.')}>
                   Change Avatar
@@ -154,7 +179,7 @@ export default function ProfileSettingsPage() {
                   type="email" 
                   className="input-field" 
                   disabled 
-                  value="john.doe@nexus.ai" 
+                  value={currentUser.email} 
                 />
                 <span className="text-muted text-small" style={{ marginTop: '4px', display: 'block' }}>Email modification is locked for security compliance.</span>
               </div>

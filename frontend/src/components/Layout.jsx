@@ -21,6 +21,39 @@ export default function Layout({ children, pageTitle = 'Dashboard' }) {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const userStr = localStorage.getItem('nexus_current_user');
+      return userStr ? JSON.parse(userStr) : { name: 'Demo User', email: 'demo@gmail.com' };
+    } catch (e) {
+      return { name: 'Demo User', email: 'demo@gmail.com' };
+    }
+  });
+
+  useEffect(() => {
+    const handleProfileUpdate = () => {
+      try {
+        const userStr = localStorage.getItem('nexus_current_user');
+        if (userStr) {
+          setCurrentUser(JSON.parse(userStr));
+        }
+      } catch (e) {}
+    };
+    window.addEventListener('storage', handleProfileUpdate);
+    return () => {
+      window.removeEventListener('storage', handleProfileUpdate);
+    };
+  }, []);
+
+  const getInitials = (name) => {
+    if (!name) return 'U';
+    const parts = name.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[1][0]).toUpperCase();
+    }
+    return name[0].toUpperCase();
+  };
+
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('nexus_theme') || 'light';
   });
@@ -105,9 +138,11 @@ export default function Layout({ children, pageTitle = 'Dashboard' }) {
         </div>
 
         <div className="sidebar-footer">
-          <div className="user-avatar-initials">JD</div>
+          <div className="user-avatar-initials">{getInitials(currentUser.name)}</div>
           <div className="sidebar-user-info">
-            <div className="sidebar-user-name">John Doe</div>
+            <div className="sidebar-user-name" title={currentUser.email} style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: '100px' }}>
+              {currentUser.name}
+            </div>
             <a onClick={handleLogout} className="sidebar-logout-link">Logout</a>
           </div>
           <LogOut 
@@ -144,7 +179,7 @@ export default function Layout({ children, pageTitle = 'Dashboard' }) {
               style={{ cursor: 'pointer' }}
               onClick={() => navigate('/settings')}
             >
-              JD
+              {getInitials(currentUser.name)}
             </div>
           </div>
         </header>

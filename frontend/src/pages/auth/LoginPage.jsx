@@ -8,11 +8,41 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
+  const usersDb = {
+    "shantanugudmewar@gmail.com": "Shantanu Gudmewar",
+    "moulendrabalaji2007@gmail.com": "Moulendra Balaji",
+    "shrishtis089@gmail.com": "Shrishti Singh",
+    "ruturajambure@gmail.com": "Ruturaj Ambure",
+    "demo@gmail.com": "Demo User"
+  };
+
   const handleLogin = (e) => {
     e.preventDefault();
-    // Simulate successful JWT token validation and storage
-    const mockJwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTEiLCJlbWFpbCI6ImxvZ2luQG5leHVzLmFpIn0.sig";
+    
+    // Check credentials
+    if (password !== 'nexus2026') {
+      alert('Authentication failed: Invalid credentials. Please use the developer password "nexus2026".');
+      return;
+    }
+
+    const emailKey = email.toLowerCase().trim();
+    let resolvedName = usersDb[emailKey];
+    if (!resolvedName) {
+      // Auto-extract name from email prefix
+      const prefix = emailKey.split('@')[0];
+      resolvedName = prefix.split(/[\._-]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    }
+
+    // Save token and user details dynamically
+    const mockJwt = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiR7ZW1haWxLZXl9In0.sig`;
     localStorage.setItem('nexus_jwt_token', mockJwt);
+    localStorage.setItem('nexus_current_user', JSON.stringify({
+      name: resolvedName,
+      email: emailKey,
+      title: 'Senior Recruiting Partner',
+      dept: 'Talent Acquisition'
+    }));
+
     navigate('/');
   };
 
