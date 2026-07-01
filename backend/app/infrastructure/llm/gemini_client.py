@@ -29,11 +29,11 @@ class MockClient:
     def __init__(self):
         self.models = MockModels()
 
-def generate_mock_data(schema: type[BaseModel]) -> dict:
+def generate_mock_data(schema: type[BaseModel]) -> dict[str, Any]:
     """
     Recursively introspects a Pydantic schema to generate schema-valid high-fidelity mock data.
     """
-    mock_dict = {}
+    mock_dict: dict[str, Any] = {}
     for name, field in schema.model_fields.items():
         annotation = field.annotation
         
@@ -42,11 +42,12 @@ def generate_mock_data(schema: type[BaseModel]) -> dict:
         args = getattr(annotation, "__args__", None)
         
         if origin is typing.Union or (hasattr(typing, "_UnionGenericAlias") and isinstance(annotation, typing._UnionGenericAlias)) or (hasattr(types, "UnionType") and isinstance(annotation, types.UnionType)):
-            non_none_args = [arg for arg in args if arg is not type(None)]
-            if non_none_args:
-                annotation = non_none_args[0]
-                origin = getattr(annotation, "__origin__", None)
-                args = getattr(annotation, "__args__", None)
+            if args is not None:
+                non_none_args = [arg for arg in args if arg is not type(None)]
+                if non_none_args:
+                    annotation = non_none_args[0]
+                    origin = getattr(annotation, "__origin__", None)
+                    args = getattr(annotation, "__args__", None)
         
         if isinstance(annotation, type) and issubclass(annotation, BaseModel):
             mock_dict[name] = generate_mock_data(annotation)
@@ -200,6 +201,7 @@ class GeminiClient:
         # Instantiate standard google-genai types.Schema from stripped dict
         api_schema = types.Schema.model_validate(schema_dict)
         
+        assert self.client is not None
         response = self.client.models.generate_content(
             model='gemini-2.5-flash',
             contents=full_prompt,
