@@ -1,0 +1,42 @@
+{
+  "9601c5d9-4def-4d84-ad96-63b9c395af9f": {
+    "id": "9601c5d9-4def-4d84-ad96-63b9c395af9f",
+    "tenant_id": "test_tenant",
+    "first_name": "Ira",
+    "last_name": "Vora",
+    "email": "candidate@example.com",
+    "phone": "Mock phone",
+    "summary": "Extracted automatically from resume",
+    "education": [
+      {
+        "degree": "Master of Science in Computer Science",
+        "major": "Unknown",
+        "institution": "Stanford University",
+        "graduation_year": 3
+      }
+    ],
+    "experience": [
+      {
+        "title": "Senior Machine Learning Engineer",
+        "company": "AI Recruiter Co",
+        "start_date": "Mock start_date",
+        "end_date": "Mock end_date",
+        "duration_months": null,
+        "responsibilities": [
+          "The candidate shows exceptional alignment with technical engineering requirements."
+        ],
+        "technologies": []
+      }
+    ],
+    "hard_skills": [
+      "Python",
+      "PyTorch",
+      "Machine Learning",
+      "FastAPI",
+      "NLP"
+    ],
+    "soft_skills": [],
+    "total_years_experience": 0.0,
+    "embedding_text": "Candidate: Ira Vora. Skills: Python, PyTorch, Machine Learning, FastAPI, NLP. Experience: Senior Machine Learning Engineer."
+  }
+}

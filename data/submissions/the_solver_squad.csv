@@ -1,101 +1,101 @@
 candidate_id,rank,score,reasoning
-CAND_0000001,1,0.000000,Strong candidate matching role requirements.
-CAND_0000002,2,0.000000,Strong candidate matching role requirements.
-CAND_0000003,3,0.000000,Strong candidate matching role requirements.
-CAND_0000004,4,0.000000,Strong candidate matching role requirements.
-CAND_0000005,5,0.000000,Strong candidate matching role requirements.
-CAND_0000006,6,0.000000,Strong candidate matching role requirements.
-CAND_0000007,7,0.000000,Strong candidate matching role requirements.
-CAND_0000008,8,0.000000,Strong candidate matching role requirements.
-CAND_0000009,9,0.000000,Strong candidate matching role requirements.
-CAND_0000010,10,0.000000,Strong candidate matching role requirements.
-CAND_0000011,11,0.000000,Strong candidate matching role requirements.
-CAND_0000012,12,0.000000,Strong candidate matching role requirements.
-CAND_0000013,13,0.000000,Strong candidate matching role requirements.
-CAND_0000014,14,0.000000,Strong candidate matching role requirements.
-CAND_0000015,15,0.000000,Strong candidate matching role requirements.
-CAND_0000016,16,0.000000,Strong candidate matching role requirements.
-CAND_0000017,17,0.000000,Strong candidate matching role requirements.
-CAND_0000018,18,0.000000,Strong candidate matching role requirements.
-CAND_0000021,19,0.000000,Strong candidate matching role requirements.
-CAND_0000023,20,0.000000,Strong candidate matching role requirements.
-CAND_0000019,21,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000020,22,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000022,23,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000024,24,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000025,25,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000026,26,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000027,27,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000028,28,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000029,29,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000030,30,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000031,31,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000032,32,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000033,33,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000034,34,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000035,35,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000036,36,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000037,37,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000038,38,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000039,39,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000040,40,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000041,41,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000042,42,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000043,43,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000044,44,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000045,45,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000046,46,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000047,47,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000048,48,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000049,49,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000050,50,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000051,51,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000052,52,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000053,53,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000054,54,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000055,55,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000056,56,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000057,57,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000058,58,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000059,59,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000060,60,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000061,61,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000062,62,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000063,63,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000064,64,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000065,65,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000066,66,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000067,67,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000068,68,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000069,69,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000070,70,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000071,71,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000072,72,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000073,73,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000074,74,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000075,75,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000076,76,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000077,77,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000078,78,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000079,79,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000080,80,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000081,81,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000082,82,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000083,83,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000084,84,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000085,85,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000086,86,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000087,87,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000088,88,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000089,89,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000090,90,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000091,91,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000092,92,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000093,93,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000094,94,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000095,95,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000096,96,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000097,97,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000098,98,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000099,99,0.001000,Relevant match based on candidate profile. Evaluated blind.
-CAND_0000100,100,0.001000,Relevant match based on candidate profile. Evaluated blind.
+CAND_0002025,1,0.425024,"Candidate shows solid technical alignment with experience as Senior AI Engineer, Lead AI Engineer skilled in Diffusion Models, FAISS, TensorFlow, scikit-learn. Demonstrated strong potential for the role."
+CAND_0007460,2,0.425021,"Candidate shows solid technical alignment with experience as AI Engineer skilled in LangChain, PEFT, Embeddings, Haystack. Demonstrated strong potential for the role."
+CAND_0001610,3,0.425020,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, Senior Data Scientist skilled in Speech Recognition, Haystack, Deep Learning, Kubeflow. Demonstrated strong potential for the role."
+CAND_0007009,4,0.425019,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer skilled in Statistical Modeling, ETL, Weaviate, Python. Demonstrated strong potential for the role."
+CAND_0000031,5,0.425018,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, Search Engineer skilled in Go, MLflow, FAISS, Pinecone. Demonstrated strong potential for the role."
+CAND_0006557,6,0.425018,"Candidate shows solid technical alignment with experience as NLP Engineer, Recommendation Systems Engineer skilled in Kubeflow, Data Science, Elasticsearch, OpenSearch. Demonstrated strong potential for the role."
+CAND_0006418,7,0.425017,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, AI Engineer skilled in Kubernetes, gRPC, Semantic Search, Embeddings. Demonstrated strong potential for the role."
+CAND_0006850,8,0.425016,"Candidate shows solid technical alignment with experience as Data Scientist, ML Engineer skilled in Elasticsearch, Accounting, QLoRA, Kubeflow. Demonstrated strong potential for the role."
+CAND_0001980,9,0.425016,"Candidate shows solid technical alignment with experience as Operations Manager, Graphic Designer skilled in SEO, Spark, REST APIs, Marketing. Demonstrated strong potential for the role."
+CAND_0007008,10,0.425016,"Candidate shows solid technical alignment with experience as Senior Software Engineer (ML) skilled in LlamaIndex, Learning to Rank, BentoML, GANs. Demonstrated strong potential for the role."
+CAND_0005260,11,0.425016,"Candidate shows solid technical alignment with experience as Senior NLP Engineer skilled in Statistical Modeling, MLOps, Snowflake, Prompt Engineering. Demonstrated strong potential for the role."
+CAND_0001088,12,0.425015,"Candidate shows solid technical alignment with experience as Project Manager, Business Analyst skilled in Spark, Redis, Terraform, Salesforce CRM. Demonstrated strong potential for the role."
+CAND_0002344,13,0.425015,"Candidate shows solid technical alignment with experience as Senior Software Engineer (ML), Computer Vision Engineer skilled in NLP, TensorFlow, Django, Pinecone. Demonstrated strong potential for the role."
+CAND_0007492,14,0.425015,"Candidate shows solid technical alignment with experience as Project Manager skilled in Project Management, Statistical Modeling, Rust, GCP. Demonstrated strong potential for the role."
+CAND_0007471,15,0.425015,"Candidate shows solid technical alignment with experience as Graphic Designer, Operations Manager skilled in JavaScript, MongoDB, GraphQL, Project Management. Demonstrated strong potential for the role."
+CAND_0004402,16,0.425015,"Candidate shows solid technical alignment with experience as AI Research Engineer, Data Scientist skilled in TypeScript, TTS, OpenSearch, Speech Recognition. Demonstrated strong potential for the role."
+CAND_0004524,17,0.425014,"Candidate shows solid technical alignment with experience as Graphic Designer skilled in PowerPoint, Angular, Weights & Biases, Redux. Demonstrated strong potential for the role."
+CAND_0007567,18,0.425014,"Candidate shows solid technical alignment with experience as AI Specialist skilled in Fine-tuning LLMs, Diffusion Models, NLP, MLOps. Demonstrated strong potential for the role."
+CAND_0005649,19,0.425014,"Candidate shows solid technical alignment with experience as Senior Data Scientist, Recommendation Systems Engineer skilled in Haystack, Redis, Prompt Engineering, Object Detection. Demonstrated strong potential for the role."
+CAND_0003575,20,0.425014,"Candidate shows solid technical alignment with experience as Data Scientist, ML Engineer skilled in BentoML, Time Series, ASR, Recommendation Systems. Demonstrated strong potential for the role."
+CAND_0081846,21,0.423025,"Candidate shows solid technical alignment with experience as Lead AI Engineer, Senior Machine Learning Engineer skilled in Data Science, Information Retrieval, LlamaIndex, pgvector. Demonstrated strong potential for the role."
+CAND_0086022,22,0.421025,"Candidate shows solid technical alignment with experience as Senior Applied Scientist, Senior ML Engineer — Search & Ranking skilled in Vector Search, MLflow, Recommendation Systems, Databricks. Demonstrated strong potential for the role."
+CAND_0018499,23,0.419025,"Candidate shows solid technical alignment with experience as Senior Machine Learning Engineer, Staff Machine Learning Engineer skilled in Deep Learning, Weaviate, Recommendation Systems, scikit-learn. Demonstrated strong potential for the role."
+CAND_0071974,24,0.417024,"Candidate shows solid technical alignment with experience as Senior AI Engineer, Staff Machine Learning Engineer skilled in LoRA, Learning to Rank, Weaviate, PEFT. Demonstrated strong potential for the role."
+CAND_0008239,25,0.415024,"Candidate shows solid technical alignment with experience as AI Engineer skilled in Milvus, Computer Vision, Feature Engineering, Semantic Search. Demonstrated strong potential for the role."
+CAND_0011162,26,0.413023,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, Machine Learning Engineer skilled in Weights & Biases, FAISS, Vector Search, LangChain. Demonstrated strong potential for the role."
+CAND_0009691,27,0.411022,"Candidate shows solid technical alignment with experience as Applied ML Engineer, AI Engineer skilled in BentoML, Prompt Engineering, Recommendation Systems, GANs. Demonstrated strong potential for the role."
+CAND_0095619,28,0.409022,"Candidate shows solid technical alignment with experience as NLP Engineer skilled in Feature Engineering, Pinecone, MLflow, Learning to Rank. Demonstrated strong potential for the role."
+CAND_0027691,29,0.407022,"Candidate shows solid technical alignment with experience as NLP Engineer, Applied ML Engineer skilled in SAP, LoRA, PEFT, Recommendation Systems. Demonstrated strong potential for the role."
+CAND_0088025,30,0.405022,"Candidate shows solid technical alignment with experience as Staff Machine Learning Engineer, Senior Machine Learning Engineer skilled in Pinecone, QLoRA, LLMs, Hugging Face Transformers. Demonstrated strong potential for the role."
+CAND_0020708,31,0.403021,"Candidate shows solid technical alignment with experience as Search Engineer skilled in Tally, NLP, Data Science, Statistical Modeling. Demonstrated strong potential for the role."
+CAND_0015578,32,0.401021,"Candidate shows solid technical alignment with experience as AI Engineer, Search Engineer skilled in Diffusion Models, Embeddings, NLP, Data Science. Demonstrated strong potential for the role."
+CAND_0084819,33,0.399021,"Candidate shows solid technical alignment with experience as Search Engineer, Senior Data Scientist skilled in Semantic Search, BM25, MLOps, OpenSearch. Demonstrated strong potential for the role."
+CAND_0013536,34,0.397021,"Candidate shows solid technical alignment with experience as Applied ML Engineer, Recommendation Systems Engineer skilled in PyTorch, Prompt Engineering, LLMs, NLP. Demonstrated strong potential for the role."
+CAND_0076904,35,0.395021,"Candidate shows solid technical alignment with experience as Senior Data Scientist, AI Engineer skilled in CNN, PEFT, Recommendation Systems, Deep Learning. Demonstrated strong potential for the role."
+CAND_0039838,36,0.393021,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, NLP Engineer skilled in MLOps, Computer Vision, Embeddings, Semantic Search. Demonstrated strong potential for the role."
+CAND_0037566,37,0.391021,"Candidate shows solid technical alignment with experience as Machine Learning Engineer skilled in Pinecone, Time Series, LlamaIndex, NLP. Demonstrated strong potential for the role."
+CAND_0039754,38,0.389020,"Candidate shows solid technical alignment with experience as Senior Applied Scientist, Senior ML Engineer — Search & Ranking skilled in Fine-tuning LLMs, LlamaIndex, Qdrant, Reinforcement Learning. Demonstrated strong potential for the role."
+CAND_0077337,39,0.387020,"Candidate shows solid technical alignment with experience as Staff Machine Learning Engineer, Senior NLP Engineer skilled in GANs, Semantic Search, QLoRA, pgvector. Demonstrated strong potential for the role."
+CAND_0091909,40,0.385020,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, NLP Engineer skilled in LLMs, Image Classification, Pinecone, Diffusion Models. Demonstrated strong potential for the role."
+CAND_0036184,41,0.383020,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, AI Engineer skilled in Image Classification, QLoRA, FAISS, GANs. Demonstrated strong potential for the role."
+CAND_0044222,42,0.381020,"Candidate shows solid technical alignment with experience as AI Engineer skilled in Vector Search, LlamaIndex, OpenSearch, Java. Demonstrated strong potential for the role."
+CAND_0017014,43,0.379020,"Candidate shows solid technical alignment with experience as Operations Manager, Graphic Designer skilled in Airflow, SEO, ETL, Kubernetes. Demonstrated strong potential for the role."
+CAND_0015582,44,0.377020,"Candidate shows solid technical alignment with experience as ML Engineer, Computer Vision Engineer skilled in Object Detection, Diffusion Models, Qdrant, Sentence Transformers. Demonstrated strong potential for the role."
+CAND_0064904,45,0.375020,"Candidate shows solid technical alignment with experience as AI Engineer, Applied ML Engineer skilled in Embeddings, Hugging Face Transformers, Elasticsearch, Diffusion Models. Demonstrated strong potential for the role."
+CAND_0050454,46,0.373019,"Candidate shows solid technical alignment with experience as AI Engineer, Machine Learning Engineer skilled in PyTorch, LangChain, QLoRA, Fine-tuning LLMs. Demonstrated strong potential for the role."
+CAND_0074735,47,0.371019,"Candidate shows solid technical alignment with experience as Applied ML Engineer, Search Engineer skilled in YOLO, RAG, Prompt Engineering, LlamaIndex. Demonstrated strong potential for the role."
+CAND_0042506,48,0.369019,"Candidate shows solid technical alignment with experience as Search Engineer, Machine Learning Engineer skilled in PEFT, TTS, scikit-learn, OpenCV. Demonstrated strong potential for the role."
+CAND_0077956,49,0.367019,"Candidate shows solid technical alignment with experience as Computer Vision Engineer, ML Engineer skilled in Milvus, TTS, SQL, Weights & Biases. Demonstrated strong potential for the role."
+CAND_0099806,50,0.365019,"Candidate shows solid technical alignment with experience as AI Engineer, Machine Learning Engineer skilled in LoRA, OpenCV, Statistical Modeling, RAG. Demonstrated strong potential for the role."
+CAND_0050876,51,0.363019,"Candidate shows solid technical alignment with experience as Applied ML Engineer, AI Engineer skilled in SQL, Qdrant, MLOps, FAISS. Demonstrated strong potential for the role."
+CAND_0076163,52,0.361019,"Candidate shows solid technical alignment with experience as NLP Engineer skilled in Weaviate, LangChain, YOLO, Reinforcement Learning. Demonstrated strong potential for the role."
+CAND_0074225,53,0.359019,"Candidate shows solid technical alignment with experience as Machine Learning Engineer skilled in Apache Beam, Statistical Modeling, Recommendation Systems, Semantic Search. Demonstrated strong potential for the role."
+CAND_0069144,54,0.357019,"Candidate shows solid technical alignment with experience as Graphic Designer skilled in GraphQL, GCP, Node.js, Microservices. Demonstrated strong potential for the role."
+CAND_0078002,55,0.355018,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, Applied ML Engineer skilled in Statistical Modeling, pgvector, Flask, FastAPI. Demonstrated strong potential for the role."
+CAND_0040200,56,0.353018,"Candidate shows solid technical alignment with experience as AI Research Engineer, Data Scientist skilled in FAISS, NLP, Apache Beam, Weaviate. Demonstrated strong potential for the role."
+CAND_0086151,57,0.351018,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, Search Engineer skilled in Figma, LangChain, BentoML, Data Science. Demonstrated strong potential for the role."
+CAND_0029367,58,0.349018,"Candidate shows solid technical alignment with experience as Senior Data Scientist, Applied ML Engineer skilled in GANs, Haystack, BentoML, MLflow. Demonstrated strong potential for the role."
+CAND_0024990,59,0.347018,"Candidate shows solid technical alignment with experience as Junior ML Engineer, ML Engineer skilled in Computer Vision, MLflow, OpenSearch, NLP. Demonstrated strong potential for the role."
+CAND_0083790,60,0.345018,"Candidate shows solid technical alignment with experience as Data Scientist, Computer Vision Engineer skilled in Image Classification, RAG, Object Detection, Reinforcement Learning. Demonstrated strong potential for the role."
+CAND_0077285,61,0.343018,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, Applied ML Engineer skilled in OpenCV, Excel, LoRA, Reinforcement Learning. Demonstrated strong potential for the role."
+CAND_0034164,62,0.341018,"Candidate shows solid technical alignment with experience as Data Scientist, Junior ML Engineer skilled in ASR, Computer Vision, Data Science, Time Series. Demonstrated strong potential for the role."
+CAND_0029439,63,0.339018,"Candidate shows solid technical alignment with experience as AI Specialist, Senior Software Engineer (ML) skilled in QLoRA, Spark, Hugging Face Transformers, Feature Engineering. Demonstrated strong potential for the role."
+CAND_0040887,64,0.337018,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, AI Engineer skilled in Reinforcement Learning, Computer Vision, SEO, FAISS. Demonstrated strong potential for the role."
+CAND_0047521,65,0.335018,"Candidate shows solid technical alignment with experience as Junior ML Engineer, Senior Software Engineer (ML) skilled in YOLO, FastAPI, LlamaIndex, Speech Recognition. Demonstrated strong potential for the role."
+CAND_0092245,66,0.333018,"Candidate shows solid technical alignment with experience as Senior Data Scientist skilled in LlamaIndex, Forecasting, Embeddings, Statistical Modeling. Demonstrated strong potential for the role."
+CAND_0082184,67,0.331018,"Candidate shows solid technical alignment with experience as Operations Manager, Business Analyst skilled in BigQuery, Flask, Diffusion Models, Go. Demonstrated strong potential for the role."
+CAND_0013393,68,0.329018,"Candidate shows solid technical alignment with experience as ML Engineer, Senior Software Engineer (ML) skilled in Excel, Embeddings, MLflow, Pinecone. Demonstrated strong potential for the role."
+CAND_0079387,69,0.327018,"Candidate shows solid technical alignment with experience as AI Engineer, NLP Engineer skilled in scikit-learn, Recommendation Systems, Python, Time Series. Demonstrated strong potential for the role."
+CAND_0041669,70,0.325018,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, Search Engineer skilled in FAISS, Milvus, PEFT, Diffusion Models. Demonstrated strong potential for the role."
+CAND_0039383,71,0.323018,"Candidate shows solid technical alignment with experience as Applied ML Engineer, Machine Learning Engineer skilled in GANs, FAISS, ASR, Kubeflow. Demonstrated strong potential for the role."
+CAND_0072660,72,0.321018,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, NLP Engineer skilled in Feature Engineering, LoRA, pgvector, PyTorch. Demonstrated strong potential for the role."
+CAND_0052328,73,0.319018,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, Senior Data Scientist skilled in Object Detection, LoRA, OpenSearch, Reinforcement Learning. Demonstrated strong potential for the role."
+CAND_0091652,74,0.317018,"Candidate shows solid technical alignment with experience as Graphic Designer, Operations Manager skilled in Flask, FastAPI, Next.js, PowerPoint. Demonstrated strong potential for the role."
+CAND_0089871,75,0.315017,"Candidate shows solid technical alignment with experience as Operations Manager skilled in Six Sigma, Agile, Tailwind, Kafka. Demonstrated strong potential for the role."
+CAND_0042100,76,0.313017,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, Senior Data Scientist skilled in Elasticsearch, Statistical Modeling, Learning to Rank, Recommendation Systems. Demonstrated strong potential for the role."
+CAND_0011687,77,0.311017,"Candidate shows solid technical alignment with experience as Senior NLP Engineer, Senior Machine Learning Engineer skilled in TensorFlow, OpenSearch, FAISS, PEFT. Demonstrated strong potential for the role."
+CAND_0030784,78,0.309017,"Candidate shows solid technical alignment with experience as Data Scientist, Junior ML Engineer skilled in Embeddings, Learning to Rank, Apache Beam, RAG. Demonstrated strong potential for the role."
+CAND_0045250,79,0.307017,"Candidate shows solid technical alignment with experience as Applied ML Engineer skilled in Sentence Transformers, Milvus, LoRA, Embeddings. Demonstrated strong potential for the role."
+CAND_0061265,80,0.305017,"Candidate shows solid technical alignment with experience as Recommendation Systems Engineer, Senior Data Scientist skilled in Qdrant, SQL, Accounting, LangChain. Demonstrated strong potential for the role."
+CAND_0080661,81,0.303017,"Candidate shows solid technical alignment with experience as Operations Manager skilled in AWS, Apache Flink, CI/CD, Redis. Demonstrated strong potential for the role."
+CAND_0044855,82,0.301017,"Candidate shows solid technical alignment with experience as Senior Data Scientist, Recommendation Systems Engineer skilled in Object Detection, Learning to Rank, Hugging Face Transformers, OpenSearch. Demonstrated strong potential for the role."
+CAND_0045984,83,0.299017,"Candidate shows solid technical alignment with experience as Project Manager skilled in Reinforcement Learning, Apache Flink, GCP, Redux. Demonstrated strong potential for the role."
+CAND_0061655,84,0.297017,"Candidate shows solid technical alignment with experience as Machine Learning Engineer, Recommendation Systems Engineer skilled in Haystack, PEFT, Pinecone, Time Series. Demonstrated strong potential for the role."
+CAND_0090280,85,0.295017,"Candidate shows solid technical alignment with experience as Business Analyst, Graphic Designer skilled in Scrum, CSS, Apache Flink, Webpack. Demonstrated strong potential for the role."
+CAND_0032807,86,0.293017,"Candidate shows solid technical alignment with experience as Machine Learning Engineer skilled in OpenSearch, OpenCV, scikit-learn, Python. Demonstrated strong potential for the role."
+CAND_0069386,87,0.291017,"Candidate shows solid technical alignment with experience as ML Engineer, Junior ML Engineer skilled in scikit-learn, LLMs, Photoshop, TensorFlow. Demonstrated strong potential for the role."
+CAND_0080766,88,0.289017,"Candidate shows solid technical alignment with experience as Staff Machine Learning Engineer, Lead AI Engineer skilled in Search Backend, LoRA, Vue.js, Tally. Demonstrated strong potential for the role."
+CAND_0063736,89,0.287017,"Candidate shows solid technical alignment with experience as Data Scientist skilled in Hugging Face Transformers, PyTorch, Learning to Rank, Marketing. Demonstrated strong potential for the role."
+CAND_0086036,90,0.285017,"Candidate shows solid technical alignment with experience as Operations Manager, Project Manager skilled in Django, Azure, PostgreSQL, Marketing. Demonstrated strong potential for the role."
+CAND_0086893,91,0.283017,"Candidate shows solid technical alignment with experience as ML Engineer skilled in Hugging Face Transformers, Weights & Biases, TTS, LLMs. Demonstrated strong potential for the role."
+CAND_0033861,92,0.281017,"Candidate shows solid technical alignment with experience as Senior NLP Engineer, Senior AI Engineer skilled in Reinforcement Learning, Weaviate, LoRA, LLMs. Demonstrated strong potential for the role."
+CAND_0095528,93,0.279017,"Candidate shows solid technical alignment with experience as Senior Data Scientist, Recommendation Systems Engineer skilled in Feature Engineering, OpenSearch, PyTorch, Semantic Search. Demonstrated strong potential for the role."
+CAND_0055992,94,0.277017,"Candidate shows solid technical alignment with experience as AI Engineer, Senior Data Scientist skilled in Information Retrieval, MLflow, FAISS, RAG. Demonstrated strong potential for the role."
+CAND_0054318,95,0.275017,"Candidate shows solid technical alignment with experience as AI Research Engineer skilled in Diffusion Models, Speech Recognition, Scrum, Reinforcement Learning. Demonstrated strong potential for the role."
+CAND_0087744,96,0.273017,"Candidate shows solid technical alignment with experience as Senior Software Engineer (ML), AI Specialist skilled in Speech Recognition, Accounting, LangChain, Pinecone. Demonstrated strong potential for the role."
+CAND_0086350,97,0.271017,"Candidate shows solid technical alignment with experience as Operations Manager skilled in AWS, Agile, SQL, Apache Flink. Demonstrated strong potential for the role."
+CAND_0021255,98,0.269017,"Candidate shows solid technical alignment with experience as Operations Manager skilled in Django, Kafka, BigQuery, Angular. Demonstrated strong potential for the role."
+CAND_0065878,99,0.267017,"Candidate shows solid technical alignment with experience as Senior Data Scientist, NLP Engineer skilled in scikit-learn, RAG, Computer Vision, pgvector. Demonstrated strong potential for the role."
+CAND_0062630,100,0.265017,"Candidate shows solid technical alignment with experience as Business Analyst, Project Manager skilled in FastAPI, MLOps, AWS, CI/CD. Demonstrated strong potential for the role."

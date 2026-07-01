@@ -1,0 +1,53 @@
+{
+  "9601c5d9-4def-4d84-ad96-63b9c395af9f": {
+    "candidate_id": "9601c5d9-4def-4d84-ad96-63b9c395af9f",
+    "tenant_id": "test_tenant",
+    "skill_depth": {
+      "value": 0.075,
+      "derived_from": [
+        "extracted_skills"
+      ]
+    },
+    "career_progression": {
+      "value": 0.2,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "project_complexity": {
+      "value": 0.125,
+      "derived_from": [
+        "extracted_projects"
+      ]
+    },
+    "authenticity": {
+      "value": 0.9,
+      "derived_from": [
+        "extracted_roles",
+        "extracted_education"
+      ]
+    },
+    "growth": {
+      "value": 0.5,
+      "derived_from": [
+        "extracted_skills",
+        "extracted_roles"
+      ]
+    },
+    "timeline_consistency": {
+      "value": 1.0,
+      "derived_from": [
+        "extracted_roles"
+      ]
+    },
+    "versions": {
+      "skill_depth": "1.0.0",
+      "career_progression": "1.0.0",
+      "project_complexity": "1.0.0",
+      "growth": "1.0.0",
+      "authenticity": "1.0.0",
+      "timeline_consistency": "1.0.0"
+    },
+    "updated_at": null
+  }
+}

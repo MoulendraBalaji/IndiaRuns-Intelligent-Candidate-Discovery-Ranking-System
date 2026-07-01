@@ -5,13 +5,13 @@
     "embedding_version": "1.0",
     "dimension": 1024
   },
-  "generated_at": "2026-07-01T10:21:34.850237Z",
+  "generated_at": "2026-07-01T18:13:13.312933Z",
   "dataset_hash": "de7b8cae39a9f9378a2cd4f8153bfc1f84960bce0ae520f263423d129df4b335",
-  "csv_hash": "a52a9fd4040b0931b31a1df1b774b0a3866aed9a352369511a0163cf8e0c7702",
+  "csv_hash": "fc534338c73015bf17932c7df3b7ccfd850bfd13e82435aa292386a7429059e0",
   "git_commit_hash": "nexus-hackathon-prod-release",
   "telemetry": {
-    "total_duration_ms": 641686,
+    "total_duration_ms": 384671,
     "candidates_ingested": 256,
-    "matching_task_id": "211d5ed6-0b14-4337-8c21-0f94c79d706b"
+    "matching_task_id": "bbf53192-5bb3-4937-9313-612890d85967"
   }
 }
