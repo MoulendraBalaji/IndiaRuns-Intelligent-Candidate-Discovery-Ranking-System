@@ -221,8 +221,14 @@ class GeminiClient:
                 break
             except Exception as e:
                 err_msg = str(e)
-                if "429" in err_msg or "ResourceExhausted" in err_msg or "Quota exceeded" in err_msg or "rate limit" in err_msg.lower():
-                    if attempt < max_retries - 1:
+                if "429" in err_msg or "ResourceExhausted" in err_msg or "Quota exceeded" in err_msg or "rate limit" in err_msg.lower() or "503" in err_msg:
+                    # If daily quota limit is reached, or model unavailable, or we're on the last attempt, fallback to mock data immediately
+                    if "limit: 20" in err_msg.lower() or "free_tier" in err_msg.lower() or attempt == max_retries - 1:
+                        logger.warning("Gemini API key daily limit or model availability issue. Falling back to Mock data.")
+                        print("\nWarning: Gemini API daily limit reached or model unavailable. Falling back to Mock data.")
+                        mock_data = generate_mock_data(response_schema)
+                        return json.dumps(mock_data)
+                    else:
                         sleep_time = base_delay * (2 ** attempt)
                         logger.warning(f"Gemini API rate limited (429). Retrying in {sleep_time}s... (Attempt {attempt+1}/{max_retries})")
                         print(f"Gemini API rate limited (429). Retrying in {sleep_time}s... (Attempt {attempt+1}/{max_retries})")
@@ -231,7 +237,9 @@ class GeminiClient:
                 raise e
         
         if response is None:
-            raise ValueError("Failed to obtain response from Gemini API after retries.")
+            logger.warning("Gemini API returned None. Falling back to Mock data.")
+            mock_data = generate_mock_data(response_schema)
+            return json.dumps(mock_data)
         
         if use_cache:
             self._cache[cache_key] = response.text
