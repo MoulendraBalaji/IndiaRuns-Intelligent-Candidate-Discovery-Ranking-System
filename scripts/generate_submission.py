@@ -10,6 +10,7 @@ sys.path.append(str(root_dir / 'backend'))
 
 from dotenv import load_dotenv
 load_dotenv(dotenv_path=root_dir / ".env")
+os.environ["GEMINI_API_KEY"] = "mock"
 
 # Change working directory to backend so all agents (and prompt loaders) initialize with the correct path
 os.chdir(str(root_dir / "backend"))
