@@ -15,6 +15,7 @@ NEXUS runs as a collection of containerized services. Follow these steps to get 
 * **Gemini API Key**: The platform uses Gemini for its multi-agent panel, resume structuring, and candidate copilot. Get a key from [Google AI Studio](https://aistudio.google.com/).
 
 ### Step-by-Step Setup
+
 1. **Navigate to the project folder**:
    ```bash
    cd IndiaRuns-Intelligent-Candidate-Discovery-Ranking-System
@@ -28,16 +29,63 @@ NEXUS runs as a collection of containerized services. Follow these steps to get 
    ```env
    GEMINI_API_KEY=your_actual_gemini_api_key_here
    ```
-3. **Launch with Docker Compose**:
-   Run the following command to download, build, and start all services (PostgreSQL, Qdrant Vector DB, Redis, Backend API, Worker, Frontend UI, Prometheus, and Grafana):
+
+Now, choose one of the options below to run the environment:
+
+---
+
+### Option A: Launch Entirely via Docker (Easiest)
+
+Use this method to run everything (databases + backend + worker + frontend) inside containerized environments:
+
+1. **Start the containers**:
    ```bash
    docker compose up -d
    ```
-4. **Verify Platform Status**:
-   Once the containers are running, access the services:
+2. **Access the Services**:
    * **NEXUS Frontend UI**: [http://localhost:3000](http://localhost:3000)
    * **NEXUS Backend API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs) (Swagger UI)
    * **Grafana Dashboards**: [http://localhost:3001](http://localhost:3001) (Credentials: `admin` / `admin`)
+
+---
+
+### Option B: Hybrid Launch (Recommended for Windows / WSL2 I/O limitations)
+
+Use this method if the Triton/Docker build fails due to WSL2 disk I/O limitations. It runs the databases inside Docker, but executes the Python backend and React frontend directly on your local machine:
+
+1. **Start only the databases & datastores in Docker**:
+   ```bash
+   docker compose up -d postgres qdrant redis minio prometheus grafana
+   ```
+2. **Run the Backend locally**:
+   - Open a terminal inside the `backend` directory:
+     ```powershell
+     cd backend
+     ```
+   - Activate the virtual environment:
+     ```powershell
+     .venv\Scripts\Activate.ps1
+     ```
+   - Start the backend server:
+     ```bash
+     python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+     ```
+     *(Keep this terminal open)*
+
+3. **Run the Frontend locally**:
+   - Open a new/separate terminal inside the `frontend` directory:
+     ```powershell
+     cd frontend
+     ```
+   - Install dependencies and start development:
+     ```bash
+     npm install
+     npm run dev
+     ```
+4. **Access the Services**:
+   * **NEXUS Frontend UI**: Check the URL printed in the frontend terminal (usually [http://localhost:3000](http://localhost:3000) or [http://localhost:5173](http://localhost:5173))
+   * **NEXUS Backend API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
+
 
 ---
 
