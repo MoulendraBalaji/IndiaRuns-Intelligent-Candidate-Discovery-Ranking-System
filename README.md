@@ -14,6 +14,10 @@ See the `docs/adr/` directory for detailed Architecture Decision Records.
 
 ## Quickstart
 
+If you are a recruiter or evaluator looking to test the platform's features, please refer to our step-by-step **[Recruiter & Evaluator Testing Guide](file:///c:/Users/admini/Desktop/Shru/MISACLLENOUS/India_Runs_AI_Recruiter/IndiaRuns-Intelligent-Candidate-Discovery-Ranking-System/RECRUITER_README.md)**.
+
+For developers and quick local execution:
+
 1. Copy the environment variables template:
    ```bash
    cp .env.example .env
@@ -23,6 +27,7 @@ See the `docs/adr/` directory for detailed Architecture Decision Records.
    docker compose up -d
    ```
 3. The API will be available at `http://localhost:8000`.
+
 
 ## Development
 This project uses `uv` for dependency management and `ruff`/`mypy` for linting and type checking.
