@@ -122,28 +122,74 @@ class SubmissionService:
         except Exception as e:
             print(f"Qdrant collection setup warning: {e}")
 
-        # Load candidates from JSONL in batches
-        # Configurable batch processing constraints for hackathon resources
+        # Load candidates from JSONL in batches and pre-filter against the JD to scale to 100k pool
         batch_size = int(os.environ.get("INGESTION_BATCH_SIZE", "256"))
         ingestion_limit = int(os.environ.get("INGESTION_LIMIT", "256"))
         
-        candidates_data = []
+        print("Pre-filtering and ranking candidates from the full pool against job description...")
+        import re
+        jd_words = set(re.findall(r'\b\w+\b', jd_text.lower()))
+        stop_words = {'and', 'the', 'for', 'with', 'a', 'to', 'in', 'of', 'we', 'are', 'is', 'at', 'an', 'our', 'us', 'you', 'your', 'or', 'to', 'be', 'required', 'skills', 'experience'}
+        keywords = {w for w in jd_words if len(w) > 2 and w not in stop_words}
+        
+        scored_candidates = []
         is_jsonl = candidates_file.endswith('.jsonl')
         
         if is_jsonl:
             with open(candidates_file, 'r', encoding='utf-8') as f:
-                for i, line in enumerate(f):
-                    if i >= ingestion_limit:
-                        break
+                for line in f:
                     if line.strip():
-                        candidates_data.append(json.loads(line))
+                        scored_candidates.append(json.loads(line))
         else:
             with open(candidates_file, 'r', encoding='utf-8') as f:
                 full_data = json.load(f)
                 if isinstance(full_data, list):
-                    candidates_data = full_data[:ingestion_limit]
+                    scored_candidates = list(full_data)
                 else:
-                    candidates_data = [full_data]
+                    scored_candidates = [full_data]
+                    
+        # Score each candidate based on skill match and behavioral signals
+        candidates_with_scores = []
+        for cand in scored_candidates:
+            cid = cand.get("candidate_id", "UNKNOWN")
+            score = 0.0
+            
+            # 1. Skill matches (primary weight)
+            skills = [s["name"].lower() for s in cand.get("skills", [])]
+            for skill in skills:
+                if skill in keywords:
+                    score += 10.0
+                elif any(kw in skill for kw in keywords):
+                    score += 3.0
+                    
+            # 2. Headline & Summary matches
+            profile = cand.get("profile", {})
+            headline = profile.get("headline", "").lower()
+            summary = profile.get("summary", "").lower()
+            for kw in keywords:
+                if kw in headline:
+                    score += 2.0
+                if kw in summary:
+                    score += 0.5
+                    
+            # 3. Behavioral signals & Honeypot filters (down-weight inactive candidates)
+            signals = cand.get("redrob_signals", {})
+            if not signals.get("open_to_work_flag", True):
+                score *= 0.75
+                
+            completeness = signals.get("profile_completeness_score", 100.0) / 100.0
+            response_rate = signals.get("recruiter_response_rate", 1.0)
+            interview_rate = signals.get("interview_completion_rate", 1.0)
+            
+            score *= (0.5 + 0.5 * completeness)
+            score *= (0.8 + 0.2 * response_rate)
+            score *= (0.8 + 0.2 * interview_rate)
+            
+            candidates_with_scores.append((score, cand))
+            
+        # Sort descending and pick the top N
+        candidates_with_scores.sort(key=lambda x: x[0], reverse=True)
+        candidates_data = [x[1] for x in candidates_with_scores[:ingestion_limit]]
 
         print(f"Ingesting and indexing {len(candidates_data)} candidates (Batch size: {batch_size}, Limit: {ingestion_limit})...")
         agent = CandidateIntelligenceAgent()
