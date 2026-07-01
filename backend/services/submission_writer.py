@@ -1,9 +1,12 @@
 import csv
+import logging
 import openpyxl
 from openpyxl.utils import get_column_letter
 from io import StringIO
 from pathlib import Path
 from typing import Dict, Optional
+
+logger = logging.getLogger(__name__)
 
 from app.schemas.ranking import RankingResult
 from app.schemas.explainability import ExplainabilityReport
