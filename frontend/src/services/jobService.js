@@ -47,6 +47,19 @@ function mapJob(job) {
     ? job.quality.missing_sections.map(sec => `Missing JD Section: ${sec}`)
     : [];
 
+  const interviewQuestions = {
+    technical: [
+      { id: 'q-t1', text: 'How do you design REST APIs to handle high concurrent writes under spikes?', rationale: 'Assesses architectural understanding of systems scalability.' },
+      { id: 'q-t2', text: 'Explain the latency trade-offs between dense semantic search and keyword matches.', rationale: 'Tests technical query processing depth.' }
+    ],
+    behavioral: [
+      { id: 'q-b1', text: 'Describe a system migration you spearheaded. How did you align conflicting viewpoints?', rationale: 'Assesses leadership and consensus building.' }
+    ],
+    culture: [
+      { id: 'q-c1', text: 'Why do you prefer working in high-growth agentic workflows instead of slow processes?', rationale: 'Validates team speed compatibility.' }
+    ]
+  };
+
   return {
     ...job,
     skillsRequired,
@@ -54,6 +67,9 @@ function mapJob(job) {
     hiddenExpectations,
     objectives,
     redFlags,
+    interviewQuestions,
+    seniority: job.seniority || job.taxonomy?.level || 'Senior',
+    department: job.department || 'Engineering',
     createdDate: job.metadata?.parsed_at 
       ? new Date(job.metadata.parsed_at).toLocaleDateString() 
       : new Date().toLocaleDateString(),
