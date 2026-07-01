@@ -387,8 +387,12 @@ class SubmissionService:
                 )
                 current_rank += 1
                 
-        # Sort entire rankings list to satisfy tie-breaking constraints (candidate_id asc)
+        # Sort entire rankings list to satisfy tie-breaking constraints
+        # Tie break: sort by candidate_id (asc), then by pre-filtering score (desc), then final_score (desc), then passed_gates (desc)
+        prefilter_scores = {cand.get("candidate_id"): score for score, cand in candidates_with_scores}
+        
         rankings.sort(key=lambda cr: cr.candidate_id)
+        rankings.sort(key=lambda cr: prefilter_scores.get(cr.candidate_id, 0.0), reverse=True)
         rankings.sort(key=lambda cr: cr.final_score, reverse=True)
         rankings.sort(key=lambda cr: cr.passed_gates, reverse=True)
         
