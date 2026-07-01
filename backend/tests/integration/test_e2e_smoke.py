@@ -141,7 +141,8 @@ async def test_full_pipeline_e2e_smoke():
     
     # Verify CSV structure
     import csv
-    with open(csv_path, 'r', encoding='utf-8') as f:
+    actual_csv_path = Path(csv_path).with_suffix(".csv")
+    with open(actual_csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         rows = list(reader)
         
