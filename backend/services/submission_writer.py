@@ -114,7 +114,16 @@ class SubmissionWriter:
                     max_len = len(val_str)
             ws.column_dimensions[col_letter].width = max(max_len + 3, 10)
 
-        wb.save(output_path)
+        try:
+            wb.save(output_path)
+        except PermissionError:
+            import time
+            timestamp = int(time.time())
+            alt_path = Path(output_path).parent / f"{Path(output_path).stem}_{timestamp}{Path(output_path).suffix}"
+            logger.warning(f"Permission denied to save workbook to {output_path}. It might be open in Excel. Saving to {alt_path} instead.")
+            print(f"\nWarning: {output_path} is locked/open. Saving to {alt_path} instead.")
+            wb.save(alt_path)
+            output_path = alt_path
         return output_path
 
     def write_csv(
@@ -133,7 +142,14 @@ class SubmissionWriter:
         csv_output_path = Path(destination) if destination else self.export_dir / f"{team_id}.csv"
         # If destination is provided, it might have .csv suffix, let's write it to CSV first
         csv_output_path.parent.mkdir(parents=True, exist_ok=True)
-        csv_output_path.write_text(csv_content, encoding="utf-8", newline="")
+        try:
+            csv_output_path.write_text(csv_content, encoding="utf-8", newline="")
+        except PermissionError:
+            import time
+            timestamp = int(time.time())
+            alt_path = Path(csv_output_path).parent / f"{Path(csv_output_path).stem}_{timestamp}{Path(csv_output_path).suffix}"
+            print(f"\nWarning: CSV file {csv_output_path} is locked/open. Saving to {alt_path} instead.")
+            alt_path.write_text(csv_content, encoding="utf-8", newline="")
 
         # Calculate XLSX destination path
         if destination:
