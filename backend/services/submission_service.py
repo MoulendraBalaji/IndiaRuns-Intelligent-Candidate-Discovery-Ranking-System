@@ -191,11 +191,11 @@ class SubmissionService:
                 if dk in summary:
                     score += 2.0
                     
-            # 3. Behavioral signals & Honeypot filters (down-weight inactive candidates and traps)
             # Honeypot / Trap Filter: skip candidates with non-relevant/conflicting job titles
             non_relevant_titles = {"sales", "hr", "accountant", "accounting", "civil", "mechanical", "marketing", "content writer", "support", "recruiter", "office"}
             is_honeypot = False
-            for exp in cand.get("experience", []):
+            experience_list = cand.get("career_history") or cand.get("experience") or []
+            for exp in experience_list:
                 title = exp.get("title", "").lower()
                 if any(nt in title for nt in non_relevant_titles):
                     is_honeypot = True
