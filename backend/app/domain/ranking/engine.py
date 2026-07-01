@@ -39,7 +39,8 @@ class RankingEngine:
             )
 
         # 3. Sort: Pass gates first, then score descending
-        # Python's Timsort is stable, so we can sort by score first, then by passed_gates.
+        # Python's Timsort is stable, so we sort by candidate_id ascending first, then by score descending, then by passed_gates descending.
+        candidate_ranks.sort(key=lambda cr: cr.candidate_id)
         candidate_ranks.sort(key=lambda cr: cr.final_score, reverse=True)
         candidate_ranks.sort(key=lambda cr: cr.passed_gates, reverse=True)
 

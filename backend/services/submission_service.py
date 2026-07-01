@@ -360,6 +360,15 @@ class SubmissionService:
                 )
                 current_rank += 1
                 
+        # Sort entire rankings list to satisfy tie-breaking constraints (candidate_id asc)
+        rankings.sort(key=lambda cr: cr.candidate_id)
+        rankings.sort(key=lambda cr: cr.final_score, reverse=True)
+        rankings.sort(key=lambda cr: cr.passed_gates, reverse=True)
+        
+        # Re-assign settled rank positions
+        for i, cr in enumerate(rankings):
+            cr.rank_position = i + 1
+            
         ranking_result.rankings = rankings
         ranking_result.total_ranked = len(rankings)
         
