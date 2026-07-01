@@ -146,10 +146,17 @@ export const api = {
   },
   addAuditLog: async (log) => {
     const logs = getMockData('auditLogs', INITIAL_AUDIT_LOGS);
+    let activeUser = 'Admin';
+    try {
+      const userStr = localStorage.getItem('nexus_current_user');
+      if (userStr) {
+        activeUser = JSON.parse(userStr).name;
+      }
+    } catch (e) {}
     const newLog = {
       id: `log-${logs.length + 1}`,
       timestamp: new Date().toISOString(),
-      recruiter: 'John Doe',
+      recruiter: activeUser,
       ip: '192.168.1.45',
       status: 'Success',
       ...log
