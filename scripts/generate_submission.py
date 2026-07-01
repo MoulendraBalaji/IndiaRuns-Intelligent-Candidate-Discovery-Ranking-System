@@ -8,13 +8,16 @@ root_dir = Path(__file__).parent.parent
 sys.path.append(str(root_dir))
 sys.path.append(str(root_dir / 'backend'))
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from backend.services.submission_service import SubmissionService
 
 def main():
     parser = argparse.ArgumentParser(description="Generate the top 100 candidate submission CSV.")
     parser.add_argument("--team_id", required=True, help="Your team ID / Participant ID for the submission filename.")
     parser.add_argument("--candidates", default="dataset/candidates.jsonl", help="Path to candidates.jsonl")
-    parser.add_argument("--job_description", default="dataset/Machine_Learning_Engineer_JD.pdf", help="Path to JD")
+    parser.add_argument("--job_description", default="dataset/job_description.docx", help="Path to JD")
     
     args = parser.parse_args()
     

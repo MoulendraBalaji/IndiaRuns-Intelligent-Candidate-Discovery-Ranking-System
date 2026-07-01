@@ -71,16 +71,31 @@ class SubmissionService:
         print("1. Parsing and Analyzing Job Description...")
         # Extract text from Job Description PDF/file
         jd_text = ""
-        try:
-            with pdfplumber.open(job_description_file) as pdf:
-                jd_text = "\n".join([page.extract_text() or "" for page in pdf.pages])
-        except Exception as e:
-            print(f"Failed parsing JD as PDF ({e}), attempting plain text parse...")
+        if job_description_file.endswith(".docx"):
             try:
-                with open(job_description_file, 'r', encoding='utf-8', errors='ignore') as f:
-                    jd_text = f.read()
-            except Exception as e2:
-                raise ValueError(f"Failed to read JD file: {e2}")
+                import zipfile
+                import xml.etree.ElementTree as ET
+                with zipfile.ZipFile(job_description_file) as docx:
+                    xml_content = docx.read('word/document.xml')
+                    tree = ET.fromstring(xml_content)
+                    namespaces = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+                    text_elements = tree.findall('.//w:t', namespaces)
+                    # Join text elements with spaces/newlines
+                    jd_text = ' '.join([t.text for t in text_elements if t.text])
+            except Exception as e:
+                print(f"Failed parsing JD as DOCX ({e}), falling back to PDF/text parsers...")
+
+        if not jd_text.strip():
+            try:
+                with pdfplumber.open(job_description_file) as pdf:
+                    jd_text = "\n".join([page.extract_text() or "" for page in pdf.pages])
+            except Exception as e:
+                print(f"Failed parsing JD as PDF ({e}), attempting plain text parse...")
+                try:
+                    with open(job_description_file, 'r', encoding='utf-8', errors='ignore') as f:
+                        jd_text = f.read()
+                except Exception as e2:
+                    raise ValueError(f"Failed to read JD file: {e2}")
 
         if not jd_text.strip():
             raise ValueError(f"Extracted JD text is empty for {job_description_file}")
